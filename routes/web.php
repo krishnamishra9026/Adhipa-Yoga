@@ -1,6 +1,21 @@
 <?php
 
-Route::redirect('/', '/login');
+
+Route::get(
+    'cache-clear',
+    function () {
+        \Artisan::call('config:cache');
+        \Artisan::call('cache:clear');
+        \Artisan::call('config:clear');
+        return 'cleared';
+    }
+);
+
+
+Route::get('/', 'HomeController@index')->name('home');
+
+
+Route::redirect('/admin', '/login');
 
 Route::redirect('/home', '/admin');
 
