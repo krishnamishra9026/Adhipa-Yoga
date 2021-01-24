@@ -180,7 +180,7 @@ class PackageController extends Controller
     public function destroy(Package $package)
     {
         $package->delete();
-        return redirect()->route('package.index')->with(['warning'=>'Package Deleted Successfully!']);
+        return redirect()->route('admin.packages.index')->with(['warning'=>'Package Deleted Successfully!']);
     }
 
     public function deleteimage(Package $package)
