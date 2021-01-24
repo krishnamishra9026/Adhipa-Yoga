@@ -37,6 +37,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('users', 'UsersController');
 
     Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
+    Route::delete('packages/destroy', 'PackageController@massDestroy')->name('packages.massDestroy');
+    Route::post('package-delete-image/{package}', 'PackageController@deleteimage')->name('package-image-delete');
 
     Route::resource('products', 'ProductsController');
+    Route::resource('packages', 'PackageController');
 });
