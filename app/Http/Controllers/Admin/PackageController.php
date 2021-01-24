@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Package;
+use Image;
 
 class PackageController extends Controller
 {
@@ -67,7 +68,7 @@ class PackageController extends Controller
         $input['off_days'] = $strinarr;
 
         $new_package = Package::create($input);
-        return redirect()->route('package.index')->with(['success'=>'Package Saved Successfully!']);
+        return redirect()->route('admin.packages.index')->with(['success'=>'Package Saved Successfully!']);
     }
 
     /**
@@ -167,7 +168,7 @@ class PackageController extends Controller
         
         $package->save();
 
-        return redirect()->route('package.index')->with(['success'=>'Package Updated Successfully!']);
+        return redirect()->route('admin.packages.index')->with(['success'=>'Package Updated Successfully!']);
     }
 
     /**

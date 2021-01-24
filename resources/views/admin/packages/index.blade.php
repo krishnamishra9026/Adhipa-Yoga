@@ -1,30 +1,20 @@
 @extends('layouts.admin')
 @section('content')
-@section('head')
-<link href="{{asset('backend/assets/css/datatables.min.css')}}" rel="stylesheet">
-@endsection
-@section('content')
-<div class="row">
-	<div class="col-md-12">
-		<nav aria-label="breadcrumb " class="ms-panel-custom">
-			<ol class="breadcrumb pl-0">
-				<li class="breadcrumb-item"><a href="/"><i class="material-icons">home</i> Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Package List</li>
-			</ol>
-			<a href="{{route('admin.packages.create')}}" class="ms-btn-icon btn-square btn-secondary"><i class="fas fa-plus"></i></a>
-		</nav>
-		@include('admin.includes.flashmessage')
+<div style="margin-bottom: 10px;" class="row">
+	<div class="col-lg-12">
+		<a class="btn btn-success" href="{{ route('admin.packages.create') }}">
+			{{ trans('global.add') }} Package
+		</a>
 	</div>
-	<div class="col-md-12">
-		<div class="ms-panel">
-			<div class="ms-panel-header">
-				<h6>Package List</h6>
-			</div>
-			<div class="ms-panel-body">
-				<div class="table-responsive">
-					<table id="data-table-10" class="table table-striped thead-primary w-100"></table>
-				</div>
-			</div>
+</div>
+<div class="card">
+	<div class="card-header">
+		Package {{ trans('global.list') }}
+	</div>
+
+	<div class="card-body">
+		<div class="table-responsive">
+			<table id="data-table-10" class="table table-striped thead-primary w-100"></table>
 		</div>
 	</div>
 </div>
