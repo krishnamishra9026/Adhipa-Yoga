@@ -12,6 +12,33 @@ Route::get(
 );
 
 
+Route::get('/packages', function () {
+    return view('packages');
+});
+
+Route::get('/aboutus', function () {
+    return view('about_us');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/single', function () {
+    return view('single');
+});
+
+Route::get('/contactus', function () {
+    return view('contact_us');
+});
+
+Route::resource('contact-us', 'ContactController');
+
+Route::get('/terms-conditions', function () {
+    return view('terms-conditions');
+});
+
+
 Route::get('/', 'HomeController@index')->name('home');
 
 
