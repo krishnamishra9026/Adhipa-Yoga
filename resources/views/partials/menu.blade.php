@@ -60,6 +60,32 @@
                     Pakages
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a href="{{ route("admin.school-classes.index") }}" class="nav-link {{ request()->is('admin/school-classes') || request()->is('admin/school-classes/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-school nav-icon">
+
+                    </i>
+                    School Classes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.lessons.index") }}" class="nav-link {{ request()->is('admin/lessons') || request()->is('admin/lessons/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-clock nav-icon">
+
+                    </i>
+                    Lessons
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route("admin.calendar.index") }}" class="nav-link {{ request()->is('admin/calendar') || request()->is('admin/calendar/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-calendar nav-icon">
+
+                    </i>
+                    Calendar
+                </a>
+            </li>
+
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-sign-out-alt">

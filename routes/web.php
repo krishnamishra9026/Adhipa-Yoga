@@ -69,4 +69,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('products', 'ProductsController');
     Route::resource('packages', 'PackageController');
+
+
+    // Lessons
+    Route::delete('lessons/destroy', 'LessonsController@massDestroy')->name('lessons.massDestroy');
+    Route::resource('lessons', 'LessonsController');
+
+    // School Classes
+    Route::delete('school-classes/destroy', 'SchoolClassesController@massDestroy')->name('school-classes.massDestroy');
+    Route::resource('school-classes', 'SchoolClassesController');
+
+    Route::get('calendar', 'CalendarController@index')->name('calendar.index');
+    
 });
