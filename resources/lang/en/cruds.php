@@ -1,5 +1,4 @@
 <?php
-
 return [
     'userManagement' => [
         'title'          => 'User management',
@@ -68,12 +67,12 @@ return [
         ],
     ],
     'lesson'         => [
-        'title'          => 'Lessons',
-        'title_singular' => 'Lesson',
+        'title'          => 'Classes Timetable',
+        'title_singular' => 'Classes Timetable',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
-            'teacher'           => 'Teacher',
+            'teacher'           => 'Trainer',
             'teacher_helper'    => '',
             'weekday'           => 'Weekday',
             'weekday_helper'    => '',
@@ -92,8 +91,8 @@ return [
         ],
     ],
     'schoolClass'    => [
-        'title'          => 'School Classes',
-        'title_singular' => 'School Class',
+        'title'          => 'Yoga Classes',
+        'title_singular' => 'Yoga Class',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',

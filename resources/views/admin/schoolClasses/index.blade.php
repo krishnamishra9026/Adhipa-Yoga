@@ -2,8 +2,8 @@
 @section('content')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route("admin.school-classes.create") }}">
-                {{ trans('global.add') }}jjj     {{ trans('cruds.schoolClass.title_singular') }}
+            <a class="btn btn-success" href="{{ route('admin.school-classes.create') }}">
+                {{ trans('global.add') }}  {{ trans('cruds.schoolClass.title_singular') }}
             </a>
         </div>
     </div>
@@ -36,43 +36,36 @@
                 </thead>
                 <tbody>
                     @foreach($schoolClasses as $key => $schoolClass)
-                        <tr data-entry-id="{{ $schoolClass->id }}">
-                            <td>
+                    <tr data-entry-id="{{ $schoolClass->id }}">
+                        <td>
 
-                            </td>
-                            <td>
-                                {{ $schoolClass->id ?? '' }}
-                            </td>
-                            <td>
-                                {{ $schoolClass->name ?? '' }}
-                            </td>
-                            <td>
-                                <a href="{{ route('admin.calendar.index') }}?class_id={{ $schoolClass->id }}">View Schedule</a>
-                            </td>
-                            <td>
-                                @can('school_class_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.school-classes.show', $schoolClass->id) }}">
-                                        {{ trans('global.view') }}
-                                    </a>
-                                @endcan
+                        </td>
+                        <td>
+                            {{ $schoolClass->id ?? '' }}
+                        </td>
+                        <td>
+                            {{ $schoolClass->name ?? '' }}
+                        </td>
+                        <td>
+                            <a href="{{ route('admin.calendar.index') }}?class_id={{ $schoolClass->id }}">View Schedule</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-xs btn-primary" href="{{ route('admin.school-classes.show', $schoolClass->id) }}">
+                                {{ trans('global.view') }}
+                            </a>
 
-                                @can('school_class_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.school-classes.edit', $schoolClass->id) }}">
-                                        {{ trans('global.edit') }}
-                                    </a>
-                                @endcan
+                            <a class="btn btn-xs btn-info" href="{{ route('admin.school-classes.edit', $schoolClass->id) }}">
+                                {{ trans('global.edit') }}
+                            </a>
+                            <form action="{{ route('admin.school-classes.destroy', $schoolClass->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                            </form>
 
-                                @can('school_class_delete')
-                                    <form action="{{ route('admin.school-classes.destroy', $schoolClass->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
-                                    </form>
-                                @endcan
+                        </td>
 
-                            </td>
-
-                        </tr>
+                    </tr>
                     @endforeach
                 </tbody>
             </table>

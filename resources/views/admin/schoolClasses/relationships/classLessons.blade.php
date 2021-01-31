@@ -1,4 +1,3 @@
-@can('lesson_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route("admin.lessons.create") }}">
@@ -6,8 +5,6 @@
             </a>
         </div>
     </div>
-@endcan
-
 <div class="card">
     <div class="card-header">
         {{ trans('cruds.lesson.title_singular') }} {{ trans('global.list') }}
@@ -46,52 +43,46 @@
                 </thead>
                 <tbody>
                     @foreach($lessons as $key => $lesson)
-                        <tr data-entry-id="{{ $lesson->id }}">
-                            <td>
+                    <tr data-entry-id="{{ $lesson->id }}">
+                        <td>
 
-                            </td>
-                            <td>
-                                {{ $lesson->id ?? '' }}
-                            </td>
-                            <td>
-                                {{ $lesson->class->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ $lesson->teacher->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ $lesson->weekday ?? '' }}
-                            </td>
-                            <td>
-                                {{ $lesson->start_time ?? '' }}
-                            </td>
-                            <td>
-                                {{ $lesson->end_time ?? '' }}
-                            </td>
-                            <td>
-                                @can('lesson_show')
-                                    <a class="btn btn-xs btn-primary" href="{{ route('admin.lessons.show', $lesson->id) }}">
-                                        {{ trans('global.view') }}
-                                    </a>
-                                @endcan
+                        </td>
+                        <td>
+                            {{ $lesson->id ?? '' }}
+                        </td>
+                        <td>
+                            {{ $lesson->class->name ?? '' }}
+                        </td>
+                        <td>
+                            {{ $lesson->teacher->name ?? '' }}
+                        </td>
+                        <td>
+                            {{ $lesson->weekday ?? '' }}
+                        </td>
+                        <td>
+                            {{ $lesson->start_time ?? '' }}
+                        </td>
+                        <td>
+                            {{ $lesson->end_time ?? '' }}
+                        </td>
+                        <td>
+                            <a class="btn btn-xs btn-primary" href="{{ route('admin.lessons.show', $lesson->id) }}">
+                                {{ trans('global.view') }}
+                            </a>
 
-                                @can('lesson_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.lessons.edit', $lesson->id) }}">
-                                        {{ trans('global.edit') }}
-                                    </a>
-                                @endcan
+                            <a class="btn btn-xs btn-info" href="{{ route('admin.lessons.edit', $lesson->id) }}">
+                                {{ trans('global.edit') }}
+                            </a>
 
-                                @can('lesson_delete')
-                                    <form action="{{ route('admin.lessons.destroy', $lesson->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
-                                    </form>
-                                @endcan
+                            <form action="{{ route('admin.lessons.destroy', $lesson->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                            </form>
 
-                            </td>
+                        </td>
 
-                        </tr>
+                    </tr>
                     @endforeach
                 </tbody>
             </table>
@@ -104,7 +95,6 @@
 <script>
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('lesson_delete')
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
@@ -132,7 +122,6 @@
     }
   }
   dtButtons.push(deleteButton)
-@endcan
 
   $.extend(true, $.fn.dataTable.defaults, {
     order: [[ 1, 'desc' ]],

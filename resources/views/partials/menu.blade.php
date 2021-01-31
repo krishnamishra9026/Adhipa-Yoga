@@ -66,7 +66,7 @@
                     <i class="fa-fw fas fa-school nav-icon">
 
                     </i>
-                    School Classes
+                    Yoga Classes
                 </a>
             </li>
             <li class="nav-item">
@@ -74,7 +74,7 @@
                     <i class="fa-fw fas fa-clock nav-icon">
 
                     </i>
-                    Lessons
+                    Classes Timetable
                 </a>
             </li>
             <li class="nav-item">
@@ -82,7 +82,7 @@
                     <i class="fa-fw fas fa-calendar nav-icon">
 
                     </i>
-                    Calendar
+                    Schedules
                 </a>
             </li>
 
@@ -94,6 +94,59 @@
                     {{ trans('global.logout') }}
                 </a>
             </li>
+
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link  nav-dropdown-toggle">
+                    <i class="fas fa-users nav-icon">
+
+                    </i>
+                    Catalogs
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a href="{{ route("admin.gallery.index") }}" class="nav-link {{ request()->is('admin/gallery') || request()->is('admin/gallery/*') ? 'active' : '' }}">
+                            <i class="fas fa-unlock-alt nav-icon">
+
+                            </i>
+                            Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route("admin.blogs.index") }}" class="nav-link {{ request()->is('admin/blogs') || request()->is('admin/blogs/*') ? 'active' : '' }}">
+                            <i class="fas fa-unlock-alt nav-icon">
+
+                            </i>
+                            Blogs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route("admin.terms-and-conditions.index") }}" class="nav-link {{ request()->is('admin/terms-and-conditions') || request()->is('admin/terms-and-conditions/*') ? 'active' : '' }}">
+                            <i class="fas fa-unlock-alt nav-icon">
+
+                            </i>
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route("admin.privacy-policy.index") }}" class="nav-link {{ request()->is('admin/privacy-policy') || request()->is('admin/privacy-policy/*') ? 'active' : '' }}">
+                            <i class="fas fa-briefcase nav-icon">
+
+                            </i>
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.about.index') }}" class="nav-link {{ request()->is('admin/about') || request()->is('admin/about/*') ? 'active' : '' }}">
+                            <i class="fas fa-user nav-icon">
+
+                            </i>
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+
         </ul>
 
         <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

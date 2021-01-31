@@ -43,8 +43,9 @@ return [
     'year'                                 => 'Year',
     'month'                                => 'Month',
     'logout'                               => 'Logout',
-    'calendar'                             => 'Calendar',
+    'calendar'                             => 'Schedules',
     'dashboard'                            => 'Dashboard',
+    'relatedData'                          => 'Related Data',
     'datatables'                           => [
         'copy'          => 'Copy',
         'csv'           => 'CSV',

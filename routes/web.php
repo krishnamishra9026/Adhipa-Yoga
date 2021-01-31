@@ -51,6 +51,14 @@ Auth::routes(['register' => false]);
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
 
+    Route::resource('gallery','GalleryController');
+    Route::post('gallery-delete-image/{gallery}', 'GalleryController@deleteimage')->name('gallery-image-delete');
+    Route::resource('blogs','BlogController');
+    Route::post('blog-delete-image/{blog}', 'BlogController@deleteimage')->name('blog-image-delete');
+    Route::resource('terms-and-conditions','TermsController');
+    Route::resource('privacy-policy','PrivacyPolicyController');
+    Route::resource('about','AboutUsController');
+
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
 
     Route::resource('permissions', 'PermissionsController');

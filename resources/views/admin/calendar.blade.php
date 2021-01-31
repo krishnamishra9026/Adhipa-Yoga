@@ -5,7 +5,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    Calendar
+                    Schedules
                 </div>
 
                 <div class="card-body">
@@ -32,7 +32,7 @@
                                         @if (is_array($value))
                                             <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center" style="background-color:#f0f0f0">
                                                 {{ $value['class_name'] }}<br>
-                                                Teacher: {{ $value['teacher_name'] }}
+                                                Trainer: {{ $value['teacher_name'] }}
                                             </td>
                                         @elseif ($value === 1)
                                             <td></td>
