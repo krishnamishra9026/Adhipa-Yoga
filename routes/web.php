@@ -60,6 +60,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('terms-and-conditions','TermsController');
     Route::resource('privacy-policy','PrivacyPolicyController');
     Route::resource('about','AboutUsController');
+    Route::resource('setting','SettingController');
 
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
 

@@ -86,15 +86,6 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                    <i class="nav-icon fas fa-sign-out-alt">
-
-                    </i>
-                    {{ trans('global.logout') }}
-                </a>
-            </li>
-
             <li class="nav-item nav-dropdown">
                 <a class="nav-link  nav-dropdown-toggle">
                     <i class="fas fa-users nav-icon">
@@ -144,6 +135,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route('admin.setting.index') }}" class="nav-link {{ request()->is('admin/setting') || request()->is('admin/setting/*') ? 'active' : '' }}">
+                            <i class="fas fa-user nav-icon">
+
+                            </i>
+                            Setting
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route('admin.about.index') }}" class="nav-link {{ request()->is('admin/about') || request()->is('admin/about/*') ? 'active' : '' }}">
                             <i class="fas fa-user nav-icon">
 
@@ -151,8 +150,20 @@
                             About
                         </a>
                     </li>
+                    
                 </ul>
             </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                    <i class="nav-icon fas fa-sign-out-alt">
+
+                    </i>
+                    {{ trans('global.logout') }}
+                </a>
+            </li>
+
+
             
 
         </ul>
