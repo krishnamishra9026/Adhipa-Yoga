@@ -52,9 +52,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::resource('gallery','GalleryController');
+    Route::resource('testimonial','TestimonialController');
     Route::post('gallery-delete-image/{gallery}', 'GalleryController@deleteimage')->name('gallery-image-delete');
     Route::resource('blogs','BlogController');
     Route::post('blog-delete-image/{blog}', 'BlogController@deleteimage')->name('blog-image-delete');
+    Route::post('testimonial-delete-image/{testimonial}', 'BlogController@deleteimage')->name('testimonial-image-delete');
     Route::resource('terms-and-conditions','TermsController');
     Route::resource('privacy-policy','PrivacyPolicyController');
     Route::resource('about','AboutUsController');

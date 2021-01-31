@@ -120,6 +120,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route("admin.testimonial.index") }}" class="nav-link {{ request()->is('admin/testimonial') || request()->is('admin/testimonial/*') ? 'active' : '' }}">
+                            <i class="fas fa-unlock-alt nav-icon">
+
+                            </i>
+                            Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route("admin.terms-and-conditions.index") }}" class="nav-link {{ request()->is('admin/terms-and-conditions') || request()->is('admin/terms-and-conditions/*') ? 'active' : '' }}">
                             <i class="fas fa-unlock-alt nav-icon">
 

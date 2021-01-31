@@ -106,16 +106,9 @@ class BlogController extends Controller
         }
 
         $blogs->title = $request->title;
+        $blogs->name = $request->name;
 
         $blogs->description = $request->description;
-
-        if(isset($request->title_arabic)){
-            $blogs->title_arabic = $request->title_arabic;
-        }
-
-        if(isset($request->description_arabic)){
-            $blogs->description_arabic = $request->description_arabic;
-        }
 
 
         if ($request->has('status')) {

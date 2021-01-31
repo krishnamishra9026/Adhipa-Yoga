@@ -51,6 +51,16 @@
                             <div class="input-group">
                                 <input type="text" id="title" name="title" class="form-control" placeholder="Title" required>
                                 <div class="invalid-feedback">
+                                    Please Enter a Title.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="name">Name</label>
+                            <div class="input-group">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                                <div class="invalid-feedback">
                                     Please Enter a Name.
                                 </div>
                             </div>

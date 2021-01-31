@@ -38,48 +38,46 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        {{ trans('global.edit') }} Blog
+        {{ trans('global.create') }} Testimonial
     </div>
 
-    <div class="card-body">              
-                <form class="needs-validation clearfix" method="POST" action="{{route('admin.blogs.update',$blog->id)}}" enctype="multipart/form-data">
+    <div class="card-body">
+                <form class="needs-validation clearfix" method="POST" action="{{route('admin.testimonial.store')}}" enctype="multipart/form-data">
                     @csrf
-                        {{ method_field('PUT') }}
                     <div class="form-row">
-                        <div class="col-md-6">
-                            <label for="title">Title</label>
-                            <div class="input-group">
-                                <input type="text" id="title" name="title" value="{{ $blog->title }}" class="form-control" placeholder="Title" required>
-                                <div class="invalid-feedback">
-                                    Please Enter a Name.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <label for="name">Name</label>
                             <div class="input-group">
-                                <input type="text" id="name" name="name" value="{{ $blog->name }}" class="form-control" placeholder="Name" required>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
                                 <div class="invalid-feedback">
                                     Please Enter a Name.
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="col-md-12">
+                            <label for="title">Title</label>
+                            <div class="input-group">
+                                <input type="text" id="title" name="title" class="form-control" placeholder="Title" required>
+                                <div class="invalid-feedback">
+                                    Please Enter a Title.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             <label for="description">Description</label>
                             <div class="input-group">
-                                <textarea rows="8" id="description" name="description" class="form-control" placeholder="Description" required>{{ $blog->description }}</textarea>
+                                <textarea rows="8" id="description" name="description" class="form-control" placeholder="Description" required></textarea>
                                 <div class="invalid-feedback">
                                     Please Write Description 
                                 </div>
                             </div>
                         </div> 
 
-
-                    
-
-                        <div class="col-md-6">
+                        
+                        <div class="col-md-12">
                             <label for="validationCustom12">Upload Image</label>
                             <div class="input-group avat">
                                 <div class="kv-avatar">
@@ -92,23 +90,13 @@
                                 <small>Note: File-size should be less than 3.5 MB</small>
                             </div>
                             <div id="kv-avatar-errors-2" class="center-block mt-3" style="width:336px;display:none"></div>
-                        </div>  
-                        {{-- <div class="col-md-12 pt-4">
-                            <label class="ms-switch">
-                                <input type="checkbox" checked="" name="status">
-                                <span class="ms-switch-slider ms-switch-primary square"></span>
-                            </label>
-                            <span> Enable </span>
-                        </div>   --}}                
+                        </div>                 
                     </div>
                     <button class="btn btn-primary float-right" type="submit">Save</button>
                 </form>
 
             </div>
         </div>
-        </div>
-    </div>
-</div>
 @endsection
 @section('scripts')
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
@@ -125,15 +113,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.1.2/themes/fas/theme.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
     <script>
-            $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-            $("#avatar-2").fileinput({
+        $("#avatar-2").fileinput({
             theme:'fas',
             overwriteInitial: false,
-            maxFileSize: 1500,
+            maxFileSize: 3500,
             showClose: false,
             showCaption: false,
             showBrowse: false,
@@ -145,19 +128,8 @@
             msgErrorClass: 'alert alert-block alert-danger',
             defaultPreviewContent: '<img src="/backend/assets/img/media.png" alt="Your Avatar"><h6 class="text-muted">Upload Image</h6>',
             layoutTemplates: {main2: '{preview} {remove} {browse}'},
-            allowedFileExtensions: ["jpg", "png", "gif"],
-            @if(isset($blog->image))
-            initialPreview: [
-            "{{asset('uploads/blogs/'.$blog->image)}}"
-            ],
-             initialPreviewAsData: true, // defaults markup
-
-    initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-    initialPreviewConfig: [
-    {caption: "{{$blog->image}}", url: "{{route('admin.blog-image-delete',$blog->id)}}", key: {{$blog->id}} }
-    ],
-    @endif
-});
+            allowedFileExtensions: ["jpg", "png", "gif"]
+        });
     </script>
     <script type="text/javascript">
     $(document).ready(function() {

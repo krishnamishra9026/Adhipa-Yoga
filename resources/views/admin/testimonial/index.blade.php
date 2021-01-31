@@ -5,18 +5,19 @@
 @section('content')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route('admin.blogs.create') }}">
-                {{ trans('global.add') }} Blogs
+            <a class="btn btn-success" href="{{ route('admin.testimonial.create') }}">
+                {{ trans('global.add') }} Testimonial
             </a>
         </div>
     </div>
 <div class="card">
     <div class="card-header">
-        Blogs
+        Gallery
     </div>
     @include('admin.includes.flashmessage')
 
     <div class="card-body">
+
                 <div class="table-responsive">
                     <table id="data-table-18" class="table table-striped thead-primary w-100"></table>
                 </div>
@@ -24,20 +25,19 @@
         </div>
 @endsection
 @section('scripts')
-@parent
 <script>
     var dataSet18 = [
 
     @foreach($images as $image)
-    [ "{{ @$no++ }}" ,"{{ $image->title }}","{{ $image->name }}", "<a href='{{route('admin.blogs.edit',$image)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a> <a href='javascript:' onclick='submitform({{ $no }});'><i class='far fa-trash-alt ms-text-danger'></i></a><form id='delete-form{{$no}}' action='{{route('admin.blogs.destroy',$image)}}' method='POST'><input type='hidden' name='_token' value='{{ csrf_token()}}'><input type='hidden' name='_method' value='DELETE'></form>"],
+    [ "{{ @$no++ }}" ,"{{ $image->name }}","{{ $image->title }}", "<a href='{{route('admin.testimonial.edit',$image)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a> <a href='javascript:' onclick='submitform({{ $no }});'><i class='far fa-trash-alt ms-text-danger'></i></a><form id='delete-form{{$no}}' action='{{route('admin.testimonial.destroy',$image)}}' method='POST'><input type='hidden' name='_token' value='{{ csrf_token()}}'><input type='hidden' name='_method' value='DELETE'></form>"],
     @endforeach
     ];
     var tablepackage = $('#data-table-18').DataTable( {
         data: dataSet18,
         columns: [
         { title: "Id" },
-        { title: "Title" },
-        { title: "Posted By" },
+        { title: "Name" },
+        { title: "Tagline" },
         { title: "Action" },
         ],
 

@@ -38,28 +38,18 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        {{ trans('global.edit') }} Blog
+        {{ trans('global.edit') }} Testimonial
     </div>
 
-    <div class="card-body">              
-                <form class="needs-validation clearfix" method="POST" action="{{route('admin.blogs.update',$blog->id)}}" enctype="multipart/form-data">
+    <div class="card-body">                
+                <form class="needs-validation clearfix" method="POST" action="{{route('admin.testimonial.update',$testimonial)}}" enctype="multipart/form-data">
                     @csrf
                         {{ method_field('PUT') }}
                     <div class="form-row">
-                        <div class="col-md-6">
-                            <label for="title">Title</label>
-                            <div class="input-group">
-                                <input type="text" id="title" name="title" value="{{ $blog->title }}" class="form-control" placeholder="Title" required>
-                                <div class="invalid-feedback">
-                                    Please Enter a Name.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <label for="name">Name</label>
                             <div class="input-group">
-                                <input type="text" id="name" name="name" value="{{ $blog->name }}" class="form-control" placeholder="Name" required>
+                                <input type="text" id="name" name="name" value="{{ $testimonial->name }}" class="form-control" placeholder="Name" required>
                                 <div class="invalid-feedback">
                                     Please Enter a Name.
                                 </div>
@@ -67,19 +57,27 @@
                         </div>
 
                         <div class="col-md-12">
+                            <label for="title">Title</label>
+                            <div class="input-group">
+                                <input type="text" id="title" name="title" value="{{ $testimonial->title }}" class="form-control" placeholder="Title" required>
+                                <div class="invalid-feedback">
+                                    Please Enter a Title.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
                             <label for="description">Description</label>
                             <div class="input-group">
-                                <textarea rows="8" id="description" name="description" class="form-control" placeholder="Description" required>{{ $blog->description }}</textarea>
+                                <textarea rows="8" id="description" name="description" class="form-control" placeholder="Description" required>{{ $testimonial->description }}</textarea>
                                 <div class="invalid-feedback">
                                     Please Write Description 
                                 </div>
                             </div>
                         </div> 
 
-
-                    
-
-                        <div class="col-md-6">
+                     
+                        <div class="col-md-12">
                             <label for="validationCustom12">Upload Image</label>
                             <div class="input-group avat">
                                 <div class="kv-avatar">
@@ -93,22 +91,13 @@
                             </div>
                             <div id="kv-avatar-errors-2" class="center-block mt-3" style="width:336px;display:none"></div>
                         </div>  
-                        {{-- <div class="col-md-12 pt-4">
-                            <label class="ms-switch">
-                                <input type="checkbox" checked="" name="status">
-                                <span class="ms-switch-slider ms-switch-primary square"></span>
-                            </label>
-                            <span> Enable </span>
-                        </div>   --}}                
+                               
                     </div>
                     <button class="btn btn-primary float-right" type="submit">Save</button>
                 </form>
 
             </div>
         </div>
-        </div>
-    </div>
-</div>
 @endsection
 @section('scripts')
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
@@ -146,15 +135,15 @@
             defaultPreviewContent: '<img src="/backend/assets/img/media.png" alt="Your Avatar"><h6 class="text-muted">Upload Image</h6>',
             layoutTemplates: {main2: '{preview} {remove} {browse}'},
             allowedFileExtensions: ["jpg", "png", "gif"],
-            @if(isset($blog->image))
+            @if(isset($testimonial->image))
             initialPreview: [
-            "{{asset('uploads/blogs/'.$blog->image)}}"
+            "{{asset('uploads/testimonial/'.$testimonial->image)}}"
             ],
              initialPreviewAsData: true, // defaults markup
 
     initialPreviewFileType: 'image', // image is the default and can be overridden in config below
     initialPreviewConfig: [
-    {caption: "{{$blog->image}}", url: "{{route('admin.blog-image-delete',$blog->id)}}", key: {{$blog->id}} }
+    {caption: "{{$testimonial->image}}", url: "{{route('admin.testimonial-image-delete',$testimonial)}}", key: {{$testimonial->id}} }
     ],
     @endif
 });
