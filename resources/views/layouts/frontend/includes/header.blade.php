@@ -1,41 +1,27 @@
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <h1>
-                <a class="navbar-brand text-white" href="/">
-                    <i class="fas fa-anchor"></i> Adhipa Yoga
-                </a>
-            </h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-lg-auto text-center align-items-center">
-                    <li class="nav-item active  mr-lg-3 mt-lg-0 mt-3">
-                        <a class="nav-link" href="/">Home /
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  mr-lg-3 mt-lg-0 mt-3">
-                        <a class="nav-link" href="/aboutus">about /</a>
-                    </li>
-                    <li class="nav-item  mr-lg-3 mt-lg-0 mt-3">
-                        <a class="nav-link" href="/packages">Packages /</a>
-                    </li>
-                    <li class="nav-item  mr-lg-3 mt-lg-0 mt-3">
-                        <a class="nav-link" href="/blog">Blog /</a>
-                    </li>
-                    <li class="nav-item mr-lg-5 mt-lg-0 mt-3">
-                        <a class="nav-link" href="/contactus">contact</a>
-                    </li>
-                    <li class="nav-item mt-lg-0 mt-3">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-lock"></i> Login</a>
-                    </li>
-                </ul>
+<header class="header default">
+            <div class="header-section">
+               <div class="container-fluid ">
+                  <nav class="navbar navbar-expand-lg header-navbar ml-0 ml-lg-5">
+                     <a class=" navbar-brand navbar-logo scroll" href="#wrapper">
+                     <img class="mb-0 logo-light" src="{{asset('frontend/assets/svg/logo-light.svg')}}" alt="">
+                     <img class="mb-0 logo-dark" src="{{asset('frontend/assets/svg/logo-dark.svg')}}" alt="">
+                     </a>
+                     <button class="navbar-toggler btn-navbar-toggler" type="button" data-toggle="collapse" data-target=".nav-menu" aria-expanded="true" aria-label="Toggle navigation">
+                     <span class="fa fa-bars"></span>
+                     </button>
+                     <div class="nav-menu collapse navbar-collapse navbar-collapse justify-content-end mr-5 ">
+                        <ul class=" navbar-nav  header-navbar-nav">
+                           <li><a class=" nav-link scroll" href="#about">About</a></li>
+                           <li><a class=" nav-link scroll" href="#services">Services</a></li>
+                           <li><a class=" nav-link scroll" href="#benefits">Benefits</a></li>
+                           <li><a class=" nav-link scroll" href="#poses">Poses</a></li>
+                           <li><a class=" nav-link scroll" href="#trainer">Trainer</a></li>
+                           <li><a class=" nav-link scroll" href="#schedule">Schedule</a></li>
+                           <li><a class=" nav-link scroll" href="#gallery">Gallery</a></li>
+                           <li><a class=" nav-link scroll mb-3 mb-lg-0" href="#contact">Contact</a></li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
             </div>
-        </div>
-
-        <!-- /.container -->
-    </nav>
-</header>
+         </header>
