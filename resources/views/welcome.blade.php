@@ -31,8 +31,8 @@
             <div class="col-md-5 mb-5 mb-lg-0 text-center">
                 <img class="mb-4 max-width-9" src="{{asset('frontend/assets/svg/logo-pink.svg')}}" alt="">
                 <div class="mb-4">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">what we do</span>
-                    <h1 class="mb-0">Ho We Are ?</h1>
+                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">what we do</span>
+                    <h1 class="mb-0 text-D9008F">Ho We Are ?</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
                 <p class="mb-4">Mountain Pose is the base for all standing poses it gives
@@ -77,8 +77,8 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">what we do</span>       
-                    <h1 class="mb-0">Our Main Services</h1>
+                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">what we do</span>       
+                    <h1 class="mb-0 text-D9008F">Our Main Services</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
             </div>
@@ -230,8 +230,8 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">free your soul</span>       
-                    <h1 class="mb-0">Yoga Benefits</h1>
+                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">free your soul</span>       
+                    <h1 class="mb-0 ext-D9008F">Yoga Benefits</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
             </div>
