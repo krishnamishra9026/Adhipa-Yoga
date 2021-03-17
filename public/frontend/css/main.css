@@ -786,7 +786,7 @@ div[class*="col-"].spacer-double-xxs, .spacer-double-xxs {
     content: "";
     background-color: transparent;
     border-radius: 50%;
-    border:2px solid #ffffff;
+    border:2px solid #9CD97C;
 }
 .play-icon:hover:before{
   background-color: rgba(255,255,255,.1);
@@ -808,7 +808,7 @@ div[class*="col-"].spacer-double-xxs, .spacer-double-xxs {
     width: 1rem;
     line-height: 0;
     fill:none;
-    stroke:#ffffff;
+    stroke:#9CD97C;
     stroke-width:20;
     stroke-miterlimit:10;
 }

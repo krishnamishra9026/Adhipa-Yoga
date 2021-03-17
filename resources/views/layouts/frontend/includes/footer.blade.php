@@ -11,7 +11,7 @@
    <div class="container spacer-one-bottom-lg spacer-xl-top">
       <div class="row text-center">
          <div class="col mb-6 mt-6 mt-lg-0">
-            <img class=" max-width-9 opacity-3" src="{{asset('frontend/assets/svg/logo-light.svg')}}" alt="">
+            <img class=" max-width-9 opacity-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
          </div>
       </div>
       <div class="row align-items-md-center">
@@ -31,30 +31,6 @@
                   </div>
                </div>
             </form>
-         </div>
-         <div class="col-md-4 col-sm-6">
-            <ul class="list-inline text-sm-right mb-0 font-size-14 mn-top">
-               <li class="list-inline-item mr-1">
-                  <a class="btn btn-social btn-icon btn-social-dark" href="#">
-                     <span class="fab fa-facebook-f btn-icon-inner"></span>
-                  </a>
-               </li>
-               <li class="list-inline-item mr-1">
-                  <a class="btn btn-social btn-icon btn-social-dark" href="#">
-                     <span class="fab fa-google btn-icon-inner"></span>
-                  </a>
-               </li>
-               <li class="list-inline-item mr-1">
-                  <a class="btn btn-social btn-icon btn-social-dark" href="#">
-                     <span class="fab fa-twitter btn-icon-inner"></span>
-                  </a>
-               </li>
-               <li class="list-inline-item mx-0">
-                  <a class="btn btn-social btn-icon btn-social-dark" href="#">
-                     <span class="fab fa-instagram btn-icon-inner"></span>
-                  </a>
-               </li>
-            </ul>
          </div>
       </div>
       <div class="row mt-6 justify-content-center ">
