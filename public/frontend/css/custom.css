@@ -1,0 +1,47 @@
+.heading{
+	top: 706px;
+	left: 207px;
+	width: 697px;
+	height: 192px;
+	text-align: left;
+	font: normal normal bold 80px/97px Helvetica Neue;
+	letter-spacing: 0px;
+	color: #FAFAFA;
+	opacity: 1;
+}
+
+.sub-heading{
+	top: 935px;
+	left: 207px;
+	width: 625px;
+	height: 35px;
+	text-align: left;
+	font: normal normal 300 30px/36px Helvetica Neue;
+	letter-spacing: 0px;
+	color: #9CD97C;
+	opacity: 1;
+}
+
+.text-503592{
+	color: #503592;
+}
+.text-B42997{
+	color: #B42997;
+}
+.text-D9008F{
+	color: #D9008F;
+}
+.text-351EB4{
+	color: #351EB4;
+}
+
+.bg-stats{
+	background: transparent linear-gradient(90deg, #411FB1 0%, #7524A5 50%, #B42997 100%) 0% 0% no-repeat padding-box;
+
+}
+.btn-primary{
+	color: #FAFAFA;
+	border-color:transparent;
+	background: transparent linear-gradient(90deg, #411FB1 0%, #7524A5 50%, #B42997 100%) 0% 0% no-repeat padding-box;
+
+}

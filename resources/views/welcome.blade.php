@@ -8,9 +8,8 @@
     <div class="container hero hero-responsive">
         <div class="row  align-items-center z-index-2 position-relative text-center">
             <div class="col-12">
-                <h1 class="display-4  text-white mb-2">Increased Muscle Strenght and Tone </h1>
-                <p class="text-white font-weight-300 mb-5 ">Learn about the different types of yoga and how it can be used as a tool to help you stay healthy.
-                </p>
+                <h1 class="display-4  text-white mb-2 heading">Increased Muscle Strength and Tone</h1>
+                <p class="font-weight-300 mb-5 sub-heading ">Learn about how yoga can help you stay healthy</p>
                 <a href="#rsvp" class="btn btn-secondary   scroll">Make an Appointment</a>
             </div>
         </div>
@@ -32,8 +31,8 @@
             <div class="col-md-5 mb-5 mb-lg-0 text-center">
                 <img class="mb-4 max-width-9" src="{{asset('frontend/assets/svg/logo-pink.svg')}}" alt="">
                 <div class="mb-4">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">what we do</span>
-                    <h1 class="mb-0">Ho We Are ?</h1>
+                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">what we do</span>
+                    <h1 class="mb-0 text-D9008F">Ho We Are ?</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
                 <p class="mb-4">Mountain Pose is the base for all standing poses it gives
@@ -78,8 +77,8 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">what we do</span>       
-                    <h1 class="mb-0">Our Main Services</h1>
+                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">what we do</span>       
+                    <h1 class="mb-0 text-D9008F">Our Main Services</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
             </div>
@@ -231,8 +230,8 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">free your soul</span>       
-                    <h1 class="mb-0">Yoga Benefits</h1>
+                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">free your soul</span>       
+                    <h1 class="mb-0 ext-D9008F">Yoga Benefits</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
             </div>
@@ -624,7 +623,7 @@
                     </span>
                 </a>
                 <h3 class="h5 text-white mt-3 mb-0">Yoga training for Everybody</h3>
-                <span class="font-size-14 text-white">Play demo course</span>
+                <span class="font-size-14 text-B42997">Play course</span>
             </div>
         </div>
     </div>
@@ -641,8 +640,8 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">choose program</span>       
-                    <h1 class="mb-0">Classes Schedule</h1>
+                    <span class="text-uppercase font-secondary font-size-12 text-503592">choose program</span>       
+                    <h1 class="mb-0 text-D9008F">Yoga Positions</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
             </div>
@@ -650,7 +649,7 @@
         <div class="row">
             <div class="col-lg-12 clearfix mb-5 mb-lg-0">
                 <div class="p-6 p-3 shadow radius-2">
-                    <h6 class="h5 text-secondary mb-5 text-center">2020 Schedule</h6>
+                    <h6 class="h5 text-B42997 mb-5 text-center">2020 Schedule</h6>
                     <table class="table table-borderless">
                         <thead class="text-center">
                             <tr>
@@ -757,13 +756,13 @@
         </div>
     </div>
 </section>
-<section id="stats" class="bg-primary spacer-double-sm">
+<section id="stats" class="bg-stats spacer-double-sm">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/orchid-white.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">560</h2>
@@ -774,7 +773,7 @@
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/buddha-white.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">30</h2>
@@ -785,7 +784,7 @@
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/buddha-white.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">20</h2>
@@ -796,7 +795,7 @@
             <div class="col-lg-3 col-md-6 ">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/orchid-white.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">40</h2>
@@ -944,12 +943,10 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">Choose a plan</span>       
-                    <h1 class="mb-0">Pricing Plans</h1>
+                    <span class="text-uppercase text-503592 font-secondary font-size-12">Choose a plan</span>       
+                    <h1 class="mb-0 text-D9008F">Pricing Plans</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
-                    <p class=" mb-0 pt-3 lead w-md-60 mx-auto">Mountain Pose is the base for all standing poses it gives
-                        you a sense of how to ground in to your feet and feel the earth
-                        below you.
+                    <p class=" mb-0 pt-3 lead w-md-60 mx-auto">Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like “simply standing,” but there is a ton going on
                     </p>
                 </div>
             </div>
@@ -1052,12 +1049,10 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">best moments</span>       
-                    <h1 class="mb-0">Yoga Gallery</h1>
+                    <span class="text-uppercase text-503592 font-secondary font-size-12">best moments</span>       
+                    <h1 class="mb-0 text-D9008F">Yoga Gallery</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
-                    <p class=" mb-0 pt-3 lead w-md-60 mx-auto">Mountain Pose is the base for all standing poses it gives
-                        you a sense of how to ground in to your feet and feel the earth
-                        below you.
+                    <p class=" mb-0 pt-3 lead w-md-60 mx-auto">MMountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may
                     </p>
                 </div>
             </div>
@@ -1132,8 +1127,8 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">from the blog</span>       
-                    <h1 class="mb-0">Latest Posts &amp; Articles</h1>
+                    <span class="text-uppercase text-503592 font-secondary font-size-12">from the blog</span>       
+                    <h1 class="mb-0 text-D9008F">Latest Posts &amp; Articles</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                     <p class=" mb-0 pt-3 lead w-md-60 mx-auto">Mountain Pose is the base for all standing poses it gives
                         you a sense of how to ground in to your feet and feel the earth
