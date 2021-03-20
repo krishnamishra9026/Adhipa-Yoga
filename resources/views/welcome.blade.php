@@ -6,11 +6,11 @@
 <section class="gradient-overlay gradient-overlay-dark ">
     <img class="bg-image" src="{{asset('frontend/assets/img/1.jpg')}}" alt="">
     <div class="container hero hero-responsive">
-        <div class="row  align-items-center z-index-2 position-relative text-center">
+        <div class="row  align-items-center z-index-2 position-relative">
             <div class="col-12">
                 <h1 class="display-4  text-white mb-2 heading">Increased Muscle Strength and Tone</h1>
                 <p class="font-weight-300 mb-5 sub-heading ">Learn about how yoga can help you stay healthy</p>
-                <a href="#rsvp" class="btn btn-secondary   scroll">Make an Appointment</a>
+                <a href="#rsvp" class="btn btn-gradient scroll text-white">Make an Appointment</a>
             </div>
         </div>
     </div>
@@ -264,59 +264,50 @@
             </div>
             <div class="col-md-5 col-lg-4">
                 <div class="mr-n w-100">
-                    <div class="media align-items-center mb-4 shadow p-1 radius-3 min-height-70" >
+                    <div class="media align-items-center mb-4 bg-media p-1 radius-3 min-height-70" >
                         <span class="p-2 mr-3 ml-3">
-                            <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/apple.svg')}}" alt="">
+                            <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                         </span>
                         <div class="media-body">
-                            <span class="font-secondary font-size-17 text-secondary-2">Increased flexibility.</span>
+                            <span class="font-secondary font-size-17 text-white">Increased flexibility.</span>
                         </div>
                     </div>
                 </div>
-                <div class="media align-items-center mb-4 shadow p-1 radius-3 min-height-70" >
+                <div class="media align-items-center mb-4 bg-media p-1 radius-3 min-height-70" >
                     <span class=" p-2 mr-3 ml-3">
-                        <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/lotus.svg')}}" alt="">
+                        <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
-                        <span class="font-secondary font-size-17 text-secondary-2">Increased muscle strength</span>
+                        <span class="font-secondary font-size-17 text-white">Increased muscle strength</span>
                     </div>
                 </div>
                 <div class="mr-n w-100">
-                    <div class="media align-items-center mb-4 shadow p-1 radius-3 min-height-70" >
+                    <div class="media align-items-center mb-4 bg-media p-1 radius-3 min-height-70" >
                         <span class=" p-2 mr-3 ml-3">
-                            <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/orchid.svg')}}" alt="">
+                            <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                         </span>
                         <div class="media-body">
-                            <span class="font-secondary font-size-17 text-secondary-2">Cardio and circulatory health</span>
+                            <span class="font-secondary font-size-17 text-white">Cardio and circulatory health</span>
                         </div>
                     </div>
                 </div>
-                <div class="media align-items-center mb-4 shadow p-1 radius-3 min-height-70" >
+                <div class="media align-items-center mb-4 bg-media p-1 radius-3 min-height-70" >
                     <span class=" p-2 mr-3 ml-3">
-                        <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/buddha.svg')}}" alt="">
+                        <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
-                        <span class="font-secondary font-size-17 text-secondary-2">Increased muscle strength</span>
+                        <span class="font-secondary font-size-17 text-white">Increased muscle strength</span>
                     </div>
                 </div>
                 <div class="mr-n w-100">
-                    <div class="media align-items-center shadow p-1 radius-3 min-height-70" >
+                    <div class="media align-items-center bg-media p-1 radius-3 min-height-70" >
                         <span class=" p-2 mr-3 ml-3">
-                            <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/cardiogram.svg')}}" alt="">
+                            <img class="img-fluid max-width-2" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                         </span>
                         <div class="media-body">
-                            <span class="font-secondary font-size-17 text-secondary-2">Protection from injury</span>
+                            <span class="font-secondary font-size-17 text-white">Protection from injury</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="mt-5 pt-5 text-center"> 
-                    <a class="mr-2 btn btn-secondary btn-radius-bottom-left  mb-lg-0" href="#">
-                        View Our Gallery
-                    </a>
                 </div>
             </div>
         </div>
@@ -327,8 +318,8 @@
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">Basic yoga poses</span>       
-                    <h1 class="mb-0">Yoga Positions</h1>
+                    <span class="text-uppercase text-503592 font-secondary font-size-12 ">Basic yoga poses</span>       
+                    <h1 class="mb-0 text-D9008F">Yoga Positions</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
             </div>
@@ -339,7 +330,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-6.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -351,7 +342,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-7.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -363,7 +354,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-8.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -375,7 +366,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-9.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -387,7 +378,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-10.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -401,7 +392,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-11.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -413,7 +404,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-12.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -425,7 +416,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-13.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -437,7 +428,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pose-14.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -449,7 +440,7 @@
                     <div class="yoga-pose-icon-container text-muted">
                         <div class="yoga-pose-icon ">
                             <div class="yoga-pose-icon-inner">
-                                <img class="" src="{{asset('frontend/assets/svg/yoga-pos-2-active.svg')}}" alt="">
+                                <img class="" src="{{asset('frontend/assets/svg/Group 201.svg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -653,7 +644,7 @@
                     <table class="table table-borderless">
                         <thead class="text-center">
                             <tr>
-                                <th class=" text-secondary  font-size-14 text-uppercase">Time</th>
+                                <th class=" text-dark font-size-14 text-uppercase">Time</th>
                                 <th class="border-left  text-dark font-size-14 text-uppercase">
                                     Mon
                                 </th>
@@ -745,15 +736,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="mt-5 pt-5 text-center"> 
-                    <a class="mr-2 btn btn-secondary btn-radius-bottom-left  mb-lg-0" href="#">
-                        Make an Appointment
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <section id="stats" class="bg-stats spacer-double-sm">
@@ -762,7 +744,7 @@
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">560</h2>
@@ -773,7 +755,7 @@
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">30</h2>
@@ -784,7 +766,7 @@
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">20</h2>
@@ -795,7 +777,7 @@
             <div class="col-lg-3 col-md-6 ">
                 <div class="media align-items-center">
                     <span class="p-2 mr-4">
-                        <img class="max-width-3" src="{{asset('frontend/assets/svg/Icon simple-sentiayoga.svg')}}" alt="">
+                        <img class="max-width-3" src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h2 class="text-white">40</h2>
@@ -819,8 +801,8 @@
             </div>
             <div class="col-12 col-md-6 col-lg-5 offset-lg-1 spacer-double-lg">
                 <div class="mb-3 pb-3">
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">choose program</span>       
-                    <h1 class="mb-0">Make an Appointment</h1>
+                    <span class="text-uppercase text-503592 font-secondary font-size-12">choose program</span>       
+                    <h1 class="mb-0 text-D9008F">Make an Appointment</h1>
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
                 </div>
                 <form action="#">
@@ -831,14 +813,6 @@
                         <button class="btn w-50 btn-primary" type="submit">
                             <span class="mn-top">Get a free account</span>
                         </button>
-                    </div>
-                    <div class="custom-control custom-checkbox d-flex align-items-center">
-                        <input type="checkbox" class="custom-control-input" id="consultantNewsletters" name="consultantNewsletters">
-                        <label class="custom-control-label" for="consultantNewsletters">
-                            <span class="font-size-14 text-muted">
-                                Receive Newsletters from foxecoach.
-                            </span>
-                        </label>
                     </div>
                 </form>
             </div>
@@ -939,7 +913,7 @@
     </div>
 </section> --}}
 <section id="pricing">
-    <div class="container spacer-double-lg border-bottom">
+    <div class="container spacer-double-lg">
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
@@ -953,99 +927,43 @@
         </div>
         <div class="row justify-content-center align-items-center">
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                <div class="card border-0 bg-light shadow radius-2 text-center pt-6 pb-3">
-                    <header class="card-header border-0 p-0 ">
-                        <div class="table-price">
-                            <div class="table-price-border">
-                                <h3 class="mb-1 h4 ">Beginner</h3>
-                                <span class="h1 d-block font-base font-weight-600 mb-0">$90</span>
-                                <span class="font-size-14 font-secondary">Price per weeek</span>
-                            </div>
-                        </div>
-                    </header>
+                <div class="card text-center">
+                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
                     <div class="card-body">
-                        <ul class="list-group list-group-flush  mb-4">
-                            <li class="list-group-item">
-                                <h6 class="text-muted">Increased Flexibility.</h6>
-                            </li>
-                            <li class="list-group-item">
-                                <h6 class="text-muted">Cardio and Circulatory Health </h6>
-                            </li>
-                            <li class="list-group-item  py-2">
-                                <h6 class="text-muted">Protection from Injury. </h6>
-                            </li>
-                        </ul>
-                        <button type="button" class="btn   btn-secondary ">By It Now</button>
+                        <h5 class="card-title">Teaching a Yoga Class Phase I</h5>
+                        <p class="card-text">28 CLASSES | BEGINNERS</p>
+                        <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
+                        <button type="button" class="btn btn-B42997 text-white">$ 25.99</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4  mb-5 mb-lg-0">
-                <div class="card border-0 bg-light shadow radius-2 text-center pt-6 pb-3">
-                    <header class="card-header border-0 p-0 ">
-                        <div class="table-price">
-                            <div class="table-price-border">
-                                <h3 class="mb-1 h4 ">Advanced</h3>
-                                <span class="h1 d-block font-base font-weight-600 mb-0 text-secondary">$290</span>
-                                <span class="font-size-14 font-secondary">Price per weeek</span>
-                            </div>
-                        </div>
-                    </header>
+                <div class="card text-center">
+                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
                     <div class="card-body">
-                        <ul class="list-group list-group-flush  mb-4">
-                            <li class="list-group-item">
-                                <h6 class="text-muted">Increased Flexibility.</h6>
-                            </li>
-                            <li class="list-group-item">
-                                <h6 class="text-muted">Cardio and Circulatory Health </h6>
-                            </li>
-                            <li class="list-group-item  py-2">
-                                <h6 class="text-muted">Protection from Injury. </h6>
-                            </li>
-                        </ul>
-                        <button type="button" class="btn   btn-primary ">By It Now</button>
+                        <h5 class="card-title">Teaching a Yoga Class Phase I</h5>
+                        <p class="card-text">28 CLASSES | BEGINNERS</p>
+                        <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
+                        <button type="button" class="btn  btn-B42997 text-white">$ 25.99</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                <div class="card border-0 bg-light shadow radius-2 text-center pt-6 pb-3">
-                    <header class="card-header border-0 p-0 ">
-                        <div class="table-price">
-                            <div class="table-price-border">
-                                <h3 class="mb-1 h4">Private</h3>
-                                <span class="h1 d-block font-base font-weight-600 mb-0">$490</span>
-                                <span class="font-size-14 font-secondary">Price per weeek</span>
-                            </div>
-                        </div>
-                    </header>
+                <div class="card text-center">
+                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
                     <div class="card-body">
-                        <ul class="list-group list-group-flush  mb-4">
-                            <li class="list-group-item">
-                                <h6 class="text-muted">Increased Flexibility.</h6>
-                            </li>
-                            <li class="list-group-item">
-                                <h6 class="text-muted">Cardio and Circulatory Health </h6>
-                            </li>
-                            <li class="list-group-item  py-2">
-                                <h6 class="text-muted">Protection from Injury. </h6>
-                            </li>
-                        </ul>
-                        <button type="button" class="btn   btn-secondary ">By It Now</button>
+                        <h5 class="card-title">Teaching a Yoga Class Phase I</h5>
+                        <p class="card-text">28 CLASSES | BEGINNERS</p>
+                        <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
+                        <button type="button" class="btn btn-B42997 text-white">$ 25.99</button>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center mt-5 pt-5">
-            <div class="col-auto">
-                <div class="alert bg-light shadow mb-0 text-center radius-2">
-                    <p class="mb-0 small"><span class="mn-top">* Plan pricing may changes read our <a href="#" class="text-secondary">Terms</a> for more info.</span>
-                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <section id="gallery">
-    <div class="container spacer-double-lg border-bottom">
+    <div class="container spacer-double-lg">
         <div class="row">
             <div class="col">
                 <div class="mb-5 pb-5 text-center">
@@ -1139,14 +1057,8 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                <article class="card shadow radius-2  bg-light border-0 h-100 pt-3">
-                    <div class="p-5">
-                        <div class="post-img position-relative">
-                            <div class="post-img-border">
-                                <img class="card-img-top" src="{{asset('frontend/assets/img/17.jpg')}}" alt=""> 
-                            </div>
-                        </div>
-                    </div>
+                <article class="card bg-blog border-0 h-100 text-left">
+                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
                     <div class="card-body pt-3">
                         <div class="d-flex justify-content-between mb-3">
                             <div class="small d-flex">
@@ -1181,14 +1093,8 @@
                 </article>
             </div>
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 ">
-                <article class="card shadow radius-2 bg-light border-0 h-100 pt-3">
-                    <div class="p-5">
-                        <div class="post-img position-relative">
-                            <div class="post-img-border">
-                                <img class="card-img-top" src="{{asset('frontend/assets/img/18.jpg')}}" alt=""> 
-                            </div>
-                        </div>
-                    </div>
+                <article class="card bg-blog  border-0 h-100">
+                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
                     <div class="card-body pt-3">
                         <div class="d-flex justify-content-between mb-3">
                             <div class="small d-flex">
@@ -1223,14 +1129,8 @@
                 </article>
             </div>
             <div class="col-md-6 col-lg-4">
-                <article class="card radius-2 shadow bg-light border-0 h-100 pt-3">
-                    <div class="p-5">
-                        <div class="post-img position-relative">
-                            <div class="post-img-border">
-                                <img class="card-img-top" src="{{asset('frontend/assets/img/19.jpg')}}" alt=""> 
-                            </div>
-                        </div>
-                    </div>
+                <article class="card bg-blog border-0 h-100">
+                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
                     <div class="card-body pt-3">
                         <div class="d-flex justify-content-between mb-3">
                             <div class="small d-flex">
@@ -1247,7 +1147,7 @@
                                 11
                             </span>
                         </div>
-                        <h3 class="h5 ">
+                        <h3 class="h5 text-B42997">
                             <a href="#">Increased muscle strength</a>
                         </h3>
                         <p>Mountain Pose is the base for all standing poses it gives
@@ -1292,7 +1192,7 @@
                 </div>
                 <div class="media align-items-center mb-5">
                     <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
-                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/address.svg')}}" alt="">
+                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h4 class="h6 mb-0">Address</h4>
@@ -1301,7 +1201,7 @@
                 </div>
                 <div class="media align-items-center mb-5">
                     <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
-                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/email.svg')}}" alt="">
+                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h4 class="h6 mb-0">Phone Number</h4>
@@ -1310,7 +1210,7 @@
                 </div>
                 <div class="media align-items-center mb-5">
                     <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
-                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/phone.svg')}}" alt="">
+                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h4 class="h6 mb-0">Say Hello</h4>
@@ -1319,7 +1219,7 @@
                 </div>
                 <div class="media align-items-center mb-5">
                     <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
-                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/open.svg')}}" alt="">
+                        <img class="max-width-1 " src="{{asset('frontend/assets/svg/simple-sentiayoga.svg')}}" alt="">
                     </span>
                     <div class="media-body">
                         <h4 class="h6 mb-0">We are Open</h4>
@@ -1330,10 +1230,15 @@
             <div class="col-lg-5 mt-5 mt-lg-0">
                 <ul class="instafeed-list list-inline" id="instafeed">
                     <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-1.jpg')}}" /></a></li>
+
                     <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-2.jpg')}}" /></a></li>
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-3.jpg')}}" /></a></li>
+
+                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-6.jpg')}}" /></a></li>
+
                     <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-4.jpg')}}" /></a></li>
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-5.jpg')}}" /></a></li>
+
+                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-4.jpg')}}" /></a></li>
+
                     <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-6.jpg')}}" /></a></li>
                 </ul>
             </div>
