@@ -532,3 +532,160 @@ ul.instafeed-list li:nth-child(6) a:after {
     background-color: #fff;
     border-color: #fff;
 }
+/*************Responsive**************/
+@media screen and (max-width:767px){
+.heading {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font: normal normal bold 40px/50px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #FAFAFA;
+    opacity: 1;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+.hero-responsive {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.sub-heading {
+    color: #9CD97C;
+    font-family: 'Helvetica 45 Light', sans-serif;
+    font-size: 22px;
+    font-weight: 100;
+}
+#about .text-center h1 {
+    font-size: 35px;
+    color: #C90079 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    line-height: 41px;
+}
+.font-secondary {
+    font-size: 18px;
+}
+#about .text-center p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    line-height: 26px;
+    color: #191919;
+}
+#about .text-center .btn-secondary{
+	font-size: 15px;
+    padding: 10px 22px;
+}
+#services .text-center h1 {
+    font-size: 35px;
+    line-height: 44px;
+    color: #D9008F;
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-weight: 400;
+}
+.text-lh-xs {
+    font-size: 26px;
+}
+.tab-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #191919;
+}
+#benefits h1 {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 35px;
+    color: #D9008F;
+    line-height: 44px;
+}
+#services .btn-secondary{
+	font-size: 20px !important;
+}
+#services .btn-secondary svg {
+    width: 19px;
+    height: 19px;
+    position: relative;
+    bottom: 2px;
+}
+.bg-media .font-secondary {
+    color: #fff !important;
+    font-size: 15px !important;
+    font-family: 'Helvetica 65 Medium', sans-serif;
+}
+#poses h1 {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 35px;
+    color: #D9008F;
+    line-height: 44px;
+}
+#schedule h1 {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 35px;
+    color: #D9008F;
+    line-height: 44px;
+}
+#schedule h6 {
+    font-size: 22px;
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    line-height: 22px;
+}
+#appointment h1 {
+    color: #191919;
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    line-height: 44px;
+    font-weight: 600;
+    font-size: 26px;
+}
+.btn-primary {
+    color: #FAFAFA;
+    border-color: transparent;
+    background: transparent linear-gradient(
+90deg
+, #411FB1 0%, #7524A5 50%, #B42997 100%) 0% 0% no-repeat padding-box;
+    font-family: 'Helvetica 45 Light', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px 22px;
+    width: 100% !important;
+}
+#pricing h1 {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 35px;
+    color: #D9008F;
+    line-height: 44px;
+}
+#pricing .col p {
+    font-family: 'Roboto', sans-serif;
+    color: #191919;
+    line-height: 30px;
+}
+.card h5 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+#gallery h1 {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 35px;
+    color: #D9008F;
+    line-height: 44px;
+}
+#news h1 {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 35px;
+    color: #D9008F;
+    line-height: 44px;
+}
+ul.instafeed-list li {
+    width: 100% !important;
+}
+.spacer-xl-top {
+    padding-top: 0rem !important;
+}
+.spacer-one-bottom-lg {
+    padding-bottom: 0rem !important;
+}
+}
