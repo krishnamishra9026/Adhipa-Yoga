@@ -362,6 +362,8 @@ ul.instafeed-list li:nth-child(6) a:after {
     font-size: 19px;
     line-height: 37px;
     color: #191919;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 #video-cover h3 {
     font-family: 'Helvetica 65 Medium', sans-serif;
@@ -517,4 +519,16 @@ ul.instafeed-list li:nth-child(6) a:after {
 .input-group-append .btn-primary {
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
+}
+#services .btn-secondary {
+    color: #503592;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+#services .btn-secondary:hover {
+    background-color: #fff;
+    border-color: #fff;
 }

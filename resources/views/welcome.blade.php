@@ -258,7 +258,10 @@
 
                     <p class="mb-5">Mountain Pose is the base for all standing poses it gives<br class="d-none d-lg-inline-block">  you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like "simply standing," but there is a ton going on.</p>
 
-                    <a class="btn btn-sm btn-secondary mr-2" href="#">View Our Gallery</a>
+                    <a class="btn btn-sm btn-secondary mr-2" href="#">View Our Gallery <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" stroke="#D9008F" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  <path fill-rule="evenodd" stroke="#D9008F" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg></a>
 
                     {{-- <a class="btn btn-sm btn-primary " href="#">Make an Appointment</a> --}}
 
@@ -2476,34 +2479,7 @@
 </section>
 
 
-   <p>
-      <a href="javascript: popuponclick()">Open Popup Window</a>
-   </p>
 
-   <p>
-      <a href="javascript: closepopup()">Close the Popup Window</a>
-   </p>
-   <script type="text/javascript">
-   function popuponclick()
-   {
-      my_window = window.open("",
-       "mywindow","status=1,width=350,height=150");
-
-      my_window.document.write('<h1>The Popup Window</h1>');
-   }
-
-   function closepopup()
-   {
-      if(false == my_window.closed)
-      {
-         my_window.close ();
-      }
-      else
-      {
-         alert('Window already closed!');
-      }
-   }
-</script>
 @endsection
 
 @push('scripts')
