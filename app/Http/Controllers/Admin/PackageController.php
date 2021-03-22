@@ -65,7 +65,7 @@ class PackageController extends Controller
         $strinarr = @implode(',', $missing);
 
         $input['workout_days'] = $workout_days;
-        $input['off_days'] = $strinarr;
+        // $input['off_days'] = $strinarr;
 
         $new_package = Package::create($input);
         return redirect()->route('admin.packages.index')->with(['success'=>'Package Saved Successfully!']);
@@ -117,8 +117,7 @@ class PackageController extends Controller
             $package->image = $path;
         }
         $package->name = $request->name;
-        $package->type = $request->type;
-        $package->includes = $request->includes;
+        $package->no_of_classes = $request->no_of_classes;
 
         $package->sort = $request->sort;
 
@@ -138,24 +137,12 @@ class PackageController extends Controller
 
         $strinarr = @implode(',', $missing);
 
-        $package->off_days = $strinarr;
+        // $package->off_days = $strinarr;
 
         $package->workout_days = $workout_days;
 
-        $package->target = $request->target;
 
         $package->description = $request->description;
-
-        if(isset($request->description)){
-            $package->name_arabic = $request->name_arabic;
-        }
-        if(isset($request->target_arabic)){
-            $package->target_arabic = $request->target_arabic;
-        }
-        if(isset($request->description_arabic)){
-            $package->description_arabic = $request->description_arabic;
-        }
-
 
         if ($request->has('status')) {
 

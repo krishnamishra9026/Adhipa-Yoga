@@ -112,24 +112,12 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6 col-md-12">
-					<label for="package_type">Select Package Type</label>
+				<div class="col-xl-6 col-md-12 mb-3">
+					<label for="no_of_classes">No of classes in Package</label>
 					<div class="input-group">
-						<select class="form-control" name="type" id="type" required>
-							<option value="online">Online</option>
-							<option value="center">center</option>
-						</select>
+						<input type="number" class="form-control" name="no_of_classes" id="no_of_classes"  required>
 						<div class="invalid-feedback">
-							Select Package type.
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<label for="targets">Package Targets</label>
-					<div class="input-group">
-						<textarea rows="5" id="targets" name="target" class="form-control" placeholder="Write about those people for whom this Package is adviced." required></textarea>
-						<div class="invalid-feedback">
-							Please Write about those people for whom this Package is adviced.
+							Please Enter No of classes in Package.
 						</div>
 					</div>
 				</div>

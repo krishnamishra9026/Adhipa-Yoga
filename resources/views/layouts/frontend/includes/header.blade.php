@@ -32,9 +32,10 @@
 
                            <li><a class=" nav-link scroll" href="#poses">Poses</a></li>
 
-                           <li><a class=" nav-link scroll" href="#trainer">Trainer</a></li>
+                           <li><a class=" nav-link scroll" href="#testtimonials">Testimonials</a></li>
 
                            <li><a class=" nav-link scroll" href="#schedule">Schedule</a></li>
+                           <li><a class=" nav-link scroll" href="#news">Blogs</a></li>
 
                            <li><a class=" nav-link scroll" href="#gallery">Gallery</a></li>
 

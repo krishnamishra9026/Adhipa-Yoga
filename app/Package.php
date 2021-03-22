@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Package extends Model
 {
      protected $table = "packages";
-    protected $fillable = ['name', 'includes','sort','workout_days','off_days', 'price', 'validity', 'target', 'description','status','image','type'];
+    protected $fillable = ['name','sort','workout_days', 'price', 'validity', 'description','status','image','no_of_classes'];
     public $timestamps = true;
 }

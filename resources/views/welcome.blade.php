@@ -1634,7 +1634,7 @@
 
 </section>
 
-{{-- <section id="testtimonials">
+<section id="testtimonials">
 
     <div class="container spacer-double-lg border-bottom">
 
@@ -1818,7 +1818,7 @@
 
     </div>
 
-</section> --}}
+</section>
 
 <section id="pricing">
 
@@ -1862,7 +1862,7 @@
 
                         <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
 
-                        <button type="button" class="btn btn-B42997 text-white">$ 25.99</button>
+                        <button type="button" class="btn w-50 btn-primary">$ 25.99</button>
 
                     </div>
 
@@ -1884,7 +1884,7 @@
 
                         <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
 
-                        <button type="button" class="btn  btn-B42997 text-white">$ 25.99</button>
+                        <button type="button" class="btn w-50 btn-primary">$ 25.99</button>
 
                     </div>
 
@@ -1906,7 +1906,7 @@
 
                         <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
 
-                        <button type="button" class="btn btn-B42997 text-white">$ 25.99</button>
+                        <button type="button" class="btn w-50 btn-primary">$ 25.99</button>
 
                     </div>
 

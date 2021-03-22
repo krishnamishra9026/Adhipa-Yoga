@@ -57,15 +57,11 @@
 								</div>
 							</div>
 							<div class="col-xl-6 col-md-12 mb-3">
-								<label for="includes">Package Includes</label>
+								<label for="no_of_classes">No of classes in Package</label>
 								<div class="input-group">
-									<select class="form-control" name="includes" id="includes" required>
-										<option value="both" @if($package->includes == "both") selected @endif>Both Workout & Diet</option>
-										<option value="workout" @if($package->includes == "workout") selected @endif>Workout Only</option>
-										<option value="diet" @if($package->includes == "diet") selected @endif>Diet Only</option>
-									</select>
+									<input type="number" class="form-control" name="no_of_classes" id="no_of_classes" value="{{ $package->no_of_classes }}" required>
 									<div class="invalid-feedback">
-										Please select what your Package Includes.
+										Please Enter No of classes in Package.
 									</div>
 								</div>
 							</div>
@@ -80,7 +76,7 @@
 							</div>
 							<div class="col-xl-6 col-md-12">
 								<div class="input-group">
-									<label for="workout_days">Workout Days</label>
+									<label for="workout_days">Days</label>
 									<select data-placeholder="Please Select Workout Days" class="js-example-basic-multiple form-control" name="workout_days[]" multiple="multiple" style="width: 100%">
 										<option value="">Please Select days</option>
 										<option @if(in_array(1, $package->workout_days)) selected @endif value="1">1</option>
@@ -108,27 +104,6 @@
 									<input type="text" class="form-control" name="validity" id="validity" placeholder="Package Validity (In Days)" value="{{ $package->validity }}" required>
 									<div class="invalid-feedback">
 										Enter Validity For Package.
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-6 col-md-12">
-								<label for="package_type">Select Package Type</label>
-								<div class="input-group">
-									<select class="form-control" name="type" id="type" required>
-										<option value="online" @if($package->type == "online") selected @endif>Online</option>
-										<option value="center" @if($package->type == "center") selected @endif>Center</option>
-									</select>
-									<div class="invalid-feedback">
-										Select Package type.
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<label for="targets">Package Targets</label>
-								<div class="input-group">
-									<textarea rows="5" id="targets" name="target" class="form-control" placeholder="Write about those people for whom this Package is adviced." required>{{ $package->target }}</textarea>
-									<div class="invalid-feedback">
-										Please Write about those people for whom this Package is adviced.
 									</div>
 								</div>
 							</div>
