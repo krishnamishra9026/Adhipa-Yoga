@@ -1604,27 +1604,52 @@
 
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
 
+                    @if(Session::has('success'))
+                    <div class="alert alert-success">
+                      {{ Session::get('success') }}
+                  </div>
+                  @endif
+
                 </div>
 
-                <form action="#">
+                <form method="post" class="row" action="{{ route('appointment.store') }}">
+                  {{csrf_field()}}
 
-                    <div class="d-flex flex-column  form-group">
+                  <div class="d-flex flex-column  form-group">
 
-                        <input class="form-control mb-3 h-100" name="Name" placeholder="Name" type="text">
+                    <input class="form-control @error('name') is-invalid @enderror  mb-3 h-100" name="name" placeholder="Name" value="{{ old('name') }}" type="text">
 
-                        <input class="form-control mb-3 h-100" name="email" placeholder="Email" type="email">
+                     @error('name')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror
 
-                        <textarea class="form-control mb-3 resize-n" rows="6" name="description" placeholder="Type your message ..."></textarea>
+                    <input class="form-control @error('email') is-invalid @enderror  mb-3 h-100" name="email" placeholder="Email" value="{{ old('email') }}" type="email">
 
-                        <button class="btn w-50 btn-primary" type="submit">
+                     @error('email')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror
 
-                            <span class="mn-top">Get a free account</span>
+                    <textarea class="form-control @error('message') is-invalid @enderror mb-3 resize-n" rows="6" name="message" placeholder="Type your message ...">{{ old('message') }}</textarea>
 
-                        </button>
+                     @error('message')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror
 
-                    </div>
+                    <button class="btn w-50 btn-primary" type="submit">
 
-                </form>
+                        <span class="mn-top">Get a free account</span>
+
+                    </button>
+
+                </div>
+
+            </form>
 
             </div>
 

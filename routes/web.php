@@ -33,6 +33,7 @@ Route::get('/contactus', function () {
 });
 
 Route::resource('contact-us', 'ContactController');
+Route::resource('appointment', 'AppointmentController');
 
 Route::get('/terms-conditions', function () {
     return view('terms-conditions');
