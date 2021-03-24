@@ -1596,7 +1596,7 @@
 
             <div class="col-md-6 col-lg-5 col-xs-12 offset-lg-1 spacer-double-lg">
 
-                <div class="mb-3 pb-3">
+                <div id="myDivAppointment" class="mb-3 pb-3">
 
                     <span class="text-uppercase text-503592 font-secondary font-size-12">choose program</span>       
 
@@ -1612,12 +1612,12 @@
 
                 </div>
 
-                <form method="post" class="row" action="{{ route('appointment.store') }}">
+                <form method="post" action="{{ route('appointment.store') }}">
                   {{csrf_field()}}
 
                   <div class="d-flex flex-column  form-group">
 
-                    <input class="form-control @error('name') is-invalid @enderror  mb-3 h-100" name="name" placeholder="Name" value="{{ old('name') }}" type="text">
+                    <input class="form-control @error('name') is-invalid @enderror  mb-3 h-100" name="name" placeholder="Name" value="{{ old('name') }}" required type="text">
 
                      @error('name')
                 <span class="invalid-feedback" role="alert">
@@ -1625,7 +1625,7 @@
                 </span>
                 @enderror
 
-                    <input class="form-control @error('email') is-invalid @enderror  mb-3 h-100" name="email" placeholder="Email" value="{{ old('email') }}" type="email">
+                    <input class="form-control @error('email') is-invalid @enderror  mb-3 h-100" name="email" placeholder="Email" value="{{ old('email') }}" required type="email">
 
                      @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -1633,7 +1633,7 @@
                 </span>
                 @enderror
 
-                    <textarea class="form-control @error('message') is-invalid @enderror mb-3 resize-n" rows="6" name="message" placeholder="Type your message ...">{{ old('message') }}</textarea>
+                    <textarea class="form-control @error('message') is-invalid @enderror mb-3 resize-n" rows="6" name="message" required placeholder="Type your message ...">{{ old('message') }}</textarea>
 
                      @error('message')
                 <span class="invalid-feedback" role="alert">
@@ -2508,7 +2508,13 @@
 @endsection
 
 @push('scripts')
-
-
+<script type="text/javascript">
+    @if (\Session::has('success'))
+        $(window).scrollTop($('#myDivAppointment').offset().top);
+    @endif
+    @error('email') 
+        $(window).scrollTop($('#myDivAppointment').offset().top);
+    @enderror
+</script>
 
 @endpush

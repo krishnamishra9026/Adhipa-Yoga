@@ -689,3 +689,8 @@ ul.instafeed-list li {
     padding-bottom: 0rem !important;
 }
 }
+span.invalid-feedback {
+    margin-bottom: 13px;
+    margin-top: -14px;
+    margin-left: 28px;
+}

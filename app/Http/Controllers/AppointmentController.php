@@ -51,6 +51,8 @@ class AppointmentController extends Controller
             'password' => bcrypt('password')
         ]);
 
+        $user->roles()->sync([0 => 2]);
+
           $appointment = new Appointment;
 
         $appointment->user_id = $user->id;

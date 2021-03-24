@@ -27,5 +27,6 @@
 	<script src="{{asset('frontend/js/placeholders.min.js')}}"></script>
 	<script src="{{asset('frontend/js/instafeed.min.js')}}"></script>
 	<script src="{{asset('frontend/js/script.js')}}"></script>
+	 @stack('scripts')
 </body>
 </html>
