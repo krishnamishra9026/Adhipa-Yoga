@@ -1973,127 +1973,35 @@
 
         <div class="row gap">
 
-            <div class="col-md-3 col-md  mb-2">
+        <?php 
+        // query the user media
+        $fields = "id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username";
+        $token = "IGQVJWX2UyR0VNem1tT1pTU253SEdnTkZASUmRDT2hxVFNHdDg5eXZAYZA0RwNURJNk1jMnVEdVNHQzlEaW94a3hKNzJIbUxuX2d4emo1MmpnTUJGUFNvaHM5WkstT3FaSlp5ZAk1CUkp4UEFtNXc4Si0wZAAZDZD";
+        $limit = 6;
+         
+        $json_feed_url="https://graph.instagram.com/me/media?fields={$fields}&access_token={$token}&limit={$limit}";
+        $json_feed = @file_get_contents($json_feed_url);
+        $contents = json_decode($json_feed, true, 512, JSON_BIGINT_AS_STRING);
+        foreach($contents["data"] as $post){
+             
+            $username = isset($post["username"]) ? $post["username"] : "";
+            $caption = isset($post["caption"]) ? $post["caption"] : "";
+            $media_url = isset($post["media_url"]) ? $post["media_url"] : "";
+            $permalink = isset($post["permalink"]) ? $post["permalink"] : "";
+            $media_type = isset($post["media_type"]) ? $post["media_type"] : "";
 
-                <a class="venobox hover-effect d-block vbox-item" data-overlay="rgba(52,58,64,.6)" href="assets/img/11.jpg')}}">
+            if($media_type=="VIDEO"){
 
-                    <span class="hover-effect-container">
+            }
+            else{
+                echo ' <div class="col-md-4 col-md  mb-2">';
+                echo " <a href='{$permalink}' target='_blank'><img src='{$media_url}' class='img-fluid img-thumbnail'/></a>";
+                echo '</div>';
+            }
 
-                        <span class="hover-effect-icon ">
-
-                            <span class=" fas fa-eye top-icon "></span>
-
-                        </span>
-
-                    </span>
-
-                    <div class="gall gall-bg-img gall-1">
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-6 col-md mb-2">
-
-                <a class="venobox hover-effect d-block vbox-item" data-overlay="rgba(52,58,64,.6)" href="assets/img/14.jpg')}}">
-
-                    <span class="hover-effect-container">
-
-                        <span class="hover-effect-icon ">
-
-                            <span class=" fas fa-eye top-icon "></span>
-
-                        </span>
-
-                    </span>
-
-                    <div class="gall gall-bg-img gall-2"></div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-3 d-none d-md-block mb-2">
-
-                <a class="venobox hover-effect d-block vbox-item" data-overlay="rgba(52,58,64,.6)" href="assets/img/13.jpg')}}">
-
-                    <span class="hover-effect-container">
-
-                        <span class="hover-effect-icon ">
-
-                            <span class=" fas fa-eye top-icon "></span>
-
-                        </span>
-
-                    </span>
-
-                    <div class="gall gall-bg-img gall-3"></div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-3 col-md mb-2 mb-md-0">
-
-                <a class="venobox hover-effect d-block vbox-item" data-overlay="rgba(52,58,64,.6)" href="assets/img/12.jpg')}}">
-
-                    <span class="hover-effect-container">
-
-                        <span class="hover-effect-icon">
-
-                            <span class=" fas fa-eye top-icon "></span>
-
-                        </span>
-
-                    </span>
-
-                    <div class="gall gall-bg-img gall-4"></div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-3 mb-2 mb-md-0">
-
-                <a class="venobox  hover-effect d-block vbox-item" data-overlay="rgba(52,58,64,.6)" href="assets/img/15.jpg')}}">
-
-                    <span class="hover-effect-container">
-
-                        <span class="hover-effect-icon">
-
-                            <span class=" fas fa-eye top-icon "></span>
-
-                        </span>
-
-                    </span>
-
-                    <div class="gall gall-bg-img gall-5"></div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-6 col-md">
-
-                <a class="venobox  hover-effect d-block vbox-item" data-overlay="rgba(52,58,64,.6)" href="assets/img/16.jpg')}}">
-
-                    <span class="hover-effect-container">
-
-                        <span class="hover-effect-icon">
-
-                            <span class=" fas fa-eye top-icon "></span>
-
-                        </span>
-
-                    </span>
-
-                    <div class="gall gall-bg-img gall-6"></div>
-
-                </a>
-
-            </div>
+        }
+        ?>
+         
 
         </div>
 
