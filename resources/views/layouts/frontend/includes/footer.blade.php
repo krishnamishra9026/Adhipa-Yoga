@@ -46,13 +46,29 @@
 
          </div>
 
-         <div class="col-md-6 col-sm-6 mb-4 mb-sm-0">
+         <div class="col-md-6 col-sm-6 mb-4 mb-sm-0" id="myDiv">
 
-            <form>
+             @if (\Session::has('success_news'))
+              <div class="alert alert-success">
+                <p>{{ \Session::get('success_news') }}</p>
+              </div><br/>
+              @endif
+              @if (\Session::has('failure_news'))
+              <div class="alert alert-danger">
+                <p>{{ \Session::get('success_news') }}</p>
+              </div><br/>
+              @endif
+              <form class="subscribe_form" method="post" action="{{url('newsletter/store')}}">
+               @csrf
 
                <div class="input-group">
 
-                  <input type="email" class="form-control" name="email" placeholder="Your email address">
+                  <input type="email" required name="email" class="form-control @error('email') is-invalid @enderror" class="form-control" name="email" placeholder="Your email address">
+                  @error('email')
+                  <span class="invalid-feedback" role="alert">
+                     <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
 
                   <div class="input-group-append">
 

@@ -22,7 +22,7 @@
 
                 <p class="font-weight-300 mb-5 sub-heading ">Learn about how yoga can help you stay healthy</p>
 
-                <a href="#rsvp" class="btn btn-gradient scroll text-white">Make an Appointment</a>
+                <a href="#appointment" class="btn btn-gradient scroll text-white">Make an Appointment</a>
 
             </div>
 
@@ -76,7 +76,7 @@
 
                 you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like "simply standing," but there is a ton going on.</p>
 
-                <a href="#rsvp" class="btn btn-secondary btn-sm">Make an Appointment</a>
+                <a href="#appointment" class="btn btn-secondary btn-sm">Make an Appointment</a>
 
             </div>
 
@@ -1669,9 +1669,9 @@
 
                 <div class="mb-5 pb-5 text-center">
 
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">Testimonials</span>       
+                    <span class="text-uppercase text-503592 font-secondary font-size-12">Testimonials</span>       
 
-                    <h1 class="mb-0">What They Say</h1>
+                    <h1 class="mb-0 text-D9008F">What They Say</h1>
 
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
 
@@ -1711,11 +1711,11 @@
 
                         </div>
 
-                        <div class="card-footer border-0  pt-0 px-5 pb-0 mt-3">
+                        <div class="card-footer border-0  pt-0 px-5 pb-3 mt-3">
 
-                            <span class="h6 font-base font-weight-600 mb-0">Jeremy Spivak</span>
+                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Jeremy Spivak</span>
 
-                            <small class="d-block text-muted">Business Manager</small>
+                            <small class="d-block text-503592">Business Manager</small>
 
                         </div>
 
@@ -1749,11 +1749,11 @@
 
                         </div>
 
-                        <div class="card-footer border-0  pt-0 px-5 pb-0  mt-3">
+                        <div class="card-footer border-0  pt-0 px-5 pb-3  mt-3">
 
-                            <span class="h6 font-base font-weight-600 mb-0">Melissa Wagner</span>
+                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Melissa Wagner</span>
 
-                            <small class="d-block text-muted">Business Manager</small>
+                            <small class="d-block text-503592">Business Manager</small>
 
                         </div>
 
@@ -1787,11 +1787,11 @@
 
                         </div>
 
-                        <div class="card-footer border-0  pt-0 px-5 pb-0 mt-3">
+                        <div class="card-footer border-0  pt-0 px-5 pb-3 mt-3">
 
-                            <span class="h6 font-base font-weight-600 mb-0">Stacy Taylor</span>
+                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Stacy Taylor</span>
 
-                            <small class="d-block text-muted">Business Manager</small>
+                            <small class="d-block text-503592">Business Manager</small>
 
                         </div>
 
@@ -1825,11 +1825,11 @@
 
                         </div>
 
-                        <div class="card-footer border-0  pt-0 px-5 pb-0  mt-3">
+                        <div class="card-footer border-0  pt-0 px-5 pb-3  mt-3">
 
-                            <span class="h6 font-base font-weight-600 mb-0">Renee Mu</span>
+                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Renee Mu</span>
 
-                            <small class="d-block text-muted">Business Manager</small>
+                            <small class="d-block text-503592">Business Manager</small>
 
                         </div>
 
@@ -2515,6 +2515,15 @@
     @error('email') 
         $(window).scrollTop($('#myDivAppointment').offset().top);
     @enderror
+
+     @if (\Session::has('success_news'))
+      $(window).scrollTop($('#myDiv').offset().top);
+    @endif
+
+    @if (\Session::has('success'))
+      $(window).scrollTop($('#myDivContact').offset().top);
+    @endif
+    
 </script>
 
 @endpush

@@ -23,7 +23,9 @@ a{
 	color: #351EB4
 
 }
-
+.shadow {
+    box-shadow: 3px 3px 3px #ffffff, -3px -3px 3px #fafafa;
+}
 .heading {
     top: 706px;
     left: 207px;
@@ -388,11 +390,20 @@ ul.instafeed-list li:nth-child(6) a:after {
     font-weight: 600;
 }
 #appointment h1 {
-    color: #191919;
     font-family: 'Helvetica 65 Medium', sans-serif;
     line-height: 74px;
     font-weight: 600;
     font-size: 40px;
+}
+
+#testtimonials h1{
+    font-family: 'Helvetica 65 Medium', sans-serif;
+    font-size: 60px;
+    color: #D9008F;
+    line-height: 74px;
+}
+#testtimonials .owl-item .card{
+    background-color: #f5e3f2 !important;
 }
 #pricing h1{
     font-family: 'Helvetica 65 Medium', sans-serif;
@@ -688,9 +699,4 @@ ul.instafeed-list li {
 .spacer-one-bottom-lg {
     padding-bottom: 0rem !important;
 }
-}
-span.invalid-feedback {
-    margin-bottom: 13px;
-    margin-top: -14px;
-    margin-left: 28px;
 }

@@ -1485,7 +1485,7 @@ background: #EAEAEA;
 
     margin-top: -60px;
 
-    background-color: #f3f5f8;
+    /*background-color: #f3f5f8;*/
 
     width: 115px;
 
@@ -1523,7 +1523,7 @@ background: #EAEAEA;
 
     content: "";
 
-    position: absolute;
+    /*position: absolute;*/
 
     top: 0;
 
@@ -1543,7 +1543,7 @@ background: #EAEAEA;
 
 }
 
-.testimonial-image:before {
+/*.testimonial-image:before {
 
     content: "";
 
@@ -1563,7 +1563,7 @@ background: #EAEAEA;
 
     right: 6px;
 
-}
+}*/
 
 .play-icon::before {
 

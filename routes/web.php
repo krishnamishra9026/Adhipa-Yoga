@@ -71,6 +71,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('roles', 'RolesController');
 
+    Route::resource('newsletters','NewsletterController');
+
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
 
     Route::resource('users', 'UsersController');
@@ -94,3 +96,4 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::get('calendar', 'CalendarController@index')->name('calendar.index');
     
 });
+Route::post('newsletter/store','NewsletterController@store');
