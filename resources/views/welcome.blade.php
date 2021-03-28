@@ -2131,11 +2131,14 @@
 
         <div class="row">
 
+            @php $i = 0; @endphp
+      @foreach($blogs as $blog)
+
             <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
 
                 <article class="card bg-blog border-0 h-100 text-left">
 
-                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{asset('uploads/blogs/'.$blog->image)}}" alt="Card image cap">
 
                     <div class="card-body pt-3">
 
@@ -2149,7 +2152,7 @@
 
                                 </div>
 
-                                <span class="text-muted ">20th March</span>
+                                <span class="text-muted ">{{ \Carbon\Carbon::parse($blog->created_at)->format('d F') }}</span>
 
                             </div>
 
@@ -2163,7 +2166,7 @@
 
                                 </svg>
 
-                                13
+                                {{ rand(1,99) }}
 
                             </span>
 
@@ -2171,13 +2174,12 @@
 
                         <h2 class="h5 ">
 
-                            <a href="#">Cardio and circulatory health</a>
+                            <a href="#">{{ $blog->title }}</a>
 
                         </h2>
 
-                        <p>Mountain Pose is the base for all standing poses it gives
-
-                        you a sense of how to ground in to your feet. </p>
+                        <p> 
+                            {{ \Illuminate\Support\Str::limit($blog->description, 120, '...') }} </p>
 
                     </div>
 
@@ -2191,7 +2193,7 @@
 
                                 <span class="font-size-13 text-muted">By</span>
 
-                                <a class="font-size-13 text-dark" href="#">Jena Young</a>
+                                <a class="font-size-13 text-dark" href="#">{{ $blog->name }}</a>
 
                             </div>
 
@@ -2203,7 +2205,10 @@
 
             </div>
 
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 ">
+            @php $i++; @endphp
+      @endforeach   
+
+            {{-- <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 ">
 
                 <article class="card bg-blog  border-0 h-100">
 
@@ -2273,79 +2278,7 @@
 
                 </article>
 
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-
-                <article class="card bg-blog border-0 h-100">
-
-                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
-
-                    <div class="card-body pt-3">
-
-                        <div class="d-flex justify-content-between mb-3">
-
-                            <div class="small d-flex">
-
-                                <div class="mr-2">
-
-                                    <a href="#">Yoga</a>
-
-                                </div>
-
-                                <span class="text-muted ">14th March</span>
-
-                            </div>
-
-                            <span class="badge bg-primary text-white font-base">
-
-                                <svg version="1.1" class="badge-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 45.9" xml:space="preserve">
-
-                                    <path d="M51.9,14.4C51.2,6.1,45.2,0,37.8,0c-4.9,0-9.4,2.7-12,6.9C23.3,2.6,19,0,14.2,0C6.8,0,0.8,6.1,0.1,14.4
-
-                                    c-0.1,0.4-0.3,2.3,0.4,5.5c1.1,4.6,3.6,8.7,7.2,12l18.3,14l18.3-14c3.6-3.3,6.1-7.4,7.2-12C52.2,16.7,52,14.8,51.9,14.4z" fill="#ffffff"></path>
-
-                                </svg>
-
-                                11
-
-                            </span>
-
-                        </div>
-
-                        <h3 class="h5 text-B42997">
-
-                            <a href="#">Increased muscle strength</a>
-
-                        </h3>
-
-                        <p>Mountain Pose is the base for all standing poses it gives
-
-                        you a sense of how to ground in to your feet. </p>
-
-                    </div>
-
-                    <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
-
-                        <div class="media align-items-center">
-
-                            <img class="avatar-xs rounded-circle mr-2" src="{{asset('frontend/assets/img/5.jpg')}}" alt="">
-
-                            <div class="media-body">
-
-                                <span class="font-size-13 text-muted">By</span>
-
-                                <a class="font-size-13 text-dark" href="#">Josef Millas</a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
+            </div> --}}
 
         </div>
 
