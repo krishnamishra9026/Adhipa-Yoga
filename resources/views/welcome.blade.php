@@ -1685,6 +1685,9 @@
 
             <div class="testimonial-carousel">
 
+                @php $count = 1; @endphp
+                @foreach($testimonials as $testimonial)
+
                 <div class="px-3  w-100 pt-5">
 
                     <div class="card border-0    bg-light">
@@ -1695,35 +1698,34 @@
 
                                 <div class="testimonial-image-border">
 
-                                    <img class="rounded-circle" src="{{asset('frontend/assets/img/5.jpg')}}" alt="/">
+                                    <img class="rounded-circle" src="{{asset('uploads/testimonial/'.$testimonial->image)}}" alt="/">
 
                                 </div>
 
                             </div>
 
-                            <p class=" mb-0 mt-2">"Mountain Pose is the base for all standing poses it gives
-
-                                you a sense of how to ground in to your feet and feel the earth
-
-                                below you."
-
-                            </p>
+                            <p class=" mb-0 mt-2">
+                                {{ \Illuminate\Support\Str::limit($testimonial->description, 120, '...') }}
+                           </p>
 
                         </div>
 
                         <div class="card-footer border-0  pt-0 px-5 pb-3 mt-3">
 
-                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Jeremy Spivak</span>
+                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F"> {{ $testimonial->name }}</span>
 
-                            <small class="d-block text-503592">Business Manager</small>
+                            <small class="d-block text-503592"> {{ $testimonial->title }}</small>
 
                         </div>
 
                     </div>
 
                 </div>
+                
 
-                <div class="px-3  w-100 pt-5">
+                @endforeach
+
+                {{-- <div class="px-3  w-100 pt-5">
 
                     <div class="card border-0  bg-light">
 
@@ -1835,7 +1837,7 @@
 
                     </div>
 
-                </div>
+                </div> --}}
 
             </div>
 

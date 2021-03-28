@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,9 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('welcome');
-    }
+    {      
+
+       $testimonials = Testimonial::latest()->get();
+       return view('welcome',compact('testimonials'));
+   }
 }
