@@ -1978,30 +1978,57 @@
         <?php 
         // query the user media
         $fields = "id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username";
-        $token = "IGQVJWX2UyR0VNem1tT1pTU253SEdnTkZASUmRDT2hxVFNHdDg5eXZAYZA0RwNURJNk1jMnVEdVNHQzlEaW94a3hKNzJIbUxuX2d4emo1MmpnTUJGUFNvaHM5WkstT3FaSlp5ZAk1CUkp4UEFtNXc4Si0wZAAZDZD";
+        $token = "IGQVJWMGZAReHZAVa1FIU0V3c2FKUElkWTI2YTJlZAllWVkw0MmNmaGxxODBjMDdqUDkyaTNrOXhxVDB1bTJMbG1LN3FDeXZAoRldoUFVHMVlDdHA4WXZA0TmlrdkVQZA19vT1FjTkRlNTlpSXM1WFQ2NDdtRAZDZD";
         $limit = 6;
          
-        $json_feed_url="https://graph.instagram.com/me/media?fields={$fields}&access_token={$token}&limit={$limit}";
-        $json_feed = @file_get_contents($json_feed_url);
-        $contents = json_decode($json_feed, true, 512, JSON_BIGINT_AS_STRING);
-        foreach($contents["data"] as $post){
-             
-            $username = isset($post["username"]) ? $post["username"] : "";
-            $caption = isset($post["caption"]) ? $post["caption"] : "";
-            $media_url = isset($post["media_url"]) ? $post["media_url"] : "";
-            $permalink = isset($post["permalink"]) ? $post["permalink"] : "";
-            $media_type = isset($post["media_type"]) ? $post["media_type"] : "";
+        $json_feed_url="https://graph.instagram.com/me/media?fields={$fields}&access_token={$token}&limit={$limit}";        
+        
 
-            if($media_type=="VIDEO"){
-
-            }
-            else{
-                echo ' <div class="col-md-4 col-md  mb-2">';
-                echo " <a href='{$permalink}' target='_blank'><img src='{$media_url}' class='img-fluid img-thumbnail'/></a>";
-                echo '</div>';
-            }
-
+        $ch = curl_init();
+        curl_setopt ($ch, CURLOPT_URL, $json_feed_url);
+        curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
+        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
+        $contents = curl_exec($ch);
+        if (curl_errno($ch)) {
+          echo curl_error($ch);
+          echo "\n<br />";
+          $contents = '';
+        } else {
+          curl_close($ch);
         }
+
+
+
+        if (!is_string($contents) || !strlen($contents)) {
+        echo "Failed to get contents.";
+        $contents = '';
+        }
+
+        //$json_feed = file_get_contents($json_feed_url,true);
+        //$json_feed = @file_get_contents($json_feed_url);
+
+        $contents = json_decode($contents, true, 512, JSON_BIGINT_AS_STRING);
+        if(empty($contents["error"])){
+            foreach($contents["data"] as $post){
+                 
+                $username = isset($post["username"]) ? $post["username"] : "";
+                $caption = isset($post["caption"]) ? $post["caption"] : "";
+                $media_url = isset($post["media_url"]) ? $post["media_url"] : "";
+                $permalink = isset($post["permalink"]) ? $post["permalink"] : "";
+                $media_type = isset($post["media_type"]) ? $post["media_type"] : "";
+
+                if($media_type=="VIDEO"){
+
+                }
+                else{
+                    echo ' <div class="col-md-4 col-md  mb-2">';
+                    echo " <a href='{$permalink}' target='_blank'><img src='{$media_url}' class='img-fluid img-thumbnail'/></a>";
+                    echo '</div>';
+                }
+
+            }
+        }
+
         ?>
          
 

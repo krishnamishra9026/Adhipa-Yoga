@@ -455,7 +455,6 @@ ul.instafeed-list li:nth-child(6) a:after {
 .card h2 a{
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 600;
-    max-width: 70%;
     text-align: left;
     margin-bottom: 10px;
     display: block;
