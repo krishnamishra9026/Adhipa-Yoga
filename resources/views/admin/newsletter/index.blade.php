@@ -23,7 +23,8 @@
     </div>
 </div>
 @endsection
-@push('scripts')
+@section('scripts')
+@parent
 <script>
     var dataSet18 = [
 
@@ -73,4 +74,4 @@
         });
     });
 </script>
-@endpush
+@endsection

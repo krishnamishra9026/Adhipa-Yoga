@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "bb0e98a9-2415-4e8a-8406-3bcc643fcf48",
+		"name": "Faceki",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const res = JSON.parse(responseBody);",
+							"const token = res.token;",
+							"postman.setEnvironmentVariable('token', token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_id\":\"ijdcsddcsdcsdcsd\",\n    \"email\":\"varun@inagrab.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/gettoken",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gettoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Analytics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/get-login-analytics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-login-analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liveness Analytics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/get-liveness-analytics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-liveness-analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup Analytics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/get-signup-analytics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-signup-analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/varunjain/Desktop/screenshot.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/varunjain/Desktop/screenshot.jpg"
+						},
+						{
+							"key": "client_id",
+							"value": "{{client_id}}",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "varun@inagrab.com",
+							"type": "text"
+						},
+						{
+							"key": "mobile_number",
+							"value": "+973211122321",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Varun jain",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "socket_id",
+							"value": "a641fb96-5a98-41f5-9d31-a3b795e449ae",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/varunjain/Desktop/screenshot.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login-request",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kyc Anlytics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/get-kyc-analytics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-kyc-analytics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kyc Verification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"description": "This is the document front image ",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "image",
+							"description": "This is the document back image ",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "image",
+							"description": "This is face image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/kyc-verification",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"kyc-verification"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

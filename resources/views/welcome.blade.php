@@ -1874,72 +1874,32 @@
         </div>
 
         <div class="row justify-content-center align-items-center">
+            @php $i = 0; @endphp
+            @foreach($packages as $package)
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
 
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="card text-center">
 
-                <div class="card text-center">
+                        <img class="card-img-top" src="{{asset('uploads/packages/'.$package->image)}}" alt="Card image cap">
 
-                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
+                        <div class="card-body">
 
-                    <div class="card-body">
+                            <h5 class="card-title">{{ $package->name }}</h5>
 
-                        <h5 class="card-title">Teaching a Yoga Class Phase I</h5>
+                            <p class="card-text">{{ $package->no_of_classes }} CLASSES | BEGINNERS</p>
 
-                        <p class="card-text">28 CLASSES | BEGINNERS</p>
+                            <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
 
-                        <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
+                            <button type="button" class="btn w-50 btn-primary">$ {{ $package->price }}</button>
 
-                        <button type="button" class="btn w-50 btn-primary">$ 25.99</button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-4  mb-5 mb-lg-0">
-
-                <div class="card text-center">
-
-                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">Teaching a Yoga Class Phase I</h5>
-
-                        <p class="card-text">28 CLASSES | BEGINNERS</p>
-
-                        <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
-
-                        <button type="button" class="btn w-50 btn-primary">$ 25.99</button>
+                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-
-                <div class="card text-center">
-
-                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">Teaching a Yoga Class Phase I</h5>
-
-                        <p class="card-text">28 CLASSES | BEGINNERS</p>
-
-                        <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
-
-                        <button type="button" class="btn w-50 btn-primary">$ 25.99</button>
-
-                    </div>
-
-                </div>
-
-            </div>
+            @php $i++; @endphp
+            @endforeach   
 
         </div>
 

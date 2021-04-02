@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Package;
 use Image;
+use File;
 
 class PackageController extends Controller
 {

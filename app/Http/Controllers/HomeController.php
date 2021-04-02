@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Testimonial;
 use App\Models\Blog;
+use App\Package;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,8 @@ class HomeController extends Controller
     public function index()
     {      
         $blogs = Blog::take(6)->get();
+        $packages = Package::latest()->take(3)->get();
         $testimonials = Testimonial::latest()->get();
-        return view('welcome',compact('testimonials','blogs'));
+        return view('welcome',compact('testimonials','blogs','packages'));
     }
 }
