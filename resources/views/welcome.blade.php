@@ -1887,8 +1887,20 @@
                             <h5 class="card-title">{{ $package->name }}</h5>
 
                             <p class="card-text">{{ $package->no_of_classes }} CLASSES | BEGINNERS</p>
+                            @php
+                                $days = explode(',', $package->workout_days );
+                                $week = array("1"=>"Sunday", "2"=>"Monday", "3"=>"Tuesday", "4"=>"Wednesday", "5"=>"Thursday", "6"=>"Friday", "7"=>"Saturday");
 
-                            <p class="card-text text-351EB4 font-size-12">8:00A A.M | MON, WED & FRI</p>
+                            @endphp   
+                            <p class="card-text text-351EB4 font-size-12">8:00A A.M |
+                            @foreach($days as $key => $day)
+                             {{ $week[$day] }}
+                            @if($key != count($days)-1)
+                                {{ "," }}
+                            @endif  
+
+                            @endforeach
+                            </p>
 
                             <button type="button" class="btn w-50 btn-primary">$ {{ $package->price }}</button>
 
