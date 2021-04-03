@@ -95,6 +95,15 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a href="{{ route("admin.appointment.index") }}" class="nav-link {{ request()->is('admin/appointment') || request()->is('admin/appointment/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-appointment nav-icon">
+
+                    </i>
+                    Appointments
+                </a>
+            </li>
+
             <li class="nav-item nav-dropdown">
                 <a class="nav-link  nav-dropdown-toggle">
                     <i class="fas fa-users nav-icon">
