@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Testimonial;
 use App\Models\Blog;
 use App\Models\Cms;
+use App\Models\Setting;
 use App\Package;
 
 class HomeController extends Controller
@@ -29,9 +30,10 @@ class HomeController extends Controller
     {      
         $blogs = Blog::take(6)->get();
         $cms = Cms::latest()->first();
-        // echo "<pre>";print_r($cms->toArray());exit;
+        $setting = Setting::first();
+        // echo "<pre>";print_r($setting->toArray());exit;
         $packages = Package::latest()->take(3)->get();
         $testimonials = Testimonial::latest()->get();
-        return view('welcome',compact('testimonials','blogs','packages', 'cms'));
+        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting'));
     }
 }

@@ -2245,7 +2245,7 @@
 
                         <h4 class="h6 mb-0">Address</h4>
 
-                        <span class="d-block font-size-14">Central Park New York, USA </span>
+                        <span class="d-block font-size-14">{{ $setting->address }}</span>
 
                     </div>
 
@@ -2263,7 +2263,7 @@
 
                         <h4 class="h6 mb-0">Phone Number</h4>
 
-                        <span class="d-block font-size-14">(513) 352-3209 </span>
+                        <span class="d-block font-size-14">{{ $setting->mobile }}</span>
 
                     </div>
 
@@ -2281,7 +2281,7 @@
 
                         <h4 class="h6 mb-0">Say Hello</h4>
 
-                        <span class="d-block font-size-14">hello@foxeyoga.com</span>
+                        <span class="d-block font-size-14">{{ $setting->email }}</span>
 
                     </div>
 
