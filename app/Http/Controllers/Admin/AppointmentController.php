@@ -19,7 +19,9 @@ class AppointmentController extends Controller
         $appointments = Appointment::latest()->get();
         foreach ($appointments as $key => $value) {
             $user = User::where('id',$value->user_id)->value('name');
+            $email = User::where('id',$value->user_id)->value('email');
             $appointments[$key]->user = $user;
+            $appointments[$key]->email = $email;
         }
         return view('admin.appointments.index',compact('appointments'))->with('no',1);
     }

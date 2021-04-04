@@ -64,17 +64,15 @@
 
                 <div class="mb-4">
 
-                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">what we do</span>
+                    <span class="text-uppercase text-secondary font-secondary font-size-12 text-503592">{{ $cms->name }}</span>
 
-                    <h1 class="mb-0 text-D9008F">Ho We Are ?</h1>
+                    <h1 class="mb-0 text-D9008F">{{ $cms->title }}</h1>
 
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
 
                 </div>
 
-                <p class="mb-4">Mountain Pose is the base for all standing poses it gives
-
-                you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like "simply standing," but there is a ton going on.</p>
+                <p class="mb-4">{{ $cms->description }}</p>
 
                 <a href="#appointment" class="btn btn-secondary btn-sm">Make an Appointment</a>
 
@@ -112,25 +110,25 @@
 
                         <div class="col-5 align-self-end  mb-2">
 
-                            <img class="img-fluid w-100" src="{{asset('frontend/assets/img/offset/1.jpg')}}" alt="">
+                            <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image)}}" alt="">
 
                         </div>
 
                         <div class="col-7  mb-2">
 
-                            <img class="img-fluid w-100" src="{{asset('frontend/assets/img/offset/2.jpg')}}" alt="">
+                            <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image2)}}" alt="">
 
                         </div>
 
                         <div class="col-5 offset-1  mb-2 mb-lg-0">
 
-                            <img class="img-fluid w-100" src="{{asset('frontend/assets/img/offset/3.jpg')}}" alt="">
+                            <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image3)}}" alt="">
 
                         </div>
 
                         <div class="col-5 mb-2">
 
-                            <img class="img-fluid w-100" src="{{asset('frontend/assets/img/offset/4.jpg')}}" alt="">
+                            <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image4)}}" alt="">
 
                         </div>
 

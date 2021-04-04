@@ -1,45 +1,44 @@
 @extends('layouts.admin')
+@section('head')
+<link href="{{asset('backend/assets/css/datatables.min.css')}}" rel="stylesheet">
+@endsection
 @section('content')
-    <div class="card">
-    <div class="card-header">
-        Make an Appointment
-
+    <div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12">
+            <a class="btn btn-success" href="{{ route('admin.cms.create') }}">
+                {{ trans('global.add') }} CMS
+            </a>
+        </div>
     </div>
+<div class="card">
+    <div class="card-header">
+        CMS
+    </div>
+    @include('admin.includes.flashmessage')
 
     <div class="card-body">
-<div class="row">
-    <div class="col-md-12">
-        <div class="ms-panel">
-            <div class="ms-panel-header">
-                <h6>Make an Appointment</h6>
-            </div>
-            
-            <div class="ms-panel-body">
-
                 <div class="table-responsive">
                     <table id="data-table-18" class="table table-striped thead-primary w-100"></table>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 @endsection
 @section('scripts')
 @parent
 <script>
     var dataSet18 = [
 
-    @foreach($appointments as $appointment)
-    [ "{{ @$no++ }}","{{ $appointment->user }} ({{ $appointment->user_id }})" ,"{{ $appointment->email }}","{{ $appointment->message }}"],
+    @foreach($images as $image)
+    [ "{{ @$no++ }}" ,"{{ $image->title }}","{{ $image->name }}", "<a href='{{route('admin.cms.edit',$image)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a> <a href='javascript:' onclick='submitform({{ $no }});'><i class='far fa-trash-alt ms-text-danger'></i></a><form id='delete-form{{$no}}' action='{{route('admin.cms.destroy',$image)}}' method='POST'><input type='hidden' name='_token' value='{{ csrf_token()}}'><input type='hidden' name='_method' value='DELETE'></form>"],
     @endforeach
     ];
     var tablepackage = $('#data-table-18').DataTable( {
         data: dataSet18,
         columns: [
         { title: "Id" },
-        { title: "User (Id)" },
-        { title: "Email" },
-        { title: "Message" },
+        { title: "Title" },
+        { title: "Posted By" },
+        { title: "Action" },
         ],
 
     });

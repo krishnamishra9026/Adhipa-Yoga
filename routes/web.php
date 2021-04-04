@@ -56,8 +56,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('testimonial','TestimonialController');
     Route::post('gallery-delete-image/{gallery}', 'GalleryController@deleteimage')->name('gallery-image-delete');
     Route::resource('blogs','BlogController');
+    Route::resource('cms','CmsController');
     Route::resource('appointment', 'AppointmentController');
     Route::post('blog-delete-image/{blog}', 'BlogController@deleteimage')->name('blog-image-delete');
+    Route::post('cms-delete-image/{cms}', 'CmsController@deleteimage')->name('cms-image-delete');
+    Route::post('cms-delete-image2/{cms}', 'CmsController@deleteimage2')->name('cms-image2-delete');
+    Route::post('cms-delete-image3/{cms}', 'CmsController@deleteimage3')->name('cms-image3-delete');
+    Route::post('cms-delete-image4/{cms}', 'CmsController@deleteimage4')->name('cms-image4-delete');
     Route::post('testimonial-delete-image/{testimonial}', 'BlogController@deleteimage')->name('testimonial-image-delete');
     Route::resource('terms-and-conditions','TermsController');
     Route::resource('privacy-policy','PrivacyPolicyController');

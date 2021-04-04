@@ -129,6 +129,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route("admin.cms.edit",1) }}" class="nav-link {{ request()->is('admin/cms') || request()->is('admin/cms/*') ? 'active' : '' }}">
+                            <i class="fas fa-unlock-alt nav-icon">
+
+                            </i>
+                            Cms
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route("admin.testimonial.index") }}" class="nav-link {{ request()->is('admin/testimonial') || request()->is('admin/testimonial/*') ? 'active' : '' }}">
                             <i class="fas fa-unlock-alt nav-icon">
 
