@@ -1,5 +1,5 @@
 <div class="sidebar">
-    <nav class="sidebar-nav ps ps--active-y">
+    <nav class="sidebar-nav scrollable-menu">
 
         <ul class="nav">
             <li class="nav-item">
