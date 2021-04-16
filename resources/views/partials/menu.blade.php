@@ -137,6 +137,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route("admin.mainservices.index") }}" class="nav-link {{ request()->is('admin/mainservices') || request()->is('admin/mainservices/*') ? 'active' : '' }}">
+                            <i class="fas fa-unlock-alt nav-icon">
+
+                            </i>
+                            Main Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route("admin.testimonial.index") }}" class="nav-link {{ request()->is('admin/testimonial') || request()->is('admin/testimonial/*') ? 'active' : '' }}">
                             <i class="fas fa-unlock-alt nav-icon">
 

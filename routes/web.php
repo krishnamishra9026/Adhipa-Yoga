@@ -90,6 +90,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('products', 'ProductsController');
     Route::resource('packages', 'PackageController');
 
+    Route::resource('mainservices','MainServicesController');
+
 
     // Lessons
     Route::delete('lessons/destroy', 'LessonsController@massDestroy')->name('lessons.massDestroy');
