@@ -36,7 +36,7 @@ class Lesson extends Model
         '4' => 'Thursday',
         '5' => 'Friday',
         '6' => 'Saturday',
-        '7' => 'Sunday',
+        // '7' => 'Sunday',
     ];
 
     public function getDifferenceAttribute()
@@ -98,7 +98,7 @@ class Lesson extends Model
     public function scopeCalendarByRoleOrClassId($query)
     {
         return $query->when(!request()->input('class_id'), function ($query) {
-            $query->when(auth()->user()->is_teacher, function ($query) {
+            $query->when(auth()->user()->is_trainer, function ($query) {
                 $query->where('teacher_id', auth()->user()->id);
             })
                 ->when(auth()->user()->is_student, function ($query) {

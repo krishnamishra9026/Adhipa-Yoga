@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Testimonial;
 use App\Models\Blog;
 use App\Models\Cms;
+use App\Models\MainServices;
 use App\Models\Setting;
 use App\Package;
+
+use App\Lesson;
+use App\Services\CalendarService;
 
 class HomeController extends Controller
 {
@@ -27,13 +31,18 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {      
+    {
+        $weekDays     = Lesson::WEEK_DAYS;
+        $calendarService = new CalendarService;
+        $calendarData = $calendarService->generateCalendarData($weekDays);
         $blogs = Blog::take(6)->get();
         $cms = Cms::latest()->first();
+        $mainservices = MainServices::all();
         $setting = Setting::first();
         // echo "<pre>";print_r($setting->toArray());exit;
         $packages = Package::latest()->take(3)->get();
         $testimonials = Testimonial::latest()->get();
-        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting'));
+        // echo "<pre>";print_r(compact('calendarData'));"</pre>";exit;
+        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices'));
     }
 }

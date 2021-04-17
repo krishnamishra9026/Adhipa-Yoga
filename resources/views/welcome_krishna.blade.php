@@ -172,7 +172,7 @@
 
                 <div  class="services-steps nav  mx-auto mb-9 " role="tablist">
 
-                    <div class="service-step-item active show" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
+                    <div class="service-step-item active show" data-toggle="tab" href="#tab-one" role="tab" aria-controls="tab-one" aria-selected="true">
 
                         <div class="service-step-icon-container text-muted">
 
@@ -194,7 +194,7 @@
 
                     </div>
 
-                    <div class="service-step-item " data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
+                    <div class="service-step-item " data-toggle="tab" href="#tab-two" role="tab" aria-controls="tab-two" aria-selected="false">
 
                         <div class="service-step-icon-container text-muted">
 
@@ -214,7 +214,7 @@
 
                     </div>
 
-                    <div class="service-step-item" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
+                    <div class="service-step-item" data-toggle="tab" href="#tab-three" role="tab" aria-controls="tab-three" aria-selected="false">
 
                         <div class="service-step-icon-container text-muted">
 
@@ -242,23 +242,21 @@
 
         <div class="tab-content mt-5 pt-5">
 
-            @foreach($mainservices as $mainservices)
-
-            <div id="tab-{{$mainservices->id}}" class="row align-items-lg-center tab-pane fade @if($mainservices->id == 1)active show @endif " role="tabpanel">
+            <div id="tab-one" class="row align-items-lg-center tab-pane fade active show " role="tabpanel">
 
                 <div class="col-md-6 mb-4 mb-md-0">
 
-                    <img class="img-fluid w-100" src="{{asset('uploads/services/'.$mainservices->img)}}" alt="">
+                    <img class="img-fluid w-100" src="{{asset('frontend/assets/img/2.jpg')}}" alt="">
 
                 </div>
 
                 <div class="col-md-6 pl-lg-6">
 
-                    <h2 class="text-lh-xs mb-4">{{ $mainservices->heading }}</h2>
+                    <h2 class="text-lh-xs mb-4">The Most Important Yoga Poses <br class="d-none d-lg-inline-block"> for Beginners Classes</h2>
 
-                    <p class="mb-5">{{ $mainservices->desc }}</p>
+                    <p class="mb-5">Mountain Pose is the base for all standing poses it gives<br class="d-none d-lg-inline-block">  you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like "simply standing," but there is a ton going on.</p>
 
-                    <a class="btn btn-sm btn-secondary mr-2" href="#gallery">View Our Gallery <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <a class="btn btn-sm btn-secondary mr-2" href="#">View Our Gallery <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" stroke="#D9008F" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
                   <path fill-rule="evenodd" stroke="#D9008F" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
                 </svg></a>
@@ -269,7 +267,185 @@
 
             </div>
 
-            @endforeach
+            <div id="tab-two" class="row align-items-lg-center tab-pane fade " role="tabpanel">
+
+                <div class="col-md-6 mb-4 mb-md-0">
+
+                    <img class="img-fluid w-100" src="{{asset('frontend/assets/img/3.jpg')}}" alt="">
+
+                </div>
+
+                <div class="col-md-6 pl-lg-6">
+
+                    <h2 class="text-lh-xs mb-4">Get ready to flow, breathe and sweat it out</h2>
+
+                    <p class="mb-5">Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like "simply standing," but there is a ton going on.</p>
+
+                    <a class="btn btn-sm btn-primary mr-2" href="#">Meet Trainers</a>
+
+                    <a class="btn btn-sm btn-secondary" href="#">
+
+
+
+                        <section id="contact">
+
+                            <div class="container spacer-double-lg">
+
+                                <div class="row justify-content-lg-between align-items-center">
+
+                                    <div class="col-lg-6  mb-7 mb-lg-0">
+
+                                        <div class="mb-3 pb-3">
+
+                                            <span class="text-uppercase text-secondary font-secondary font-size-12">get in touch</span>       
+
+                                            <h1 class="mb-0">Questions Contact Us</h1>
+
+                                            <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
+
+                                            <p class=" mb-0 pt-3 lead ">Mountain Pose is the base for all standing poses it gives
+
+                                                you a sense of how to ground in to your feet and feel the earth
+
+                                                below you.
+
+                                            </p>
+
+                                        </div>
+
+                                        <div class="media align-items-center mb-5">
+
+                                            <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
+
+                                                <img class="max-width-1 " src="{{asset('frontend/assets/svg/footerleft-icon.png')}}" alt="">
+
+                                            </span>
+
+                                            <div class="media-body">
+
+                                                <h4 class="h6 mb-0">Address</h4>
+
+                                                <span class="d-block font-size-14">Central Park New York, USA </span>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="media align-items-center mb-5">
+
+                                            <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
+
+                                                <img class="max-width-1 " src="{{asset('frontend/assets/svg/footerleft-icon.png')}}" alt="">
+
+                                            </span>
+
+                                            <div class="media-body">
+
+                                                <h4 class="h6 mb-0">Phone Number</h4>
+
+                                                <span class="d-block font-size-14">(513) 352-3209 </span>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="media align-items-center mb-5">
+
+                                            <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
+
+                                                <img class="max-width-1 " src="{{asset('frontend/assets/svg/footerleft-icon.png')}}" alt="">
+
+                                            </span>
+
+                                            <div class="media-body">
+
+                                                <h4 class="h6 mb-0">Say Hello</h4>
+
+                                                <span class="d-block font-size-14">hello@foxeyoga.com</span>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="media align-items-center mb-5">
+
+                                            <span class="contact-icon shadow-inner rounded-circle p-2 mr-3">
+
+                                                <img class="max-width-1 " src="{{asset('frontend/assets/svg/footerleft-icon.png')}}" alt="">
+
+                                            </span>
+
+                                            <div class="media-body">
+
+                                                <h4 class="h6 mb-0">We are Open</h4>
+
+                                                <span class="d-block font-size-14">Monday - Saturday <br>10:00 am - 22:00 pm</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-5 mt-5 mt-lg-0">
+
+                                        <ul class="instafeed-list list-inline" id="instafeed">
+
+                                            <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-1.jpg')}}" /></a></li>
+
+                                            <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-2.jpg')}}" /></a></li>
+
+                                            <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-3.jpg')}}" /></a></li>
+
+                                            <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-4.jpg')}}" /></a></li>
+
+                                            <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-5.jpg')}}" /></a></li>
+
+                                            <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-6.jpg')}}" /></a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                        Pricing Plans
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div id="tab-three" class="row align-items-lg-center tab-pane fade " role="tabpanel">
+
+                <div class="col-md-6 mb-4 mb-md-0">
+
+                    <img class="img-fluid w-100" src="{{asset('frontend/assets/img/4.jpg')}}" alt="">
+
+                </div>
+
+                <div class="col-md-6 pl-lg-6">
+
+                    <h2 class="text-lh-xs mb-4">Private Yoga Classes specially designed for your.</h2>
+
+                    <p class="mb-5">Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like "simply standing," but there is a ton going on.</p>
+
+                    <a class="btn btn-sm btn-primary mr-2" href="#">Yoga Poses</a>
+
+                    <a class="btn btn-sm btn-secondary" href="#">
+
+                        View Schedule
+
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -1293,40 +1469,6 @@
 
                     </table>
 
-
-                    <table class="table table-borderless" style="display: none;">
-                        <thead class="text-center">
-                            <th width="125">Time</th>
-                            @foreach($weekDays as $day)
-                                <th class=" border-left  text-dark font-size-14 text-uppercase " >{{ $day }}</th>
-                            @endforeach
-                        </thead>
-                        <tbody>
-                            
-                            @foreach($calendarData as $time => $days)
-                                <tr>
-                                    <td class="font-size-13 text-dark  text-center">
-                                        @php
-                                        $ff = date('a',strtotime(explode('-', $time)[1]))
-                                        @endphp
-                                        {{ $time }} <br>
-                                        {{ $ff }}
-                                    </td>
-                                    @foreach($days as $value)
-                                        @if (is_array($value))
-                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center text-center border-left py-3 px-4" >
-                                                {{ $value['class_name'] }}<br>
-                                                {{ $value['teacher_name'] }}
-                                            </td>
-                                        @elseif ($value === 1)
-                                            <td  class="text-center border-left">-</td>
-                                        @endif
-                                    @endforeach
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-
                 </div>
 
             </div>
@@ -1832,8 +1974,10 @@
         $contents = '';
         }
 
+        //$json_feed = file_get_contents($json_feed_url,true);
+        //$json_feed = @file_get_contents($json_feed_url);
 
-         $contents = json_decode($contents, true, 512, JSON_BIGINT_AS_STRING);
+        $contents = json_decode($contents, true, 512, JSON_BIGINT_AS_STRING);
         if(empty($contents["error"])){
             foreach($contents["data"] as $post){
                  

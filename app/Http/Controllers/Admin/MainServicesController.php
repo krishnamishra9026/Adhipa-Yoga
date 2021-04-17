@@ -97,73 +97,28 @@ class MainServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $cms = Cms::find($id);
-        if ($request->has('image')) {
+        $cms = MainServices::find($id);
+        if ($request->has('img')) {
 
-            $file = $request->file('image');
+            $file = $request->file('img');
             $name = $file->getClientOriginalName();
             $path = time().$name;
             // $profileimage = Image::make($file);
             $profileimage = Image::make($file);
-            $profileimage->save(public_path('uploads/cms/'.$path),100);
-            $cms->image = $path;
+            $profileimage->save(public_path('uploads/services/'.$path),100);
+            $cms->img = $path;
 
         }
 
-        if ($request->has('image2')) {
+       
 
-            $file = $request->file('image2');
-            $name = $file->getClientOriginalName();
-            $path = time().$name;
-            // $profileimage2 = Image::make($file);
-            $profileimage2 = Image::make($file);
-            $profileimage2->save(public_path('uploads/cms/'.$path),100);
-            $cms->image2 = $path;
+        $cms->heading = $request->heading;
 
-        }
-
-        if ($request->has('image3')) {
-
-            $file = $request->file('image3');
-            $name = $file->getClientOriginalName();
-            $path = time().$name;
-            // $profileimage3 = Image::make($file);
-            $profileimage3 = Image::make($file);
-            $profileimage3->save(public_path('uploads/cms/'.$path),100);
-            $cms->image3 = $path;
-
-        }
-
-        if ($request->has('image4')) {
-
-            $file = $request->file('image4');
-            $name = $file->getClientOriginalName();
-            $path = time().$name;
-            // $profileimage4 = Image::make($file);
-            $profileimage4 = Image::make($file);
-            $profileimage4->save(public_path('uploads/cms/'.$path),100);
-            $cms->image4 = $path;
-
-        }
-
-        $cms->title = $request->title;
-        $cms->name = $request->name;
-
-        $cms->description = $request->description;
-
-
-        if ($request->has('status')) {
-
-            $cms->status = $request->status;
-
-        }else{
-
-            $cms->status = "off";
-        }
+        $cms->desc = $request->desc;
         
         $cms->save();
 
-        return redirect()->route('admin.cms.edit',1)->with(['success'=>'Cms Updated Successfully!']);
+        return redirect()->route('admin.mainservices.edit',$id)->with(['success'=>'Cms Updated Successfully!']);
     }
 
     /**
@@ -175,10 +130,10 @@ class MainServicesController extends Controller
 
     public function deleteimage($id)
     {
-        $cms = Cms::find($id);
-        $image = public_path('uploads/cms/'.$cms->image);
+        $cms = MainServices::find($id);
+        $image = public_path('uploads/services/'.$cms->img);
         File::delete($image);
-        $cms->update(['image' => null]);
+        $cms->update(['img' => null]);
 
         return response()->json(["success"=>'deleted']);
     }
