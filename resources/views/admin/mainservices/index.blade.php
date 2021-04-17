@@ -22,16 +22,16 @@
     var dataSet18 = [
         [
             "Beginer Classes",
-            "<a href='{{route('admin.blogs.edit',1)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a>"
+            "<a href='{{route('admin.mainservices.edit',1)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a>"
         ],
         [
             "Advanced Classes",
-            "<a href='{{route('admin.blogs.edit',2)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a>"
+            "<a href='{{route('admin.mainservices.edit',2)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a>"
 
         ],
         [
             "Private Classes",
-            "<a href='{{route('admin.blogs.edit',3)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a>"
+            "<a href='{{route('admin.mainservices.edit',3)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a>"
         ]
     ];
     var tablepackage = $('#data-table-18').DataTable( {

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cms;
 use App\Models\Blog;
+use App\Models\MainServices;
 use Image;
 use File;
 
@@ -81,9 +82,10 @@ class MainServicesController extends Controller
      */
     public function edit($id)
     {
-        $cms = Cms::where('id',$id)->first();
+        #echo $id; exit;
+        $cms = MainServices::where('id',$id)->first();
         // echo "<pre>";print_r($cms);"</pre>";exit;
-        return view('admin.cms.edit', compact('cms'));
+        return view('admin.mainservices.edit', compact('cms'));
     }
 
     /**
