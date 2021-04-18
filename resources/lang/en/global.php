@@ -312,7 +312,7 @@ return [
     'deselect_all'                         => 'Deselect all',
     'team-management'                      => 'Teams',
     'team-management-singular'             => 'Team',
-    'site_title'                           => 'Laravel + CoreUI',
+    'site_title'                           => 'Yoga Admin Panel',
     'userManagement'                       => [
         'title'          => 'User Management',
         'title_singular' => 'User Management',
