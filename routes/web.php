@@ -43,7 +43,7 @@ Route::get('/terms-conditions', function () {
 Route::get('/', 'HomeController@index')->name('home');
 
 
-Route::redirect('/admin', '/login');
+Route::redirect('/yoga/admin', '/login');
 
 Route::redirect('/home', '/admin');
 

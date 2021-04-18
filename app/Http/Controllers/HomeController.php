@@ -32,9 +32,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $weekDays     = Lesson::WEEK_DAYS;
-        $calendarService = new CalendarService;
-        $calendarData = $calendarService->generateCalendarData($weekDays);
+        // $weekDays     = Lesson::WEEK_DAYS;
+        // $calendarService = new CalendarService;
+        // $calendarData = $calendarService->generateCalendarData($weekDays);
         $blogs = Blog::take(6)->get();
         $cms = Cms::latest()->first();
         $mainservices = MainServices::all();
@@ -43,6 +43,6 @@ class HomeController extends Controller
         $packages = Package::latest()->take(3)->get();
         $testimonials = Testimonial::latest()->get();
         // echo "<pre>";print_r(compact('calendarData'));"</pre>";exit;
-        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices'));
+        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting'/*, 'calendarData','weekDays'*/,'mainservices'));
     }
 }

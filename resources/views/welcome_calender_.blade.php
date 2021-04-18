@@ -1294,7 +1294,38 @@
                     </table>
 
 
-                  
+                    <table class="table table-borderless" style="display: none;">
+                        <thead class="text-center">
+                            <th width="125">Time</th>
+                            @foreach($weekDays as $day)
+                                <th class=" border-left  text-dark font-size-14 text-uppercase " >{{ $day }}</th>
+                            @endforeach
+                        </thead>
+                        <tbody>
+                            
+                            @foreach($calendarData as $time => $days)
+                                <tr>
+                                    <td class="font-size-13 text-dark  text-center">
+                                        @php
+                                        $ff = date('a',strtotime(explode('-', $time)[1]))
+                                        @endphp
+                                        {{ $time }} <br>
+                                        {{ $ff }}
+                                    </td>
+                                    @foreach($days as $value)
+                                        @if (is_array($value))
+                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center text-center border-left py-3 px-4" >
+                                                {{ $value['class_name'] }}<br>
+                                                {{ $value['teacher_name'] }}
+                                            </td>
+                                        @elseif ($value === 1)
+                                            <td  class="text-center border-left">-</td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
 
                 </div>
 
