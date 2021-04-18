@@ -67,9 +67,9 @@
                         </div>
 
                         <div class="col-md-12">
-                            <label for="description">Description</label>
+                            <label for="desc">Description</label>
                             <div class="input-group">
-                                <textarea rows="8" id="description" name="description" class="form-control" placeholder="Description" required>{{ $contactus->desc }}</textarea>
+                                <textarea rows="8" id="desc" name="desc" class="form-control" placeholder="Description" required>{{ $contactus->desc }}</textarea>
                                 <div class="invalid-feedback">
                                     Please Write Description 
                                 </div>
@@ -112,16 +112,6 @@
                                 <textarea id="open_timting" name="open_timting" class="form-control" placeholder="Description" required style="min-height: 15px;">{{ $contactus->open_timting }}</textarea>
                                 <div class="invalid-feedback">
                                     Please Write Say Hello
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="description">Facebook Url</label>
-                            <div class="input-group">
-                                <input type="text" name="facebook" class="form-control" value="{{ $contactus->facebook }}" required="required">
-                                <div class="invalid-feedback">
-                                    Please Write facebook url 
                                 </div>
                             </div>
                         </div>
@@ -321,34 +311,7 @@
     @endif
 });
 
-    $("#avatar-24").fileinput({
-            theme:'fas',
-            overwriteInitial: false,
-            maxFileSize: 1500,
-            showClose: false,
-            showCaption: false,
-            showBrowse: false,
-            browseOnZoneClick: true,
-            removeLabel: '',
-            removeIcon: '<i class="flaticon-trash"></i> Remove Image',
-            removeTitle: 'Cancel or reset changes',
-            elErrorContainer: '#kv-avatar-errors-24',
-            msgErrorClass: 'alert alert-block alert-danger',
-            defaultPreviewContent: '<img src="/backend/assets/img/media.png" alt="Your Avatar"><h6 class="text-muted">Upload Image</h6>',
-            layoutTemplates: {main2: '{preview} {remove} {browse}'},
-            allowedFileExtensions: ["jpg", "png", "gif"],
-            @if(isset($contactus->image4))
-            initialPreview: [
-            "{{asset('uploads/contactus/'.$contactus->image4)}}"
-            ],
-             initialPreviewAsData: true, // defaults markup
-
-    initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-    initialPreviewConfig: [
-    {caption: "{{$contactus->image4}}", url: "{{route('admin.contactus-image4-delete',$contactus->id)}}", key: {{$contactus->id}} }
-    ],
-    @endif
-});
+   
     </script>
     <script type="text/javascript">
     $(document).ready(function() {

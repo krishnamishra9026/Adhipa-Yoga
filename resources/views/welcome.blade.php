@@ -2046,13 +2046,13 @@
 
                 <div class="mb-3 pb-3">
 
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">get in touch</span>       
+                    <span class="text-uppercase text-secondary font-secondary font-size-12">{{ $contactus->title }}</span>       
 
-                    <h1 class="mb-0">Contact us</h1>
+                    <h1 class="mb-0">{{ $contactus->name }}</h1>
 
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
 
-                    <p class=" mb-0 pt-3 lead ">Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may
+                    <p class=" mb-0 pt-3 lead ">{{ $contactus->desc }}
 
                     </p>
 
@@ -2070,7 +2070,7 @@
 
                         <h4 class="h6 mb-0">Address</h4>
 
-                        <span class="d-block font-size-14">{{ $setting->address }}</span>
+                        <span class="d-block font-size-14">{{ $contactus->address }}</span>
 
                     </div>
 
@@ -2088,7 +2088,7 @@
 
                         <h4 class="h6 mb-0">Phone Number</h4>
 
-                        <span class="d-block font-size-14">{{ $setting->mobile }}</span>
+                        <span class="d-block font-size-14">{{ $contactus->phone_no }}</span>
 
                     </div>
 
@@ -2106,7 +2106,7 @@
 
                         <h4 class="h6 mb-0">Say Hello</h4>
 
-                        <span class="d-block font-size-14">{{ $setting->email }}</span>
+                        <span class="d-block font-size-14">{{ $contactus->say_hello }}</span>
 
                     </div>
 
@@ -2124,7 +2124,7 @@
 
                         <h4 class="h6 mb-0">We are Open</h4>
 
-                        <span class="d-block font-size-14">Monday - Saturday <br>10:00 am - 22:00 pm</span>
+                        <span class="d-block font-size-14">{{ $contactus->open_timting}}</span>
 
                     </div>
 
@@ -2136,27 +2136,27 @@
 
                 <ul class="instafeed-list list-inline" id="instafeed">
 
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-1.jpg')}}" /></a></li>
+                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('uploads/contactus/'.$contactus->image)}}" /></a></li>
 
 
 
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-2.jpg')}}" /></a></li>
+                    <li><a class="hover-effect" target="_blank" href="{{ $contactus->twitter}}"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-2.jpg')}}" /></a></li>
 
 
 
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-6.jpg')}}" /></a></li>
+                    <li><a class="hover-effect" target="_blank" href="{{ $contactus->facebook}}"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-6.jpg')}}" /></a></li>
 
 
 
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-4.jpg')}}" /></a></li>
+                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('uploads/contactus/'.$contactus->image2)}}" /></a></li>
 
 
 
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-4.jpg')}}" /></a></li>
+                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('uploads/contactus/'.$contactus->image3)}}" /></a></li>
 
 
 
-                    <li><a class="hover-effect" target="_blank" href="https://www.instagram.com/oumaila9/"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-6.jpg')}}" /></a></li>
+                    <li><a class="hover-effect" target="_blank" href="{{ $contactus->insta}}"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-eye hover-effect-icon-inner"></span></span></span></span><img class=" mw-100 " src="{{asset('frontend/assets/img/600x600-6.jpg')}}" /></a></li>
 
                 </ul>
 

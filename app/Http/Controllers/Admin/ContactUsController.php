@@ -146,21 +146,18 @@ class ContactUsController extends Controller
         $contactus->title = $request->title;
         $contactus->name = $request->name;
 
-        $contactus->description = $request->description;
-
-
-        if ($request->has('status')) {
-
-            $contactus->status = $request->status;
-
-        }else{
-
-            $contactus->status = "off";
-        }
+        $contactus->desc = $request->desc;
+        $contactus->address = $request->address;
+        $contactus->phone_no = $request->phone_no;
+        $contactus->say_hello = $request->say_hello;
+        $contactus->open_timting = $request->open_timting;
+        $contactus->facebook = $request->facebook;
+        $contactus->twitter = $request->twitter;
+        $contactus->insta = $request->insta;
         
         $contactus->save();
 
-        return redirect()->route('admin.contactus.edit',1)->with(['success'=>'ContactUs Updated Successfully!']);
+        return redirect()->route('admin.contactus.edit',$id)->with(['success'=>'ContactUs Updated Successfully!']);
     }
 
     /**

@@ -88,6 +88,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     //Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
     Route::delete('packages/destroy', 'PackageController@massDestroy')->name('packages.massDestroy');
     Route::post('package-delete-image/{package}', 'PackageController@deleteimage')->name('package-image-delete');
+  
 
     //Route::resource('products', 'ProductsController');
     Route::resource('packages', 'PackageController');
@@ -95,6 +96,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('mainservices','MainServicesController');
 
     Route::resource('contactus','ContactUsController');
+
+      Route::post('contactus-image-delete/{contactus}', 'ContactUsController@deleteimage')->name('contactus-image-delete');
+      Route::post('contactus-image2-delete/{contactus}', 'ContactUsController@deleteimage2')->name('contactus-image2-delete');
+      Route::post('contactus-image3-delete/{contactus}', 'ContactUsController@deleteimage3')->name('contactus-image3-delete');
 
     // Lessons
     Route::delete('lessons/destroy', 'LessonsController@massDestroy')->name('lessons.massDestroy');
