@@ -28,9 +28,9 @@ Route::get('/single', function () {
     return view('single');
 });
 
-Route::get('/contactus', function () {
-    return view('contact_us');
-});
+// Route::get('/contactus', function () {
+//     return view('contact_us');
+// });
 
 Route::resource('contact-us', 'ContactController');
 Route::resource('appointment', 'AppointmentController');
@@ -85,15 +85,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('users', 'UsersController');
 
-    Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
+    //Route::delete('products/destroy', 'ProductsController@massDestroy')->name('products.massDestroy');
     Route::delete('packages/destroy', 'PackageController@massDestroy')->name('packages.massDestroy');
     Route::post('package-delete-image/{package}', 'PackageController@deleteimage')->name('package-image-delete');
 
-    Route::resource('products', 'ProductsController');
+    //Route::resource('products', 'ProductsController');
     Route::resource('packages', 'PackageController');
 
     Route::resource('mainservices','MainServicesController');
 
+    Route::resource('contactus','ContactUsController');
 
     // Lessons
     Route::delete('lessons/destroy', 'LessonsController@massDestroy')->name('lessons.massDestroy');

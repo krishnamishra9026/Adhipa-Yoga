@@ -153,6 +153,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route("admin.contactus.edit",1) }}" class="nav-link {{ request()->is('admin/contactus') || request()->is('admin/contactus/*') ? 'active' : '' }}">
+                            <i class="fas fa-user nav-icon">
+
+                            </i>
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route("admin.terms-and-conditions.index") }}" class="nav-link {{ request()->is('admin/terms-and-conditions') || request()->is('admin/terms-and-conditions/*') ? 'active' : '' }}">
                             <i class="fas fa-unlock-alt nav-icon">
 
