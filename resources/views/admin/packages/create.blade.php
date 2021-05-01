@@ -121,6 +121,35 @@
 						</div>
 					</div>
 				</div>
+			</div>
+				<div id="education_fields">
+					<div class="form-row">
+					<div class="col-md-3">
+								<div class="form-group">
+			                <label class="required" for="start_time">Start time</label>
+			                <input class="form-control startdate" type="text" name="startTime[]" value="" required>
+			            </div>
+			        </div>
+			        <div class="col-md-3">
+			            <div class="form-group">
+			                <label class="required" for="end_time">End time</label>
+			                <input class="form-control enddate" type="text" name="endTime[]"  value="{{ old('end_time') }}" required>
+			            </div>
+			        </div>
+			        <div class="col-md-5">
+			            <div class="form-group">
+			                <label class="required" for="link">Link</label>
+			                <input class="form-control" type="text" name="link[]"  value="" required>
+			            </div>
+			        </div>
+			        <div class="col-md-1" style="margin-top: 25px;">
+			        	<div class="input-group-btn">
+					        <button class="btn btn-success" type="button"  onclick="education_fields();"> <span class="fa fa-plus" aria-hidden="true"></span> </button>
+					      </div>
+			        </div>
+			    	</div>
+				</div>
+				<div class="form-row">
 				<div class="col-md-12">
 					<label for="description">Package Description</label>
 					<div class="input-group">
@@ -198,6 +227,78 @@
 			tags: true,
 			tokenSeparators: [',', ' ']
 		});
+
+		var startDate;
+        $(".startdate").datetimepicker({
+			format: 'HH:mm',
+			stepping: 30,
+			icons: {
+			      up: 'fas fa-chevron-up',
+			      down: 'fas fa-chevron-down',
+			      previous: 'fas fa-chevron-left',
+			      next: 'fas fa-chevron-right'
+			    }
+        }).on('dp.change', function (event) {
+        	debugger;
+		    //The start time changes, and the minimum value of the end time is set as the end time.
+		    var starttime=$('.startdate').val();
+		    if(starttime){
+		        $('.endtime').datetimepicker('setStartDate',starttime);
+		    }else {
+		        $('.endtime').datetimepicker('setStartDate',new Date(-8639968443048000));
+		    }
+		});
+        $(".enddate").datetimepicker({
+			format: 'HH:mm',
+			stepping: 30,
+			icons: {
+			      up: 'fas fa-chevron-up',
+			      down: 'fas fa-chevron-down',
+			      previous: 'fas fa-chevron-left',
+			      next: 'fas fa-chevron-right'
+			    }
+			//  onClose: function(current_time, $input){
+			//         var endDate = $(".enddate").val();
+			//         if(startDate>endDate){
+			//                alert('Please select correct date');
+			//         }
+			// }
+        }).on('dp.change', function (event) {
+	        // End time changes, the maximum value of the start time is set to the end time
+		    var endtime=$('.endtime').val();
+		    if(endtime){
+		        $('.starttime').datetimepicker('setEndDate',endtime);
+		    }else {
+		        $('.starttime').datetimepicker('setEndDate',new Date(8639968443048000));
+		    }
+		});
 	});
+
+		var room = 1;
+		function education_fields() {
+		 
+		    room++;
+		    var objTo = document.getElementById('education_fields')
+		    var divtest = document.createElement("div");
+			divtest.setAttribute("class", "form-row removeclass"+room);
+			var rdiv = 'removeclass'+room;
+		    divtest.innerHTML = '<div class="col-md-3"><div class="form-group"><label class="required" for="start_time">Start time</label><input class="form-control lesson-timepicker {" type="text" name="startTime[]"  value="" required><span class="help-block"></span></div></div><div class="col-md-3"><div class="form-group"><label class="required" for="end_time">End time</label><input class="form-control lesson-timepicker" type="text" name="endTime[]" value="" required></div></div><div class="col-md-5"><div class="form-group"><label class="required" for="link">Link</label><input class="form-control" type="text" name="link[]" value="" required></div></div><div class="col-md-1" style="margin-top: 25px;"><div class="input-group-btn"><button class="btn btn-danger" type="button"  onclick="remove_education_fields('+ room +');"> <span class="fa fa-minus" aria-hidden="true"></span></button></div></div>';
+		    
+		    objTo.appendChild(divtest)
+
+		      $('.lesson-timepicker').datetimepicker({
+			    format: 'HH:mm',
+			    stepping: 30,
+			    icons: {
+			      up: 'fas fa-chevron-up',
+			      down: 'fas fa-chevron-down',
+			      previous: 'fas fa-chevron-left',
+			      next: 'fas fa-chevron-right'
+			    }
+			  })
+		}
+		   function remove_education_fields(rid) {
+			   $('.removeclass'+rid).remove();
+		   }
 </script>
 	@endsection

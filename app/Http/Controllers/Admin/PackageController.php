@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Package;
+use App\Models\PackageTiming;
 use Image;
 use File;
 
@@ -69,6 +70,24 @@ class PackageController extends Controller
         // $input['off_days'] = $strinarr;
 
         $new_package = Package::create($input);
+
+
+
+        $startTimes =  $request->input('startTime', []);
+        $endTimes =  $request->input('endTime', []);
+        $links =  $request->input('link', []);
+
+        foreach ($startTimes as $index => $startTimes) {
+            $packageTime[] = [
+                "package_id" => $new_package->id, // change this
+                "startTime" => $startTimes[$index],
+                "endTime" => $endTimes[$index],
+                "link" => $links[$index]
+            ];
+        }
+
+        PackageTiming::insert($packageTime);
+
         return redirect()->route('admin.packages.index')->with(['success'=>'Package Saved Successfully!']);
     }
 
@@ -92,7 +111,14 @@ class PackageController extends Controller
     public function edit(Package $package)
     {
         $package->workout_days = explode(',', $package->workout_days);
-        return view('admin.packages.edit', compact('package'));
+
+        $packageTimings = PackageTiming::where('package_id',$package->id)->get();
+
+        #print_r($packageTiming); exit;
+
+        //get(array("package_id"=>));
+
+        return view('admin.packages.edit', compact('package', 'packageTimings'));
     }
 
     /**
@@ -155,6 +181,28 @@ class PackageController extends Controller
         }
         
         $package->save();
+
+        PackageTiming::where('package_id',$package->id)->delete();
+        $startTimes =  $request->input('startTime', []);
+        $endTimes =  $request->input('endTime', []);
+        $links =  $request->input('link', []);
+
+        foreach ($startTimes as $index => $startTime) {
+            $packageTime[] = [
+                "package_id" => $package->id, // change this
+                "startTime" => date("H:i:s",strtotime($startTimes[$index])),
+                "endTime" => date("H:i:s",strtotime($endTimes[$index])),
+                "link" => $links[$index]
+            ];
+        }
+
+        // echo "<pre>";
+        // print_r(date("H:i:s",strtotime($startTimes[0])));exit;
+
+
+        PackageTiming::insert($packageTime);
+
+
 
         return redirect()->route('admin.packages.index')->with(['success'=>'Package Updated Successfully!']);
     }
