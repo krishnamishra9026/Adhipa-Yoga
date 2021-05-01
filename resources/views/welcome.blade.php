@@ -454,278 +454,142 @@
 </section>
 
 <section id="poses">
-
-    <div class="container spacer-double-lg border-bottom">
-
-        <div class="row">
-
-            <div class="col">
-
-                <div class="mb-5 pb-5 text-center">
-
-                    <span class="text-uppercase text-503592 font-secondary font-size-12 ">Basic yoga poses</span>       
-
-                    <h1 class="mb-0 text-D9008F">Yoga Positions</h1>
-
-                    <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row align-items-center justify-content-center">
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item ">
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+            <div class="container spacer-double-lg border-bottom">
+               <div class="row">
+                  <div class="col">
+                     <div class="mb-5 pb-5 text-center">
+                        <span class="text-uppercase text-secondary font-secondary font-size-12">Basic yoga poses</span>       
+                        <h1 class="mb-0">Yoga Positions</h1>
+                        <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div class="row align-items-center justify-content-center">
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item ">
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-6.svg')}}" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item ">
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item ">
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-7.svg')}}" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0">Trikonasana </h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item ">
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0">Trikonasana </h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item ">
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-8.svg')}}" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0">Vrksasana</h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item " >
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0">Vrksasana</h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item " >
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-9.svg')}}" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0">Savasana</h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item " >
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0">Savasana</h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item " >
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-10.sv')}}g" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title mb-0">Kursiasana</h5>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row mt-4 pt-4 align-items-center justify-content-center">
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item " >
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title mb-0">Kursiasana</h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="row mt-4 pt-4 align-items-center justify-content-center">
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item " >
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-11.sv')}}g" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0"> Bhujangasana</h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item " >
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0"> Bhujangasana</h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item " >
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-12.sv')}}g" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0">Tadasana</h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item " >
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0">Tadasana</h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item " >
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-13.sv')}}g" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0">Sukhasna</h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item " >
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0">Sukhasna</h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item " >
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-14.sv')}}g" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title  mb-0">Sanskrit</h5>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4">
-
-                <div class="yoga-pose-item " >
-
-                    <div class="yoga-pose-icon-container text-muted">
-
-                        <div class="yoga-pose-icon ">
-
-                            <div class="yoga-pose-icon-inner">
-
-                                <img class="" src="{{asset('frontend/assets/svg/simple-sentiayoga.png')}}" alt="">
-
-                            </div>
-
+                        <h5 class="yoga-pose-title  mb-0">Sanskrit</h5>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4">
+                     <div class="yoga-pose-item " >
+                        <div class="yoga-pose-icon-container text-muted">
+                           <div class="yoga-pose-icon ">
+                              <div class="yoga-pose-icon-inner">
+                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pos-2-acti')}}ve.svg" alt="">
+                              </div>
+                           </div>
                         </div>
-
-                    </div>
-
-                    <h5 class="yoga-pose-title mb-0">Uttanasana</h5>
-
-                </div>
-
+                        <h5 class="yoga-pose-title mb-0">Uttanasana</h5>
+                     </div>
+                  </div>
+               </div>
             </div>
-
-        </div>
-
-    </div>
-
-</section>
+         </section>
 
 {{-- <section id="trainer">
 
@@ -1082,24 +946,6 @@
 <section id="schedule">
 
     <div class="container spacer-double-lg">
-
-        <div class="row">
-
-            <div class="col">
-
-                <div class="mb-5 pb-5 text-center">
-
-                    <span class="text-uppercase font-secondary font-size-12 text-503592">choose program</span>       
-
-                    <h1 class="mb-0 text-D9008F">Yoga Positions</h1>
-
-                    <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
 
         <div class="row">
 
