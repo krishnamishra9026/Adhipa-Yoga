@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 31, 2021 at 08:55 AM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Host: localhost
+-- Generation Time: May 08, 2021 at 12:01 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `about_us` (
   `id` int(11) NOT NULL,
-  `content` text
+  `content` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -43,17 +42,40 @@ INSERT INTO `about_us` (`id`, `content`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `appointments`
+--
+
+INSERT INTO `appointments` (`id`, `user_id`, `message`, `created_at`, `updated_at`) VALUES
+(1, 13, 'ffh f f fj jfj', '2021-03-23 14:09:34', '2021-03-23 14:09:34'),
+(2, 14, 'sdg', '2021-03-24 12:54:54', '2021-03-24 12:54:54'),
+(3, 15, 'Sonam Mishra', '2021-03-24 13:07:00', '2021-03-24 13:07:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `blogs`
 --
 
 CREATE TABLE `blogs` (
   `id` bigint(20) NOT NULL,
   `title` varchar(191) NOT NULL,
-  `description` text,
-  `image` text,
-  `image_popup` text,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `name` varchar(191) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `image` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `status` varchar(111) NOT NULL DEFAULT 'off'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -61,9 +83,69 @@ CREATE TABLE `blogs` (
 -- Dumping data for table `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `title`, `description`, `image`, `image_popup`, `created_at`, `updated_at`, `status`) VALUES
-(2, 'Blog 2', 'Blog 2 Discription1', '1612078607carousel1.jpg', NULL, '2021-01-31 07:36:47', '2021-01-31 02:06:47', 'off'),
-(3, 'test blog', 'Test Bloggg', '1612078721carousel3.jpg', NULL, '2021-01-31 02:08:42', '2021-01-31 02:08:42', 'off');
+INSERT INTO `blogs` (`id`, `title`, `name`, `description`, `image`, `created_at`, `updated_at`, `status`) VALUES
+(2, 'Blog 1', 'Name 1', 'Blog 2 Discription1', NULL, '2021-04-03 17:40:15', '2021-04-03 12:10:15', 'off'),
+(4, 'Blog 2', 'Blog name 2', 'Blog name 2 Description', '1616919463kaylee-garrett-GaprWyIw66o-unsplash@2x.png', '2021-03-28 08:17:43', '2021-03-28 02:47:43', 'off'),
+(5, 'Blog 2', 'Blog name 2', 'Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet.', NULL, '2021-04-03 17:26:21', '2021-04-03 11:56:21', 'off');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cms`
+--
+
+CREATE TABLE `cms` (
+  `id` bigint(20) NOT NULL,
+  `title` varchar(191) NOT NULL,
+  `name` varchar(191) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `image` text DEFAULT NULL,
+  `image2` varchar(255) DEFAULT NULL,
+  `image3` varchar(255) DEFAULT NULL,
+  `image4` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `status` varchar(111) NOT NULL DEFAULT 'off'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cms`
+--
+
+INSERT INTO `cms` (`id`, `title`, `name`, `description`, `image`, `image2`, `image3`, `image4`, `created_at`, `updated_at`, `status`) VALUES
+(1, 'Ho We Are ?', 'WHAT WE DO', 'Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like \"simply standing,\" but there is a ton going on.', '16174727161.jpg', '16175227352.jpg', '16175231163.jpg', '16175227354.jpg', '2021-04-04 08:27:53', '2021-04-04 02:57:53', 'off');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE `contact_us` (
+  `id` int(11) NOT NULL,
+  `title` varchar(55) NOT NULL,
+  `name` varchar(55) NOT NULL,
+  `desc` text DEFAULT NULL,
+  `address` varchar(250) NOT NULL,
+  `phone_no` varchar(55) NOT NULL,
+  `say_hello` varchar(55) NOT NULL,
+  `open_timting` varchar(150) NOT NULL,
+  `image` varchar(250) NOT NULL,
+  `image2` varchar(250) NOT NULL,
+  `image3` varchar(250) NOT NULL,
+  `facebook` varchar(250) NOT NULL,
+  `twitter` varchar(250) NOT NULL,
+  `insta` varchar(250) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`id`, `title`, `name`, `desc`, `address`, `phone_no`, `say_hello`, `open_timting`, `image`, `image2`, `image3`, `facebook`, `twitter`, `insta`, `created_at`, `updated_at`) VALUES
+(1, 'GET IN TOUCH', 'Contact us', 'Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may', 'Central Park New York, USA', '(513) 352-3209', 'hello@foxeyoga.com', 'Monday - Saturday\r\n10:00 am - 22:00 pm', '1618759618600x600-1.jpg', '1618759618600x600-2.jpg', '1618759802600x600-3.jpg', '22', 'ee', 'ee', NULL, '2021-04-18 10:00:02');
 
 -- --------------------------------------------------------
 
@@ -77,7 +159,7 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -89,10 +171,10 @@ CREATE TABLE `failed_jobs` (
 CREATE TABLE `galleries` (
   `id` int(11) NOT NULL,
   `title` varchar(191) NOT NULL,
-  `description` text,
-  `image` text,
-  `image_popup` text,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `description` text DEFAULT NULL,
+  `image` text DEFAULT NULL,
+  `image_popup` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `status` varchar(121) NOT NULL DEFAULT 'off'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -102,7 +184,8 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `title`, `description`, `image`, `image_popup`, `created_at`, `updated_at`, `status`) VALUES
-(2, 'Gallery 2', NULL, '1612079457carousel3.jpg', '1612079457carousel3.jpg', '2021-01-31 02:20:57', '2021-01-31 02:20:57', 'off');
+(2, 'Gallery 2', NULL, '1612079457carousel3.jpg', '1612079457carousel3.jpg', '2021-01-31 02:20:57', '2021-01-31 02:20:57', 'off'),
+(3, 'Imge 15', NULL, '161631019615.jpg', '161631019715.jpg', '2021-03-21 01:33:17', '2021-03-21 01:33:17', 'off');
 
 -- --------------------------------------------------------
 
@@ -127,10 +210,33 @@ CREATE TABLE `lessons` (
 --
 
 INSERT INTO `lessons` (`id`, `weekday`, `start_time`, `end_time`, `created_at`, `updated_at`, `deleted_at`, `teacher_id`, `class_id`) VALUES
-(1, 3, '16:00:00', '18:00:00', '2021-01-26 05:12:43', '2021-01-26 05:12:43', NULL, 1, 1),
-(2, 2, '18:00:00', '21:00:00', '2021-01-26 05:14:58', '2021-01-26 10:28:06', '2021-01-26 10:28:06', 1, 1),
-(3, 4, '15:30:00', '16:30:00', '2021-01-26 10:34:25', '2021-01-26 10:58:59', NULL, 1, 2),
-(4, 2, '03:00:00', '05:00:00', '2021-01-26 11:01:18', '2021-01-26 11:01:18', NULL, 2, 3);
+(1, 3, '08:30:00', '10:30:00', '2021-04-10 06:25:10', '2021-04-10 06:32:17', NULL, 3, 1),
+(2, 5, '06:00:00', '13:00:00', '2021-04-30 12:12:34', '2021-04-30 12:12:34', NULL, 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `main_services`
+--
+
+CREATE TABLE `main_services` (
+  `id` int(11) NOT NULL,
+  `class` enum('Beginer','Advanced','Private') NOT NULL,
+  `heading` varchar(250) NOT NULL,
+  `desc` text DEFAULT NULL,
+  `img` varchar(250) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `main_services`
+--
+
+INSERT INTO `main_services` (`id`, `class`, `heading`, `desc`, `img`, `status`, `updated_at`) VALUES
+(1, 'Beginer', 'The Most Important Yoga Posesfor Beginners Classes', 'Mountain Pose is the base for all standing poses it gives\r\nyou a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like \"simply standing,\" but there is a ton going on.', '16186874582.jpg', 1, '2021-04-17 13:54:18'),
+(2, 'Advanced', 'Get ready to flow, breathe and sweat it out', 'Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like \"simply standing,\" but there is a ton going on. Hello world', '16186873741.jpg', 1, '2021-04-18 03:37:49'),
+(3, 'Private', 'Private Yoga Classes specially designed for your.', 'Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like \"simply standing,\" but there is a ton going on.', '16186874823.jpg', 1, '2021-04-17 13:55:08');
 
 -- --------------------------------------------------------
 
@@ -165,27 +271,46 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `newsletter_subscriptions`
+--
+
+CREATE TABLE `newsletter_subscriptions` (
+  `id` int(11) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `newsletter_subscriptions`
+--
+
+INSERT INTO `newsletter_subscriptions` (`id`, `email`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'er.krishna.mishra@gmail.com', 0, NULL, NULL),
+(2, 'er.krishna.mishra@gmail.com', 0, NULL, NULL),
+(3, 'er.krishna.mishra@gmail.com', 0, NULL, NULL),
+(4, 'shashank.123.shukla@gmail.com', 0, NULL, NULL),
+(5, 'er.krishna.mishra@gmail.com', 0, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `packages`
 --
 
 CREATE TABLE `packages` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name_arabic` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `includes` enum('both','workout','diet') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `no_of_classes` int(11) NOT NULL,
   `sort` int(11) NOT NULL,
   `price` double(8,2) NOT NULL,
   `validity` int(11) NOT NULL,
-  `target` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `target_arabic` text COLLATE utf8mb4_unicode_ci,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description_arabic` text COLLATE utf8mb4_unicode_ci,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'on',
-  `type` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `workout_days` text COLLATE utf8mb4_unicode_ci,
-  `off_days` text COLLATE utf8mb4_unicode_ci,
+  `workout_days` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` varchar(12234) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `is_accept_subscriptions` int(11) NOT NULL DEFAULT '1',
+  `is_accept_subscriptions` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -194,11 +319,48 @@ CREATE TABLE `packages` (
 -- Dumping data for table `packages`
 --
 
-INSERT INTO `packages` (`id`, `name`, `name_arabic`, `includes`, `sort`, `price`, `validity`, `target`, `target_arabic`, `description`, `description_arabic`, `status`, `type`, `workout_days`, `off_days`, `image`, `is_accept_subscriptions`, `created_at`, `updated_at`) VALUES
-(1, 'Fitness Freaks', 'النزوات اللياقة البدنية', 'both', 1, 499.00, 30, 'This is for those who like challenges and face them head on like a beast', 'هذا لمن يحبون التحديات ويواجهونها وجهاً لوجه مثل الوحش', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n\r\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\r\n\r\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'Lorem ipsum هو ببساطة نص شكلي يستخدم في صناعة الطباعة والتنضيد.\r\n\r\nكان Lorem ipsum هو النص الوهمي القياسي في الصناعة منذ القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحًا من النوع وتدافعت عليه لعمل كتاب عينة.\r\n\r\nعلى مر السنين ، سآتي ، التي ستخرج منها برأيك من ميزة التمرين ، بحيث تحفز الجهود بالمنطقة التعليمية وطول العمر.', 'on', NULL, '1,2,3,4,5', '6,7', '16009576871.jpg', 1, '2020-08-19 01:02:28', '2020-12-31 06:11:01'),
-(2, 'Fitnes Junkie', NULL, 'both', 2, 499.00, 20, 'This is for those who live the gym life, can\'t stand to miss working out for even a day, a structured exercise for every day of the week.', 'هذا مخصص لأولئك الذين يعيشون حياة الصالة الرياضية ، ولا يمكنهم تحمل تفويت التمرين حتى يوم واحد ، وهو تمرين منظم لكل يوم من أيام الأسبوع.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n\r\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\r\n\r\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum هو ببساطة نص شكلي يستخدم في صناعة الطباعة والتنضيد.\r\n\r\nكان Lorem ipsum هو النص الوهمي القياسي في الصناعة منذ القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحًا من النوع وتدافعت عليه لعمل كتاب عينة.\r\n\r\nباستثناء أن السود كيوبيدات ليسوا استثناءً ، فهو مهدئ للروح ، أي أنهم تخلوا عن الواجبات العامة لأولئك المسؤولين عن مشاكلك.', 'on', 'online', '1,2,3,4,5,6', '7', '1600959216download.png', 1, '2020-08-19 01:32:34', '2021-01-24 09:35:54'),
-(3, 'Fitness Forger', 'فيتنس فورجر', 'workout', 3, 199.00, 15, 'Shaping your body is your first Goal. However time constraints does not allow you to workout to the max, here are some exercises you can do any time of day.', 'تشكيل جسمك هو هدفك الأول. على الرغم من أن ضيق الوقت لا يسمح لك بالتمرين إلى أقصى حد ، فإليك بعض التمارين التي يمكنك القيام بها في أي وقت من اليوم.', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.\r\n\r\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 'Lorem ipsum هو ببساطة نص شكلي يستخدم في صناعة الطباعة والتنضيد.\r\n\r\nكان Lorem ipsum هو النص الوهمي القياسي في الصناعة منذ القرن الخامس عشر الميلادي ، عندما أخذت طابعة غير معروفة لوحًا من النوع وتدافعت عليه لعمل كتاب عينة.\r\n\r\nتريد أن تكون ألمًا في كيوبيداتات سيلوم وقد تم انتقاده في فرار Duis et dolore magna لا ينتج عنه متعة.', 'on', NULL, '1,3,5,7', '2,4,6', '1600959300165_Forge-Fitness-adjusted.jpg', 1, '2020-08-19 01:37:15', '2020-12-31 06:09:32'),
-(4, 'Center Package', NULL, 'both', 1, 699.00, 22, 'This is for those who like challenges and face them head on like a beast', NULL, 'This is for those who like challenges and face them head on like a beast', NULL, 'on', NULL, '3,6', '1,2,4,5,7', NULL, 1, '2021-01-12 02:31:57', '2021-01-12 02:31:57');
+INSERT INTO `packages` (`id`, `name`, `no_of_classes`, `sort`, `price`, `validity`, `description`, `status`, `workout_days`, `image`, `is_accept_subscriptions`, `created_at`, `updated_at`) VALUES
+(1, 'Teaching a Yoga Class Phase I', 28, 1, 26.00, 30, 'Teaching a Yoga Class Phase I', 'on', '1,3,4', '1617390690Rectangle 374.png', 1, '2020-08-19 01:02:28', '2021-04-03 05:26:35'),
+(6, 'Teaching a Yoga Class Phase I', 28, 1, 26.00, 30, 'Teaching a Yoga Class Phase I', 'on', '1,3,5', '1617390690Rectangle 374.png', 1, '2020-08-19 01:02:28', '2021-04-02 13:41:31'),
+(7, 'Teaching a Yoga Class Phase I', 28, 1, 26.00, 30, 'Teaching a Yoga Class Phase I', 'on', '1,3,5', '1617390690Rectangle 374.png', 1, '2020-08-19 01:02:28', '2021-04-02 13:41:31'),
+(8, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:06:31', '2021-05-01 02:06:31'),
+(9, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:07:31', '2021-05-01 02:07:31'),
+(10, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:08:19', '2021-05-01 02:08:19'),
+(11, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:09:38', '2021-05-01 02:09:38'),
+(12, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:10:48', '2021-05-01 02:10:48'),
+(13, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:10:54', '2021-05-01 02:10:54'),
+(14, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:11:04', '2021-05-01 02:11:04'),
+(15, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:12:22', '2021-05-01 02:12:22'),
+(16, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:12:42', '2021-05-01 02:12:42'),
+(17, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:12:52', '2021-05-01 02:12:52'),
+(18, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:13:00', '2021-05-01 02:13:00'),
+(19, 'aFAFAF', 3, 2, 550.00, 55, 'gasg', 'on', '3,4', NULL, 1, '2021-05-01 02:13:13', '2021-05-01 02:13:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `package_timings`
+--
+
+CREATE TABLE `package_timings` (
+  `id` int(11) NOT NULL,
+  `package_id` int(11) NOT NULL,
+  `startTime` time DEFAULT NULL,
+  `endTime` time DEFAULT NULL,
+  `link` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `package_timings`
+--
+
+INSERT INTO `package_timings` (`id`, `package_id`, `startTime`, `endTime`, `link`) VALUES
+(1, 19, '00:00:01', '00:00:01', 'https://getdatepicker.com/4/Options/'),
+(2, 19, '00:00:02', '00:00:03', 'https://getdatepicker.com/4/Options/'),
+(9, 13, '00:00:02', '00:00:02', 'https://stackoverflow.com/questions/40122633/if-else-condition-in-blade-file-laravel-5-3'),
+(10, 13, '00:00:01', '00:00:03', 'https://stackoverflow.com/questions/40122633/if-else-condition-in-blade-file-laravel-5-3'),
+(27, 18, '02:00:00', '02:00:00', 'https://laracasts.com/discuss/channels/eloquent/non-static-method-illuminatedatabaseeloquentmodelupdate-should-not-be-called-statically'),
+(28, 18, '03:00:00', '02:00:00', 'https://laracasts.com/discuss/channels/eloquent/non-static-method-illuminatedatabaseeloquentmodelupdate-should-not-be-called-statically');
 
 -- --------------------------------------------------------
 
@@ -325,7 +487,7 @@ INSERT INTO `permission_role` (`role_id`, `permission_id`) VALUES
 
 CREATE TABLE `privacy_policies` (
   `id` int(11) NOT NULL,
-  `content` text
+  `content` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -344,7 +506,7 @@ INSERT INTO `privacy_policies` (`id`, `content`) VALUES
 CREATE TABLE `products` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `price` decimal(15,2) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -392,7 +554,8 @@ CREATE TABLE `role_user` (
 INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
 (1, 1),
 (2, 3),
-(3, 3);
+(3, 3),
+(15, 2);
 
 -- --------------------------------------------------------
 
@@ -413,9 +576,36 @@ CREATE TABLE `school_classes` (
 --
 
 INSERT INTO `school_classes` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'test school1', '2021-01-26 04:41:34', '2021-01-26 10:24:47', NULL),
-(2, 'Morning Flow', '2021-01-26 10:33:26', '2021-01-26 10:33:26', NULL),
-(3, 'Hath Flow', '2021-01-26 11:00:08', '2021-01-26 11:00:08', NULL);
+(1, 'Beginner', '2021-04-10 06:23:36', '2021-04-10 06:23:36', NULL),
+(2, 'Amar Ujala', '2021-04-30 12:11:38', '2021-04-30 12:11:38', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE `settings` (
+  `id` int(11) NOT NULL,
+  `site_name` varchar(191) DEFAULT NULL,
+  `site_title` varchar(191) DEFAULT NULL,
+  `site_description` varchar(191) DEFAULT NULL,
+  `contact_name` varchar(191) DEFAULT NULL,
+  `mobile` varchar(191) DEFAULT NULL,
+  `email` varchar(191) DEFAULT NULL,
+  `country` varchar(191) DEFAULT NULL,
+  `state` varchar(191) DEFAULT NULL,
+  `city` varchar(191) DEFAULT NULL,
+  `what_we_do` text DEFAULT NULL,
+  `address` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `site_name`, `site_title`, `site_description`, `contact_name`, `mobile`, `email`, `country`, `state`, `city`, `what_we_do`, `address`) VALUES
+(1, 'Yoga11', 'Daily Yoga', 'Daily Yoga Site', 'Krishna Mishra', '(513) 352-3209', 'hello@foxeyoga.com', 'India', 'Delhi', 'Barabanki', NULL, 'Central Park New York, USA');
 
 -- --------------------------------------------------------
 
@@ -425,7 +615,7 @@ INSERT INTO `school_classes` (`id`, `name`, `created_at`, `updated_at`, `deleted
 
 CREATE TABLE `terms` (
   `id` int(11) NOT NULL,
-  `content` text
+  `content` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -434,6 +624,36 @@ CREATE TABLE `terms` (
 
 INSERT INTO `terms` (`id`, `content`) VALUES
 (1, 'Terms & Conditions content ....11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` int(11) NOT NULL,
+  `title` varchar(191) NOT NULL,
+  `name` varchar(191) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `image` text DEFAULT NULL,
+  `image_popup` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` varchar(121) NOT NULL DEFAULT 'off'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `title`, `name`, `description`, `image`, `image_popup`, `created_at`, `updated_at`, `status`) VALUES
+(2, 'Business Manager', 'Melissa Wagner', '\"Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earthbelow you.\"', '16168718006.jpg', '16168718016.jpg', '2021-03-27 19:03:21', '2021-03-27 13:33:21', 'off'),
+(4, 'Php Developer', 'Krishna Mishra', 'A PHP developer is responsible for writing server-side web application logic. PHP developers usually develop back-end components, connect the application with the other (often third-party) web services, and support the front-end developers by integrating their work with the application.', '16168720545.jpg', '16168720545.jpg', '2021-03-27 13:37:34', '2021-03-27 13:37:34', 'off'),
+(5, 'Graphics Designer', 'Laxman Mishra', 'Lara J Designs is the Best of the Best! I have used them for many projects and am always impressed. My business cards are continually complimented and my internet sales have dramatically increased since switching to a Lara J Designs created website. Their talent and professionalism is only surpassed by their kindness. Kudos to Lara J Designs!', '16169171788.jpg', '16169171788.jpg', '2021-03-28 02:09:38', '2021-03-28 02:09:38', 'off'),
+(6, 'Business Manager', 'Melissa Wagner', '\"Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earthbelow you.\"', '16168718006.jpg', '16168718016.jpg', '2021-03-27 19:03:21', '2021-03-27 13:33:21', 'off'),
+(7, 'Php Developer', 'Krishna Mishra', 'A PHP developer is responsible for writing server-side web application logic. PHP developers usually develop back-end components, connect the application with the other (often third-party) web services, and support the front-end developers by integrating their work with the application.', '16168720545.jpg', '16168720545.jpg', '2021-03-27 13:37:34', '2021-03-27 13:37:34', 'off'),
+(8, 'Graphics Designer', 'Laxman Mishra', 'Lara J Designs is the Best of the Best! I have used them for many projects and am always impressed. My business cards are continually complimented and my internet sales have dramatically increased since switching to a Lara J Designs created website. Their talent and professionalism is only surpassed by their kindness. Kudos to Lara J Designs!', '16169171788.jpg', '16169171788.jpg', '2021-03-28 02:09:38', '2021-03-28 02:09:38', 'off');
 
 -- --------------------------------------------------------
 
@@ -461,7 +681,11 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`, `class_id`) VALUES
 (1, 'Admin', 'admin@admin.com', NULL, '$2y$10$imU.Hdz7VauIT3LIMCMbsOXvaaTQg6luVqkhfkBcsUd.SJW2XSRKO', NULL, '2019-04-15 13:43:32', '2019-04-15 13:43:32', NULL, NULL),
 (2, 'Krishna Mishra', 'Krishna@gmail.com', NULL, '$2y$10$Nlck1b9xNtLLuiIGOOWKhu8wQb1tPadIfya1EeTQosAU05jpA/HCy', NULL, '2021-01-26 10:31:57', '2021-01-26 10:31:57', NULL, NULL),
-(3, 'Trainer1', 'trainer1@gmail.com', NULL, '$2y$10$bXlKyLDOGo65XTppKh09cujUoUjhyBCZDlzkPptipR6umdWu.u.ju', NULL, '2021-01-27 13:26:37', '2021-01-27 13:26:37', NULL, NULL);
+(3, 'Trainer1', 'trainer1@gmail.com', NULL, '$2y$10$bXlKyLDOGo65XTppKh09cujUoUjhyBCZDlzkPptipR6umdWu.u.ju', NULL, '2021-01-27 13:26:37', '2021-01-27 13:26:37', NULL, NULL),
+(4, 'KRISHNA MISHRA', 'er.krishna.mishra@gmail.com', NULL, '$2y$10$/KbiaX6lYpdVEX4byArtL.nZb2H3H6TMJ9GHkok2LMBTrUQ7shJoa', NULL, '2021-03-23 13:40:08', '2021-03-23 13:40:08', NULL, NULL),
+(13, 'Laxman Mishra', 'laxmanmishrabbk@gmail.com', NULL, '$2y$10$dpATZGla6g/q1va0LeWK2eaiK6/MoVDv4pA5w7p/YNGEs9oe0dACa', NULL, '2021-03-23 14:09:34', '2021-03-23 14:09:34', NULL, NULL),
+(14, 'KRISHNA MISHRA', 'er.krishna.mishra1@gmail.com', NULL, '$2y$10$PO.SbVDOWijtQTHCqxjz8.q3rBpYBEe7OmIO.IVqdQ5ATebsLjjna', NULL, '2021-03-24 12:54:54', '2021-03-24 12:54:54', NULL, NULL),
+(15, 'Sonam Mishra', 'sonam@gmail.com', NULL, '$2y$10$lwV9EtJY/k9sBeAefN9zX.WiFXHTB7e2BpBCIxUoetj83FpBRPZJG', NULL, '2021-03-24 13:07:00', '2021-03-24 13:07:00', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -474,9 +698,27 @@ ALTER TABLE `about_us`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `appointments`
+--
+ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `blogs`
 --
 ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cms`
+--
+ALTER TABLE `cms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -500,15 +742,33 @@ ALTER TABLE `lessons`
   ADD KEY `class_fk_1001508` (`class_id`);
 
 --
+-- Indexes for table `main_services`
+--
+ALTER TABLE `main_services`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `newsletter_subscriptions`
+--
+ALTER TABLE `newsletter_subscriptions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `packages`
 --
 ALTER TABLE `packages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `package_timings`
+--
+ALTER TABLE `package_timings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -562,9 +822,21 @@ ALTER TABLE `school_classes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `settings`
+--
+ALTER TABLE `settings`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `terms`
 --
 ALTER TABLE `terms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -585,10 +857,28 @@ ALTER TABLE `about_us`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `appointments`
+--
+ALTER TABLE `appointments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `cms`
+--
+ALTER TABLE `cms`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -600,13 +890,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `lessons`
 --
 ALTER TABLE `lessons`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `main_services`
+--
+ALTER TABLE `main_services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -615,10 +911,22 @@ ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `newsletter_subscriptions`
+--
+ALTER TABLE `newsletter_subscriptions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `packages`
 --
 ALTER TABLE `packages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `package_timings`
+--
+ALTER TABLE `package_timings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -648,7 +956,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `school_classes`
 --
 ALTER TABLE `school_classes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `settings`
+--
+ALTER TABLE `settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `terms`
@@ -657,10 +971,16 @@ ALTER TABLE `terms`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables

@@ -14,7 +14,6 @@
   <source  class="bg-image"  src="rain.mp4" type="https://www.w3schools.com/howto/rain.mp4">
 </video>
 
-    <img class="bg-image" src="{{asset('frontend/assets/img/1.jpg')}}" alt="">
 
     <div class="container hero hero-responsive">
 
