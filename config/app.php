@@ -232,7 +232,7 @@ return [
 
     'calendar' => [
         'start_time'    => '08:30',
-        'end_time'      => '24:00',
+        'end_time'      => '21:30',
     ],
 
 ];
