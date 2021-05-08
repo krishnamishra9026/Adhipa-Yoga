@@ -37,7 +37,27 @@ class LessonsController extends Controller
 
     public function store(StoreLessonRequest $request)
     {
-        $lesson = Lesson::create($request->all());
+        //$lesson = Lesson::create($request->all());
+
+
+        $startTimes =  $request->input('startTime', []);
+        $endTimes =  $request->input('endTime', []);
+        $weekdays =  $request->input('weekday', []);
+        $class_id =  $request->input('class_id');
+        $teacher_id =  $request->input('teacher_id');
+
+        foreach ($startTimes as $index => $startTime) {
+            $classTime[] = [
+                "teacher_id" => $teacher_id, // change this
+                "class_id" => $class_id,
+                "weekday" => $weekdays[$index],
+                "start_time" => date("H:i:s",strtotime($startTimes[$index])),
+                "end_time" => date("H:i:s",strtotime($endTimes[$index])),
+            ];
+        }
+
+
+        Lesson::insert($classTime);
 
         return redirect()->route('admin.lessons.index');
     }

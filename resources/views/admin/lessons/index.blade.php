@@ -103,8 +103,7 @@
 @parent
 <script>
     $(function () {
-  let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('lesson_delete')
+  let dtButtons = $.extend(true, [], [])
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
@@ -132,7 +131,6 @@
     }
   }
   dtButtons.push(deleteButton)
-@endcan
 
   $.extend(true, $.fn.dataTable.defaults, {
     order: [[ 1, 'desc' ]],

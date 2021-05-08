@@ -77,7 +77,7 @@ class PackageController extends Controller
         $endTimes =  $request->input('endTime', []);
         $links =  $request->input('link', []);
 
-        foreach ($startTimes as $index => $startTimes) {
+        foreach ($startTimes as $index => $startTime) {
             $packageTime[] = [
                 "package_id" => $new_package->id, // change this
                 "startTime" => $startTimes[$index],
