@@ -7,13 +7,65 @@
 @endsection
 
 @section('content')
+<style type="text/css">
+    header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+</style>
 
 <section class="gradient-overlay gradient-overlay-dark ">
 
-    <video autoplay muted loop id="myVideo">
-  <source  class="bg-image"  src="rain.mp4" type="https://www.w3schools.com/howto/rain.mp4">
-</video>
 
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="100%" height="100%">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
+ 
 
     <div class="container hero hero-responsive">
 
@@ -32,6 +84,7 @@
         </div>
 
     </div>
+
 
     <div class="curved-decoration ">
 
@@ -77,7 +130,7 @@
 
                 <p class="mb-4">{{ $cms->description }}</p>
 
-                <a href="#appointment" class="btn btn-secondary btn-sm">Make an Appointment</a>
+                {{-- <a href="#appointment" class="btn btn-secondary btn-sm">Make an Appointment</a> --}}
 
             </div>
 
@@ -111,12 +164,12 @@
 
                     <div class="row gap" data-jarallax-element="-60 0">
 
-                        <div class="col-5 align-self-end  mb-2">
+                        <div class="col-12 align-self-end  mb-2">
 
                             <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image)}}" alt="">
 
                         </div>
-
+{{-- 
                         <div class="col-7  mb-2">
 
                             <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image2)}}" alt="">
@@ -133,7 +186,7 @@
 
                             <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image4)}}" alt="">
 
-                        </div>
+                        </div> --}}
 
                     </div>
 
@@ -469,67 +522,77 @@
                </div>
                <div class="row align-items-center justify-content-center">
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item ">
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-6.svg')}}" alt="">
-                              </div>
-                           </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                        <div class="yoga-pose-item ">
+                            <div class="yoga-pose-icon-container text-muted">
+                                <div class="yoga-pose-icon ">
+                                    <div class="yoga-pose-icon-inner">
+                                        <img class="" src="{{asset('frontend/assets/svg/yoga-pose-6.svg')}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
                         </div>
-                        <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
-                     </div>
+                    </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item ">
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-7.svg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Trikonasana </h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item ">
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-7.svg')}}" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Trikonasana </h5>
+                         </div>
+                     </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item ">
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-8.svg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Vrksasana</h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item ">
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-8.svg')}}" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Vrksasana</h5>
+                         </div>
+                     </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-9.svg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Savasana</h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item " >
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-9.svg')}}" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Savasana</h5>
+                         </div>
+                     </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-10.sv')}}g" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title mb-0">Kursiasana</h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item " >
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-10.sv')}}g" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title mb-0">Kursiasana</h5>
+                         </div>
+                     </a>
                   </div>
                </div>
-               <div class="row mt-4 pt-4 align-items-center justify-content-center">
+               <div style="display: none;" class="row mt-4 pt-4 align-items-center justify-content-center">
                   <div class="col-lg-2 col-md-4">
                      <div class="yoga-pose-item " >
                         <div class="yoga-pose-icon-container text-muted">
@@ -1255,7 +1318,7 @@
 
 </section>
 
-<section id="appointment" class=" bg-white">
+<section style="display: none;" id="appointment" class=" bg-white">
 
     <div class="container">
 
@@ -1727,7 +1790,7 @@
 
                                 <div class="mr-2">
 
-                                    <a href="#">Ton</a>
+                                    <a href="#">Posted On :</a>
 
                                 </div>
 
@@ -1735,7 +1798,7 @@
 
                             </div>
 
-                            <span class="badge bg-primary text-white font-base">
+                            <span style="display: none;" class="badge bg-primary text-white font-base">
 
                                 <svg version="1.1" class="badge-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 45.9" xml:space="preserve">
 
@@ -1753,7 +1816,7 @@
 
                         <h2 class="h5 ">
 
-                            <a href="#">{{ $blog->title }}</a>
+                            <a href="{{ url('/blog/'.$blog->id) }}">{{ $blog->title }}</a>
 
                         </h2>
 
@@ -2017,7 +2080,35 @@
 
 </section>
 
-
+ <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
 
 @endsection
 

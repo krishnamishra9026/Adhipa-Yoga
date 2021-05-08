@@ -13,7 +13,6 @@ class CalendarService
         $lessons   = Lesson::with('class', 'teacher')
             ->calendarByRoleOrClassId()
             ->get();
-        echo "<pre>";print_r($timeRange);"</pre>";exit;
 
         foreach ($timeRange as $time)
         {

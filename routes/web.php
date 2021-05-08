@@ -24,6 +24,10 @@ Route::get('/blog', function () {
     return view('blog');
 });
 
+Route::get('/blog/{id}', function () {
+    return view('blog');
+});
+
 Route::get('/single', function () {
     return view('single');
 });
