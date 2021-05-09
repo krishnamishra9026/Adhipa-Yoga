@@ -97,11 +97,21 @@ class Lesson extends Model
 
     public function scopeCalendarByRoleOrClassId($query)
     {
-        return $query->when(!request()->input('class_id'), function ($query) {
-            $query->when(auth()->user()->is_trainer, function ($query) {
-                $query->where('teacher_id', auth()->user()->id);
+       
+          return $query->when(!request()->input('class_id'), function ($query) {
+             if (empty(auth()->user())) {
+            $trainer = '';
+           $student = '';
+           $user_id = 1;
+        }else{
+ $trainer = auth()->user()->is_trainer;
+           $student =  auth()->user()->is_student;
+           $user_id =  auth()->user()->id;
+        }
+            $query->when(@$trainer, function ($query) {
+                $query->where('teacher_id', $user_id);
             })
-                ->when(auth()->user()->is_student, function ($query) {
+                ->when($student, function ($query) {
                     $query->where('class_id', auth()->user()->class_id ?? '0');
                 });
         })

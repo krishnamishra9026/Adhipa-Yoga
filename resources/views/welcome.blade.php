@@ -965,186 +965,44 @@
 
                             <tr>
 
-                                <th class=" text-dark font-size-14 text-uppercase">Time</th>
+                                <th width="1%" class=" text-dark font-size-14 text-uppercase">Time</th>
 
-                                <th class="border-left  text-dark font-size-14 text-uppercase">
+                                @foreach($weekDays as $day)
+                                <th  width="1%" class="border-left  text-dark font-size-14 text-uppercase">{{ $day }}</th>
+                            @endforeach
 
-                                    Mon
-
-                                </th>
-
-                                <th class=" border-left border-right text-dark  font-size-14 text-uppercase">
-
-                                    Tue
-
-                                </th>
-
-                                <th class=" text-dark  font-size-14 text-uppercase" >
-
-                                    wed
-
-                                </th>
-
-                                <th class="border-left  text-dark  font-size-14 text-uppercase">
-
-                                    Thur
-
-                                </th>
-
-                                <th class=" border-left border-right text-dark font-size-14 text-uppercase">
-
-                                    Fri
-
-                                </th>
-
-                                <th class=" text-dark font-size-14 text-uppercase" >
-
-                                    Sat
-
-                                </th>
 
                             </tr>
 
                         </thead>
 
                         <tbody>
-
+                             @foreach($calendarData as $time => $days)
                             <tr>
 
-                                <th class="font-size-13 text-dark text-center">8:30 <br>am</th>
+                                @php
+                                $am_pm=date('a',strtotime(explode('-', $time)[1]));
+                                $time1=date('h:m',strtotime(explode('-', $time)[0]));
+                                $time2=date('h:m',strtotime(explode('-', $time)[1]));
+                                @endphp
 
-                                <td class="text-center   border-left">
-
-                                    Beginner<br>
-
-                                    Group A
-
-                                </td>
-
-                                <td class="text-center  border-left border-right ">
-
-                                    -
-
-                                </td>
-
-                                <td class="text-center   border-left">
-
-                                    Beginner<br>
-
-                                    Group A
-
-                                </td>
-
-                                <td class="text-center  border-left border-right ">
-
-                                    -
-
-                                </td>
-
-                                <td class="text-center  border-left border-right ">
-
-                                    -
-
-                                </td>
-
-                                <td class=" text-center  ">
-
-                                    Beginner<br>
-
-                                    Group B
-
-                                </td>
-
+                                <th class="font-size-13 text-dark text-center">{{ $time1.' - '.$time2 }} <br> {{ $am_pm }}</th>
+                                    @foreach($days as $value)
+                                        @if (is_array($value))
+                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center border-left">
+                                                {{ $value['class_name'] }}<br>
+                                                {{-- Trainer: --}} {{ $value['teacher_name'] }}
+                                            </td>
+                                        @elseif ($value === 1)
+                                            <td class="text-center  border-left "> - </td>
+                                        @endif
+                                    @endforeach                             
                             </tr>
-
-                            <tr>
-
-                                <th class="font-size-13 text-dark text-center">10:00 <br>am</th>
-
-                                <td class="text-center   border-left">-</td>
-
-                                <td class="text-center  border-left border-right p-3">
-
-                                    Advanced<br>
-
-                                    Group A
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class=" text-center  ">
-
-                                    -
-
-                                </td>
-
-                            </tr>
-
-                            <tr>
-
-                                <th class="font-size-13 text-dark  text-center">12:30 <br>pm</th>
-
-                                <td class="text-center   border-left">Advanced<br>
-
-                                    Group B
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class=" text-center ">
-
-                                    -
-
-                                </td>
-
-                            </tr>
+                        @endforeach
 
                         </tbody>
 
-                    </table>
-
-
-                  
+                    </table>                  
 
                 </div>
 
