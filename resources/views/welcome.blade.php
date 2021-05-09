@@ -959,9 +959,7 @@
 
                     <h6 class="h5 text-B42997 mb-5 text-center">2020 Schedule</h6>
 
-                    <table style=" display: block;
-  height: 500px;
-  overflow-y: scroll;" class="table table-borderless">
+                    <table style=" display: block;  height: 500px;  overflow-y: scroll;" class="table table-borderless">
 
                         <thead class="text-center">
 
@@ -970,7 +968,7 @@
                                 <th width="1%" class=" text-dark font-size-14 text-uppercase">Time</th>
 
                                 @foreach($weekDays as $day)
-                                <th  width="1%" class="border-left  text-dark font-size-14 text-uppercase">{{ $day }}</th>
+                                <th  width="1%" class="border-left  border-right text-dark font-size-14 text-uppercase">{{ $day }}</th>
                             @endforeach
 
 
@@ -988,15 +986,15 @@
                                 $time2=date('h:m',strtotime(explode('-', $time)[1]));
                                 @endphp
 
-                                <th class="font-size-13 text-dark text-center">{{ $time1.' - '.$time2 }} <br> {{ $am_pm }}</th>
+                                <th class="font-size-13 text-dark  text-center">{{ $time1.' - '.$time2 }} <br> {{ $am_pm }}</th>
                                     @foreach($days as $value)
                                         @if (is_array($value))
-                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center border-left">
+                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center border-right border-left">
                                                 {{ $value['class_name'] }}<br>
                                                 {{-- Trainer: --}} {{ $value['teacher_name'] }}
                                             </td>
                                         @elseif ($value === 1)
-                                            <td class="text-center  border-left "> - </td>
+                                            <td class="text-center  border-right border-left "> - </td>
                                         @endif
                                     @endforeach                             
                             </tr>
