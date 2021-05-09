@@ -48,6 +48,12 @@ class HomeController extends Controller
         return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting'/*, 'calendarData','weekDays'*/,'mainservices','contactus'));
     }
 
+    public function blog($id='')
+    {
+        $blog = Blog::where('id',$id)->first();
+       return view('blog',compact('blog'));
+    }
+
 
     public function indexHome()
     {

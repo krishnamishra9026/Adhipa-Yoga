@@ -1754,7 +1754,7 @@
 
                         <h2 class="h5 ">
 
-                            <a href="#">{{ $blog->title }}</a>
+                            <a href="{{ url('/blog/'.$blog->id) }}">{{ $blog->title }}</a>
 
                         </h2>
 
