@@ -86,7 +86,7 @@
                 </a>
             </li>
 
-            <li class="nav-item">
+            <!--li class="nav-item">
                 <a href="{{ route("admin.newsletters.index") }}" class="nav-link {{ request()->is('admin/newsletters') || request()->is('admin/newsletters/*') ? 'active' : '' }}">
                     <i class="fa-fw fas fa-newsletters nav-icon">
 
@@ -102,7 +102,7 @@
                     </i>
                     Appointments
                 </a>
-            </li>
+            </li-->
 
             <li class="nav-item nav-dropdown">
                 <a class="nav-link  nav-dropdown-toggle">

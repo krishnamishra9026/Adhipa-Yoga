@@ -8,16 +8,16 @@
 
 @section('content')
 <style type="text/css">
-    header {
+    .video-container {
   position: relative;
   background-color: black;
-  height: 75vh;
-  min-height: 25rem;
+  height: 100vh;
+  /*min-height: 25rem;*/
   width: 100%;
   overflow: hidden;
 }
 
-header video {
+.video-container video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,82 +32,55 @@ header video {
   transform: translateX(-50%) translateY(-50%);
 }
 
-header .container {
+.video-container .container {
   position: relative;
   z-index: 2;
 }
 
-header .overlay {
+.video-container .overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.1;
   z-index: 1;
 }
 
 @media (pointer: coarse) and (hover: none) {
-  header {
+  .video-container {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
   }
-  header video {
+  .video-container video {
     display: none;
   }
 }
 </style>
 
-<section class="gradient-overlay gradient-overlay-dark ">
-
-
+<section class="gradient-overlay gradient-overlay-dark video-container">
   <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="100%" height="100%">
-    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="{{asset('frontend/assets/video/main_video.mp4')}}" type="video/mp4">
   </video>
- 
+  <div class="container hero hero-responsive">
 
-    <div class="container hero hero-responsive">
+    <div class="row  align-items-center z-index-2 position-relative">
 
-        <div class="row  align-items-center z-index-2 position-relative">
+        <div class="col-12">
 
-            <div class="col-12">
+            <h1 class="display-4  text-white mb-2 heading">Increased Muscle Strength and Tone</h1>
 
-                <h1 class="display-4  text-white mb-2 heading">Increased Muscle Strength and Tone</h1>
+            <p class="font-weight-300 mb-5 sub-heading ">Learn about how yoga can help you stay healthy</p>
 
-                <p class="font-weight-300 mb-5 sub-heading ">Learn about how yoga can help you stay healthy</p>
-
-                <a href="#appointment" class="btn btn-gradient scroll text-white">Make an Appointment</a>
-
-            </div>
+            <a href="#appointment" class="btn btn-gradient scroll text-white">Make an Appointment</a>
 
         </div>
 
     </div>
 
-
-    <div class="curved-decoration ">
-
-        <div class="decoration-bottom bottom-n1">
-
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-
-            viewBox="0 0 800 43.2" enable-background="new 0 0 800 43.2;" xml:space="preserve">
-
-
-
-            <path fill="#f3f5f8" d="M0,43.1v-4.8c0,0,187.9-30,400-3S800,0,800,0v43.1H0z"/>
-
-            <path fill="#f3f5f8" opacity="0.3" d="M0,43V18.7c0,0,131.8-13.9,269.2,20.9C407.2,60,600.3-13.9,800,27.8V43H0z"/>
-
-            </svg>
-
-        </div>
-
-    </div>
-
+</div>
 </section>
-
 <section id="about">
 
     <div class="container spacer-double-lg border-bottom">
@@ -957,7 +930,7 @@ header .overlay {
 
     <img class="bg-image" src="{{asset('frontend/assets/img/9.jpg')}}" alt="">
 
-    <div class="container spacer-xlg z-index-2 position-relative">
+   <!--  <div class="container spacer-xlg z-index-2 position-relative">
 
         <div class="row justify-content-center text-center">
 
@@ -991,7 +964,7 @@ header .overlay {
 
         </div>
 
-    </div>
+    </div> -->
 
     <div class="curved-decoration bottom-n1">
 
@@ -1159,7 +1132,7 @@ header .overlay {
 
                             </tr>
 
-                            <tr>
+                            <tr style="border-bottom: 1px solid #dee2e6">
 
                                 <th class="font-size-13 text-dark  text-center">12:30 <br>pm</th>
 
