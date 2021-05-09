@@ -959,7 +959,9 @@
 
                     <h6 class="h5 text-B42997 mb-5 text-center">2020 Schedule</h6>
 
-                    <table class="table table-borderless">
+                    <table style=" display: block;
+  height: 500px;
+  overflow-y: scroll;" class="table table-borderless">
 
                         <thead class="text-center">
 
