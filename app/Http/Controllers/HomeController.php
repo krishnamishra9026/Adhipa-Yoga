@@ -70,6 +70,6 @@ class HomeController extends Controller
         $packages = Package::latest()->take(3)->get();
         $testimonials = Testimonial::latest()->get();
         // echo "<pre>";print_r(compact('calendarData'));"</pre>";exit;
-        return view('welcome_index',compact('testimonials','blogs','packages', 'cms', 'setting'/*, 'calendarData','weekDays'*/,'mainservices','contactus'));
+        return view('welcome_index',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'));
     }
 }

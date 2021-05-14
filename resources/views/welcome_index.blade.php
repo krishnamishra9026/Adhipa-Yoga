@@ -48,14 +48,14 @@
   z-index: 1;
 }
 
-@media (pointer: coarse) and (hover: none) {
+/*@media (pointer: coarse) and (hover: none) {
   .video-container {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
   }
   .video-container video {
-    display: none;
+    display: blocks;
   }
-}
+}*/
 </style>
 
 <section class="gradient-overlay gradient-overlay-dark video-container">
@@ -63,23 +63,6 @@
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="{{asset('frontend/assets/video/main_video.mp4')}}" type="video/mp4">
   </video>
-  <div class="container hero hero-responsive">
-
-    <div class="row  align-items-center z-index-2 position-relative">
-
-        <div class="col-12">
-
-            <h1 class="display-4  text-white mb-2 heading">Increased Muscle Strength and Tone</h1>
-
-            <p class="font-weight-300 mb-5 sub-heading ">Learn about how yoga can help you stay healthy</p>
-
-            <a href="#appointment" class="btn btn-gradient scroll text-white">Make an Appointment</a>
-
-        </div>
-
-    </div>
-
-</div>
 </section>
 <section id="about">
 
@@ -103,7 +86,6 @@
 
                 <p class="mb-4">{{ $cms->description }}</p>
 
-                {{-- <a href="#appointment" class="btn btn-secondary btn-sm">Make an Appointment</a> --}}
 
             </div>
 
@@ -286,13 +268,6 @@
                     <h2 class="text-lh-xs mb-4">{{ $mainservices->heading }}</h2>
 
                     <p class="mb-5">{{ $mainservices->desc }}</p>
-
-                    <a class="btn btn-sm btn-secondary mr-2" href="#gallery">View Our Gallery <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" stroke="#D9008F" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                  <path fill-rule="evenodd" stroke="#D9008F" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                </svg></a>
-
-                    {{-- <a class="btn btn-sm btn-primary " href="#">Make an Appointment</a> --}}
 
                 </div>
 
@@ -992,192 +967,53 @@
 
                 <div class="p-6 p-3 shadow radius-2">
 
-                    <h6 class="h5 text-B42997 mb-5 text-center">2020 Schedule</h6>
+                    <h6 class="h5 text-B42997 mb-5 text-center">2021 Schedule</h6>
 
-                    <table class="table table-borderless">
+
+                    <table style=" display: block;  height: 500px;  overflow-y: scroll;" class="table table-borderless">
 
                         <thead class="text-center">
 
                             <tr>
 
-                                <th class=" text-dark font-size-14 text-uppercase">Time</th>
+                                <th width="1%" class=" text-dark font-size-14 text-uppercase">Time</th>
 
-                                <th class="border-left  text-dark font-size-14 text-uppercase">
+                                @foreach($weekDays as $day)
+                                <th  width="1%" class="border-left  border-right text-dark font-size-14 text-uppercase">{{ $day }}</th>
+                            @endforeach
 
-                                    Mon
-
-                                </th>
-
-                                <th class=" border-left border-right text-dark  font-size-14 text-uppercase">
-
-                                    Tue
-
-                                </th>
-
-                                <th class=" text-dark  font-size-14 text-uppercase" >
-
-                                    wed
-
-                                </th>
-
-                                <th class="border-left  text-dark  font-size-14 text-uppercase">
-
-                                    Thur
-
-                                </th>
-
-                                <th class=" border-left border-right text-dark font-size-14 text-uppercase">
-
-                                    Fri
-
-                                </th>
-
-                                <th class=" text-dark font-size-14 text-uppercase" >
-
-                                    Sat
-
-                                </th>
 
                             </tr>
 
                         </thead>
 
                         <tbody>
-
+                             @foreach($calendarData as $time => $days)
                             <tr>
 
-                                <th class="font-size-13 text-dark text-center">8:30 <br>am</th>
+                                @php
+                                $am_pm=date('a',strtotime(explode('-', $time)[1]));
+                                $time1=date('h:m',strtotime(explode('-', $time)[0]));
+                                $time2=date('h:m',strtotime(explode('-', $time)[1]));
+                                @endphp
 
-                                <td class="text-center   border-left">
-
-                                    Beginner<br>
-
-                                    Group A
-
-                                </td>
-
-                                <td class="text-center  border-left border-right ">
-
-                                    -
-
-                                </td>
-
-                                <td class="text-center   border-left">
-
-                                    Beginner<br>
-
-                                    Group A
-
-                                </td>
-
-                                <td class="text-center  border-left border-right ">
-
-                                    -
-
-                                </td>
-
-                                <td class="text-center  border-left border-right ">
-
-                                    -
-
-                                </td>
-
-                                <td class=" text-center  ">
-
-                                    Beginner<br>
-
-                                    Group B
-
-                                </td>
-
+                                <th class="font-size-13 text-dark  text-center">{{ $time1.' - '.$time2 }} <br> {{ $am_pm }}</th>
+                                    @foreach($days as $value)
+                                        @if (is_array($value))
+                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center border-right border-left">
+                                                {{ $value['class_name'] }}<br>
+                                                {{-- Trainer: --}} {{ $value['teacher_name'] }}
+                                            </td>
+                                        @elseif ($value === 1)
+                                            <td class="text-center  border-right border-left "> - </td>
+                                        @endif
+                                    @endforeach                             
                             </tr>
-
-                            <tr>
-
-                                <th class="font-size-13 text-dark text-center">10:00 <br>am</th>
-
-                                <td class="text-center   border-left">-</td>
-
-                                <td class="text-center  border-left border-right p-3">
-
-                                    Advanced<br>
-
-                                    Group A
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class=" text-center  ">
-
-                                    -
-
-                                </td>
-
-                            </tr>
-
-                            <tr style="border-bottom: 1px solid #dee2e6">
-
-                                <th class="font-size-13 text-dark  text-center">12:30 <br>pm</th>
-
-                                <td class="text-center   border-left">Advanced<br>
-
-                                    Group B
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class="text-center  border-left border-right py-3 px-4">Advanced<br>
-
-                                    Group c
-
-                                </td>
-
-                                <td class=" text-center ">
-
-                                    -
-
-                                </td>
-
-                            </tr>
+                        @endforeach
 
                         </tbody>
 
-                    </table>
-
+                    </table>  
 
                   
 
