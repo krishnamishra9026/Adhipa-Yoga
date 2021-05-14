@@ -36,6 +36,21 @@ class HomeController extends Controller
         $weekDays     = Lesson::WEEK_DAYS;
         $calendarService = new CalendarService;
         $calendarData = $calendarService->generateCalendarData($weekDays);
+
+        
+
+        foreach($calendarData as $key=>$calendar)
+        {
+            if(($calendar[0]==1) && ($calendar[1]==1)  && ($calendar[2]==1)  && ($calendar[3]==1) && ($calendar[4]==1) && ($calendar[5]==1))
+                unset($calendarData[$key]);
+        }
+
+        // echo "<pre>";
+        // print_r($calendarData); exit;
+
+
+
+        
         $blogs = Blog::take(6)->get();
         $cms = Cms::latest()->first();
         $contactus = ContactUs::latest()->first();

@@ -7,55 +7,79 @@
 @endsection
 
 @section('content')
+<style type="text/css">
+    .video-container {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  /*min-height: 25rem;*/
+  width: 100%;
+  overflow: hidden;
+}
 
-<section class="gradient-overlay gradient-overlay-dark ">
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
 
-    <video autoplay muted loop id="myVideo">
-  <source  class="bg-image"  src="rain.mp4" type="https://www.w3schools.com/howto/rain.mp4">
-</video>
+.video-container .container {
+  position: relative;
+  z-index: 2;
+}
 
-    <img class="bg-image" src="{{asset('frontend/assets/img/1.jpg')}}" alt="">
+.video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.1;
+  z-index: 1;
+}
 
-    <div class="container hero hero-responsive">
+@media (max-aspect-ratio: 16/9) {
+    .video-container video{ 
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .video-container video{ 
+        width:auto;
+        height: 100%;
+    }
 
-        <div class="row  align-items-center z-index-2 position-relative">
+}
 
-            <div class="col-12">
-
-                <h1 class="display-4  text-white mb-2 heading">Increased Muscle Strength and Tone</h1>
-
-                <p class="font-weight-300 mb-5 sub-heading ">Learn about how yoga can help you stay healthy</p>
-
-                <a href="#appointment" class="btn btn-gradient scroll text-white">Make an Appointment</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="curved-decoration ">
-
-        <div class="decoration-bottom bottom-n1">
-
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-
-            viewBox="0 0 800 43.2" enable-background="new 0 0 800 43.2;" xml:space="preserve">
+/*@media (pointer: coarse) and (hover: none) {
+  .video-container {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  .video-container video {
+    display: blocks;
+  }
+}*/
 
 
+</style>
 
-            <path fill="#f3f5f8" d="M0,43.1v-4.8c0,0,187.9-30,400-3S800,0,800,0v43.1H0z"/>
-
-            <path fill="#f3f5f8" opacity="0.3" d="M0,43V18.7c0,0,131.8-13.9,269.2,20.9C407.2,60,600.3-13.9,800,27.8V43H0z"/>
-
-            </svg>
-
-        </div>
-
-    </div>
-
+<section class="gradient-overlay gradient-overlay-dark video-container">
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="{{asset('frontend/assets/video/main_video.mp4')}}" type="video/mp4">
+  </video>
 </section>
-
 <section id="about">
 
     <div class="container spacer-double-lg border-bottom">
@@ -78,7 +102,6 @@
 
                 <p class="mb-4">{{ $cms->description }}</p>
 
-                <a href="#appointment" class="btn btn-secondary btn-sm">Make an Appointment</a>
 
             </div>
 
@@ -112,12 +135,12 @@
 
                     <div class="row gap" data-jarallax-element="-60 0">
 
-                        <div class="col-5 align-self-end  mb-2">
+                        <div class="col-12 align-self-end  mb-2">
 
                             <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image)}}" alt="">
 
                         </div>
-
+{{-- 
                         <div class="col-7  mb-2">
 
                             <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image2)}}" alt="">
@@ -134,7 +157,7 @@
 
                             <img class="img-fluid w-100" src="{{asset('uploads/cms/'.$cms->image4)}}" alt="">
 
-                        </div>
+                        </div> --}}
 
                     </div>
 
@@ -261,13 +284,6 @@
                     <h2 class="text-lh-xs mb-4">{{ $mainservices->heading }}</h2>
 
                     <p class="mb-5">{{ $mainservices->desc }}</p>
-
-                    <a class="btn btn-sm btn-secondary mr-2" href="#gallery">View Our Gallery <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" stroke="#D9008F" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                  <path fill-rule="evenodd" stroke="#D9008F" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                </svg></a>
-
-                    {{-- <a class="btn btn-sm btn-primary " href="#">Make an Appointment</a> --}}
 
                 </div>
 
@@ -470,67 +486,77 @@
                </div>
                <div class="row align-items-center justify-content-center">
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item ">
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-6.svg')}}" alt="">
-                              </div>
-                           </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                        <div class="yoga-pose-item ">
+                            <div class="yoga-pose-icon-container text-muted">
+                                <div class="yoga-pose-icon ">
+                                    <div class="yoga-pose-icon-inner">
+                                        <img class="" src="{{asset('frontend/assets/svg/yoga-pose-6.svg')}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
                         </div>
-                        <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
-                     </div>
+                    </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item ">
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-7.svg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Trikonasana </h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item ">
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-7.svg')}}" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Trikonasana </h5>
+                         </div>
+                     </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item ">
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-8.svg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Vrksasana</h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item ">
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-8.svg')}}" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Vrksasana</h5>
+                         </div>
+                     </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-9.svg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Savasana</h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item " >
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-9.svg')}}" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title  mb-0">Savasana</h5>
+                         </div>
+                     </a>
                   </div>
                   <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-10.sv')}}g" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title mb-0">Kursiasana</h5>
-                     </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
+                         <div class="yoga-pose-item " >
+                            <div class="yoga-pose-icon-container text-muted">
+                               <div class="yoga-pose-icon ">
+                                  <div class="yoga-pose-icon-inner">
+                                     <img class="" src="{{asset('frontend/assets/svg/yoga-pose-10.sv')}}g" alt="">
+                                  </div>
+                               </div>
+                            </div>
+                            <h5 class="yoga-pose-title mb-0">Kursiasana</h5>
+                         </div>
+                     </a>
                   </div>
                </div>
-               <div class="row mt-4 pt-4 align-items-center justify-content-center">
+               <div style="display: none;" class="row mt-4 pt-4 align-items-center justify-content-center">
                   <div class="col-lg-2 col-md-4">
                      <div class="yoga-pose-item " >
                         <div class="yoga-pose-icon-container text-muted">
@@ -895,7 +921,7 @@
 
     <img class="bg-image" src="{{asset('frontend/assets/img/9.jpg')}}" alt="">
 
-    <div class="container spacer-xlg z-index-2 position-relative">
+   <!--  <div class="container spacer-xlg z-index-2 position-relative">
 
         <div class="row justify-content-center text-center">
 
@@ -929,7 +955,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
     <div class="curved-decoration bottom-n1">
 
@@ -957,9 +983,10 @@
 
                 <div class="p-6 p-3 shadow radius-2">
 
-                    <h6 class="h5 text-B42997 mb-5 text-center">2020 Schedule</h6>
+                    <h6 class="h5 text-B42997 mb-5 text-center">2021 Schedule</h6>
 
-                    <table style=" display: block;  height: 500px;  overflow-y: scroll;" class="table table-borderless">
+
+                    <table style="max-height: 100px; overflow-y: scroll;" class="table table-borderless">
 
                         <thead class="text-center">
 
@@ -968,7 +995,7 @@
                                 <th width="1%" class=" text-dark font-size-14 text-uppercase">Time</th>
 
                                 @foreach($weekDays as $day)
-                                <th  width="1%" class="border-left  border-right text-dark font-size-14 text-uppercase">{{ $day }}</th>
+                                <th  width="1%" class="border-left  border-right border-bottom text-dark font-size-14 text-uppercase">{{ $day }}</th>
                             @endforeach
 
 
@@ -986,15 +1013,15 @@
                                 $time2=date('h:m',strtotime(explode('-', $time)[1]));
                                 @endphp
 
-                                <th class="font-size-13 text-dark  text-center">{{ $time1.' - '.$time2 }} <br> {{ $am_pm }}</th>
+                                <th class="font-size-13 text-dark  text-center border-bottom">{{ $time1.' - '.$time2 }} <br> {{ $am_pm }}</th>
                                     @foreach($days as $value)
                                         @if (is_array($value))
-                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center border-right border-left">
+                                            <td rowspan="{{ $value['rowspan'] }}" class="align-middle text-center border-right border-left border-bottom">
                                                 {{ $value['class_name'] }}<br>
                                                 {{-- Trainer: --}} {{ $value['teacher_name'] }}
                                             </td>
                                         @elseif ($value === 1)
-                                            <td class="text-center  border-right border-left "> - </td>
+                                            <td class="text-center  border-right border-left border-bottom"> - </td>
                                         @endif
                                     @endforeach                             
                             </tr>
@@ -1002,7 +1029,9 @@
 
                         </tbody>
 
-                    </table>                  
+                    </table>  
+
+                  
 
                 </div>
 
@@ -1114,7 +1143,7 @@
 
 </section>
 
-<section id="appointment" class=" bg-white">
+<section style="display: none;" id="appointment" class=" bg-white">
 
     <div class="container">
 
@@ -1568,15 +1597,14 @@
         </div>
 
         <div class="row">
+            <div class="owl-carousel owl-theme card-group col" id="blogSlider">
 
             @php $i = 0; @endphp
       @foreach($blogs as $blog)
 
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="card bg-blog border-0 h-100 text-left mb-5 mb-lg-0 ml-5">
 
-                <article class="card bg-blog border-0 h-100 text-left">
-
-                    <img class="card-img-top" src="{{asset('uploads/blogs/'.$blog->image)}}" alt="Card image cap">
+                    <a href="{{ url('/blog/'.$blog->id) }}"><img class="card-img-top" src="{{asset('uploads/blogs/'.$blog->image)}}" alt="Card image cap"></a>
 
                     <div class="card-body pt-3">
 
@@ -1584,17 +1612,13 @@
 
                             <div class="small d-flex">
 
-                                <div class="mr-2">
-
-                                    <a href="#">Ton</a>
-
-                                </div>
+                                <div class="mr-2 text-primary">Posted On : </div>
 
                                 <span class="text-muted ">{{ \Carbon\Carbon::parse($blog->created_at)->format('d F') }}</span>
 
                             </div>
 
-                            <span class="badge bg-primary text-white font-base">
+                            <span style="display: none;" class="badge bg-primary text-white font-base">
 
                                 <svg version="1.1" class="badge-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 45.9" xml:space="preserve">
 
@@ -1621,30 +1645,12 @@
 
                     </div>
 
-                    <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
+                </div>
 
-                        <div class="media align-items-center">
-
-                            <img class="avatar-xs rounded-circle mr-2" src="{{asset('frontend/assets/img/7.jpg')}}" alt="">
-
-                            <div class="media-body">
-
-                                <span class="font-size-13 text-muted">By</span>
-
-                                <a class="font-size-13 text-dark" href="#">{{ $blog->name }}</a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
 
             @php $i++; @endphp
       @endforeach   
+            </div>
 
             {{-- <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 ">
 
@@ -1876,7 +1882,35 @@
 
 </section>
 
-
+ <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
 
 @endsection
 
@@ -1897,6 +1931,45 @@
       $(window).scrollTop($('#myDivContact').offset().top);
     @endif
     
+
+
 </script>
+
+<script>
+$('#blogSlider').owlCarousel({
+        stagePadding: 80,
+        loop:false,
+        dots:false,
+        margin:20,
+        nav:true,
+        navText: ["<i class='fas fa-arrow-left'></i>","<i class='fas fa-arrow-right'></i>"],
+        navContainer: '.owl-container .custom-nav',
+        navClass: ["owl-prev rounded-circle","owl-next rounded-circle"],
+        items:3,
+        autoWidth:false,
+        center:true,
+        URLhashListener:true,
+        autoplayHoverPause:true,
+        startPosition: 'URLHash',
+        responsive:{
+            0:{
+                items:1,
+                stagePadding:0
+            },
+            768:{
+                items:1,
+                stagePadding:0
+            },
+            992:{
+                items:2,
+                stagePadding:60
+            },
+            1200:{
+                items:3
+            }
+        }
+})
+    </script>
+
 
 @endpush
