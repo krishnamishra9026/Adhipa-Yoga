@@ -48,6 +48,20 @@
   z-index: 1;
 }
 
+@media (max-aspect-ratio: 16/9) {
+    .video-container video{ 
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .video-container video{ 
+        width:auto;
+        height: 100%;
+    }
+
+}
+
 /*@media (pointer: coarse) and (hover: none) {
   .video-container {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
