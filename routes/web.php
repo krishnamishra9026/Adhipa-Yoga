@@ -46,7 +46,6 @@ Route::get('/terms-conditions', function () {
 
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/index', 'HomeController@indexHome')->name('home.index');
 
 
 Route::redirect('/yoga/admin', '/login');

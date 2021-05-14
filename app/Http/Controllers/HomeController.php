@@ -69,22 +69,4 @@ class HomeController extends Controller
        return view('blog',compact('blog'));
     }
 
-
-    public function indexHome()
-    {
-        $weekDays     = Lesson::WEEK_DAYS;
-        $calendarService = new CalendarService;
-        $calendarData = $calendarService->generateCalendarData($weekDays);
-        // echo "<pre>";print_r($calendarData);exit;
-        $blogs = Blog::take(6)->get();
-        $cms = Cms::latest()->first();
-        $contactus = ContactUs::latest()->first();
-        $mainservices = MainServices::all();
-        $setting = Setting::first();
-        // echo "<pre>";print_r($setting->toArray());exit;
-        $packages = Package::latest()->take(3)->get();
-        $testimonials = Testimonial::latest()->get();
-        // echo "<pre>";print_r(compact('calendarData'));"</pre>";exit;
-        return view('welcome_index',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'));
-    }
 }
