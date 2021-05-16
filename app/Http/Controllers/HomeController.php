@@ -14,6 +14,9 @@ use App\Package;
 use App\Lesson;
 use App\Services\CalendarService;
 
+
+use Cache;
+
 class HomeController extends Controller
 {
     /**
@@ -60,7 +63,18 @@ class HomeController extends Controller
         $packages = Package::latest()->take(3)->get();
         $testimonials = Testimonial::latest()->get();
         // echo "<pre>";print_r($calendarData);"</pre>";exit;
-        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'));
+        //return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'));
+
+
+        if ( Cache::has('news_index') ) {
+            return Cache::get('news_index');
+        } else {
+            $news = array();
+            $cachedData = view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'))->render();
+            Cache::put('news_index', $cachedData);                                         
+            return $cachedData;           
+        }   
+
     }
 
     public function blog($id='')
