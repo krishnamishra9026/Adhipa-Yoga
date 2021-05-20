@@ -1009,8 +1009,8 @@
 
                                 @php
                                 $am_pm=date('a',strtotime(explode('-', $time)[1]));
-                                $time1=date('h:m',strtotime(explode('-', $time)[0]));
-                                $time2=date('h:m',strtotime(explode('-', $time)[1]));
+                                $time1=date('h:i',strtotime(explode('-', $time)[0]));
+                                $time2=date('h:i',strtotime(explode('-', $time)[1]));
                                 @endphp
 
                                 <th class="font-size-13 text-dark  text-center border-bottom">{{ $time1.' - '.$time2 }} <br> {{ $am_pm }}</th>
