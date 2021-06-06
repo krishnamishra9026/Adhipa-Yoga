@@ -1423,6 +1423,18 @@
 
                     <h1 class="mb-0 text-D9008F">Pricing Plans</h1>
 
+                     @if(Session::has('paypal_success'))
+                    <div class="alert alert-success">
+                      {{ Session::get('paypal_success') }}
+                  </div>
+                  @endif
+
+                   @if(Session::has('paypal_failure'))
+                    <div class="alert alert-danger">
+                      {{ Session::get('paypal_failure') }}
+                  </div>
+                  @endif
+
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
 
                     <p class=" mb-0 pt-3 lead w-md-60 mx-auto">Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet and feel the earth below you. Mountain pose may seem like “simply standing,” but there is a ton going on
@@ -1464,7 +1476,9 @@
                             @endforeach
                             </p>
 
-                            <button type="button" class="btn w-50 btn-primary">$ {{ $package->price }}</button>
+                            {{-- <button type="button" class="btn w-50 btn-primary">$ {{ $package->price }}</button> --}}
+
+                             <a href="{{ route('payment') }}" type="button" class="btn w-50 btn-primary" >Pay ${{ $package->price }}</a>
 
                         </div>
 
@@ -1919,6 +1933,16 @@
     @if (\Session::has('success'))
         $(window).scrollTop($('#myDivAppointment').offset().top);
     @endif
+
+    @if (\Session::has('paypal_success'))
+        $(window).scrollTop($('#pricing').offset().top);
+    @endif
+
+    @if (\Session::has('paypal_failure'))
+        $(window).scrollTop($('#pricing').offset().top);
+    @endif
+
+
     @error('email') 
         $(window).scrollTop($('#myDivAppointment').offset().top);
     @enderror
