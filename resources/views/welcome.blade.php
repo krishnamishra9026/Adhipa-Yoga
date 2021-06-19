@@ -1526,7 +1526,7 @@
         <?php 
         // query the user media
         $fields = "id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username";
-        $token = "IGQVJWMGZAReHZAVa1FIU0V3c2FKUElkWTI2YTJlZAllWVkw0MmNmaGxxODBjMDdqUDkyaTNrOXhxVDB1bTJMbG1LN3FDeXZAoRldoUFVHMVlDdHA4WXZA0TmlrdkVQZA19vT1FjTkRlNTlpSXM1WFQ2NDdtRAZDZD";
+        $token = "IGQVJYb3dYTG1kWkhTVXJmbTBLMHBoWnBBMVR6SmJ4R3RmQ2JQVWo4VnNUZA0x6SjloVmdsMG9Vb2NTdDBIUndzcTJDZAmwtSDB4YVpTczhuT2Ixa0tPRndtTTVOdkNNNWVMUFZAPU3M1WWgtVmRHVE5xawZDZD";
         $limit = 6;
          
         $json_feed_url="https://graph.instagram.com/me/media?fields={$fields}&access_token={$token}&limit={$limit}";        
