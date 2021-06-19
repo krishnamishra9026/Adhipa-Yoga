@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
 
-  <title>Foxeyoga - Premium Yoga and Wellness Html Template</title>
+  <title>Yogadhipa - Online yoga classes</title>
 
   <meta name="description" content="">
 
