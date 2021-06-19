@@ -47,9 +47,11 @@ Route::get('/terms-conditions', function () {
 
 Route::get('/', 'HomeController@index')->name('home');
 
+
+
 Route::get('payment', 'PayPalController@payment')->name('payment');
-Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
 Route::get('payment/success', 'PayPalController@success')->name('payment.success');
+Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
 
 Route::redirect('/yoga/admin', '/login');
 

@@ -604,6 +604,8 @@ class ComposerStaticInit63c5104a7ac78ac048aa5daa036a8477
         'App\\Http\\Requests\\UpdateRoleRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateRoleRequest.php',
         'App\\Http\\Requests\\UpdateSchoolClassRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateSchoolClassRequest.php',
         'App\\Http\\Requests\\UpdateUserRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateUserRequest.php',
+        'App\\Invoice' => __DIR__ . '/../..' . '/app/Invoice.php',
+        'App\\Item' => __DIR__ . '/../..' . '/app/Item.php',
         'App\\Lesson' => __DIR__ . '/../..' . '/app/Lesson.php',
         'App\\Models\\AboutUs' => __DIR__ . '/../..' . '/app/Models/AboutUs.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',

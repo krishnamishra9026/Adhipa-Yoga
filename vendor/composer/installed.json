@@ -1574,17 +1574,17 @@
     },
     {
         "name": "guzzlehttp/psr7",
-        "version": "1.8.1",
-        "version_normalized": "1.8.1.0",
+        "version": "1.8.2",
+        "version_normalized": "1.8.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/psr7.git",
-            "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+            "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-            "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+            "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
             "shasum": ""
         },
         "require": {
@@ -1602,7 +1602,7 @@
         "suggest": {
             "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
         },
-        "time": "2021-03-21T16:25:00+00:00",
+        "time": "2021-04-26T09:17:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2518,17 +2518,17 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "2.46.0",
-        "version_normalized": "2.46.0.0",
+        "version": "2.49.0",
+        "version_normalized": "2.49.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "2fd2c4a77d58a4e95234c8a61c5df1f157a91bf4"
+            "reference": "93d9db91c0235c486875d22f1e08b50bdf3e6eee"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2fd2c4a77d58a4e95234c8a61c5df1f157a91bf4",
-            "reference": "2fd2c4a77d58a4e95234c8a61c5df1f157a91bf4",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/93d9db91c0235c486875d22f1e08b50bdf3e6eee",
+            "reference": "93d9db91c0235c486875d22f1e08b50bdf3e6eee",
             "shasum": ""
         },
         "require": {
@@ -2547,7 +2547,7 @@
             "phpunit/phpunit": "^7.5.20 || ^8.5.14",
             "squizlabs/php_codesniffer": "^3.4"
         },
-        "time": "2021-02-24T17:30:44+00:00",
+        "time": "2021-06-02T07:31:40+00:00",
         "bin": [
             "bin/carbon"
         ],
@@ -4922,7 +4922,8 @@
                 "url": "https://github.com/sebastianbergmann",
                 "type": "github"
             }
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "sebastian/type",
@@ -5025,17 +5026,17 @@
     },
     {
         "name": "srmklive/paypal",
-        "version": "1.8.0",
-        "version_normalized": "1.8.0.0",
+        "version": "1.9.0",
+        "version_normalized": "1.9.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/srmklive/laravel-paypal.git",
-            "reference": "0c2ae237577f62396d474674cb40f82825a41ffb"
+            "reference": "779bc87eb4cd62982e4f2f57fb667fe47c78e259"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/srmklive/laravel-paypal/zipball/0c2ae237577f62396d474674cb40f82825a41ffb",
-            "reference": "0c2ae237577f62396d474674cb40f82825a41ffb",
+            "url": "https://api.github.com/repos/srmklive/laravel-paypal/zipball/779bc87eb4cd62982e4f2f57fb667fe47c78e259",
+            "reference": "779bc87eb4cd62982e4f2f57fb667fe47c78e259",
             "shasum": ""
         },
         "require": {
@@ -5043,7 +5044,7 @@
             "illuminate/support": "~5.1|~5.2|~5.3|~5.4|~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
             "nesbot/carbon": "~1.0|~2.0"
         },
-        "time": "2020-09-03T07:50:08+00:00",
+        "time": "2021-06-07T16:21:12+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -6385,17 +6386,17 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.22.1",
-        "version_normalized": "1.22.1.0",
+        "version": "v1.23.0",
+        "version_normalized": "1.23.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
-            "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
+            "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
-            "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
+            "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
             "shasum": ""
         },
         "require": {
@@ -6404,11 +6405,11 @@
         "suggest": {
             "ext-mbstring": "For best performance"
         },
-        "time": "2021-01-22T09:19:47+00:00",
+        "time": "2021-05-27T09:27:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-main": "1.22-dev"
+                "dev-main": "1.23-dev"
             },
             "thanks": {
                 "name": "symfony/polyfill",
@@ -6924,17 +6925,17 @@
     },
     {
         "name": "symfony/translation",
-        "version": "v4.4.21",
-        "version_normalized": "4.4.21.0",
+        "version": "v4.4.25",
+        "version_normalized": "4.4.25.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/translation.git",
-            "reference": "eb8f5428cc3b40d6dffe303b195b084f1c5fbd14"
+            "reference": "dfe132c5c6d89f90ce7f961742cc532e9ca16dd4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/translation/zipball/eb8f5428cc3b40d6dffe303b195b084f1c5fbd14",
-            "reference": "eb8f5428cc3b40d6dffe303b195b084f1c5fbd14",
+            "url": "https://api.github.com/repos/symfony/translation/zipball/dfe132c5c6d89f90ce7f961742cc532e9ca16dd4",
+            "reference": "dfe132c5c6d89f90ce7f961742cc532e9ca16dd4",
             "shasum": ""
         },
         "require": {
@@ -6967,7 +6968,7 @@
             "symfony/config": "",
             "symfony/yaml": ""
         },
-        "time": "2021-03-23T16:25:01+00:00",
+        "time": "2021-05-26T17:39:37+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -7011,17 +7012,17 @@
     },
     {
         "name": "symfony/translation-contracts",
-        "version": "v2.3.0",
-        "version_normalized": "2.3.0.0",
+        "version": "v2.4.0",
+        "version_normalized": "2.4.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/translation-contracts.git",
-            "reference": "e2eaa60b558f26a4b0354e1bbb25636efaaad105"
+            "reference": "95c812666f3e91db75385749fe219c5e494c7f95"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/e2eaa60b558f26a4b0354e1bbb25636efaaad105",
-            "reference": "e2eaa60b558f26a4b0354e1bbb25636efaaad105",
+            "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/95c812666f3e91db75385749fe219c5e494c7f95",
+            "reference": "95c812666f3e91db75385749fe219c5e494c7f95",
             "shasum": ""
         },
         "require": {
@@ -7030,11 +7031,11 @@
         "suggest": {
             "symfony/translation-implementation": ""
         },
-        "time": "2020-09-28T13:05:58+00:00",
+        "time": "2021-03-23T23:28:01+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.3-dev"
+                "dev-main": "2.4-dev"
             },
             "thanks": {
                 "name": "symfony/contracts",

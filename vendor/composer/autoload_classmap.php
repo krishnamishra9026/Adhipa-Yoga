@@ -71,6 +71,8 @@ return array(
     'App\\Http\\Requests\\UpdateRoleRequest' => $baseDir . '/app/Http/Requests/UpdateRoleRequest.php',
     'App\\Http\\Requests\\UpdateSchoolClassRequest' => $baseDir . '/app/Http/Requests/UpdateSchoolClassRequest.php',
     'App\\Http\\Requests\\UpdateUserRequest' => $baseDir . '/app/Http/Requests/UpdateUserRequest.php',
+    'App\\Invoice' => $baseDir . '/app/Invoice.php',
+    'App\\Item' => $baseDir . '/app/Item.php',
     'App\\Lesson' => $baseDir . '/app/Lesson.php',
     'App\\Models\\AboutUs' => $baseDir . '/app/Models/AboutUs.php',
     'App\\Models\\Blog' => $baseDir . '/app/Models/Blog.php',
