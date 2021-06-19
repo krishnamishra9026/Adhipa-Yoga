@@ -16,7 +16,7 @@ class PayPalController extends Controller
         $data['items'] = [
             [
                 'name' => 'devnote tutorial create',
-                'price' => 160,
+                'price' => 1,
                 'desc' => 'Description for devnote tutorial!',
                 'qty' => 1
             ]
@@ -26,7 +26,7 @@ class PayPalController extends Controller
         $data['invoice_description'] = "Your order #{$data['invoice_id']} Invoice";
         $data['return_url'] = route('payment.success');
         $data['cancel_url'] = route('payment.cancel');
-        $data['total'] = 160;
+        $data['total'] = 1;
 
         $provider = $this->provider;
         $response = $provider->setExpressCheckout($data);
