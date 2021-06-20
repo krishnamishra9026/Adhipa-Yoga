@@ -57,7 +57,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6 col-md-12 mb-3">
+				<div class="col-xl-6 col-md-12 mb-3" style="display: none;">
 					<label for="includes">Package Includes</label>
 					<div class="input-group">
 						<select class="form-control" name="includes" id="includes" required>
