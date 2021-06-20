@@ -489,7 +489,7 @@
                   </div>
                </div>
                <div class="row align-items-center justify-content-center">
-                  <div class="col-lg-2 col-md-4">
+                  <!--div class="col-lg-2 col-md-4">
                     <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
                         <div class="yoga-pose-item ">
                             <div class="yoga-pose-icon-container text-muted">
@@ -502,7 +502,7 @@
                             <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
                         </div>
                     </a>
-                  </div>
+                  </div-->
                   <div class="col-lg-2 col-md-4">
                     <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
                          <div class="yoga-pose-item ">
