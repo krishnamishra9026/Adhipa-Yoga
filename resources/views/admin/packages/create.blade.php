@@ -112,7 +112,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6 col-md-12 mb-3">
+				<div class="col-xl-6 col-md-12 mb-3" style="display: none;">
 					<label for="no_of_classes">No of classes in Package</label>
 					<div class="input-group">
 						<input type="number" class="form-control" name="no_of_classes" id="no_of_classes"  required>
