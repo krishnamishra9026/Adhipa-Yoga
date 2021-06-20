@@ -1,18 +1,18 @@
-@extends('layouts.frontend.app')
-
-@section('head')
-
-<title>Welcome to Adhipa Yoga</title>
-
-@endsection
-
+@extends('layouts.frontend.app-no-menu')
 @section('content')
+<div class="jumbotron jumbotron-fluid bg-stats">
+
+</div>
+
+<section>
+<div class="paid text-center">
+	<i class="fa fa-check"></i>
+	<h4>Payment Successful</h4>
+	<p>You will be redirected automatically in few seconds</p>
+</div>
 
 
-	<div class="paid text-center" style="display: none">
-		<i class="fa fa-check"></i>
-		<h4>Payment Successful</h4>
-		<p>You will be redirected automatically in few seconds</p>
-	</div>
+</section>
 
 @endsection
+
