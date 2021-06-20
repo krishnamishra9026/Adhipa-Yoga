@@ -1616,7 +1616,7 @@
             @php $i = 0; @endphp
       @foreach($blogs as $blog)
 
-                <div class="card bg-blog border-0 h-100 text-left mb-5 mb-lg-0">
+                <div class="card bg-blog border-0 h-100 text-left mb-5 mb-lg-0 ml-lg-4 ml-1">
 
                     <a href="{{ url('/blog/'.$blog->id) }}"><img class="card-img-top" src="{{asset('uploads/blogs/'.$blog->image)}}" alt="Card image cap"></a>
 
