@@ -207,9 +207,9 @@
 
                                 <div class="service-step-icon-inner">
 
-                                    <img class=" disabled d-none" src="{{asset('frontend/assets/svg/yoga-pos-1-active.png')}}" alt="">
+                                    <img class=" disabled d-none" src="{{asset('frontend/assets/svg/Begginers.png')}}" alt="">
 
-                                    <img class="  d-none enabled" src="{{asset('frontend/assets/svg/yoga-pos-1.png')}}" alt="">
+                                    <img class="  d-none enabled" src="{{asset('frontend/assets/svg/Begginers.png')}}" alt="">
 
                                 </div>
 
@@ -227,9 +227,11 @@
 
                             <div class="service-step-icon ">
 
-                                <div class="service-step-icon-inner"><img class=" disabled d-none" src="{{asset('frontend/assets/svg/yoga-pos-1-active.png')}}" alt="">
+                                <div class="service-step-icon-inner">
 
-                                    <img class="  d-none enabled" src="{{asset('frontend/assets/svg/yoga-pos-1.png')}}" alt="">
+                                    <img class=" disabled d-none" src="{{asset('frontend/assets/svg/Advanced.png')}}" alt="">
+
+                                    <img class="  d-none enabled" src="{{asset('frontend/assets/svg/Advanced.png')}}" alt="">
 
                                 </div>
 
@@ -247,9 +249,11 @@
 
                             <div class="service-step-icon ">
 
-                                <div class="service-step-icon-inner"><img class="  disabled d-none" src="{{asset('frontend/assets/svg/yoga-pos-1-active.png')}}" alt="">
+                                <div class="service-step-icon-inner">
 
-                                    <img class="  d-none enabled" src="{{asset('frontend/assets/svg/yoga-pos-1.png')}}" alt="">
+                                    <img class="  disabled d-none" src="{{asset('frontend/assets/svg/Private.png')}}" alt="">
+
+                                    <img class="  d-none enabled" src="{{asset('frontend/assets/svg/Private.png')}}" alt="">
 
                                 </div>
 
