@@ -1478,7 +1478,7 @@
 
                             {{-- <button type="button" class="btn w-50 btn-primary">$ {{ $package->price }}</button> --}}
 
-                             <a href="{{ url('payment?pay='.$package->price) }}" type="button" class="btn w-50 btn-primary" >Pay ${{ $package->price }}</a>
+                             <a href="{{ url('payment?pay='.$package->price) }}" class="btn w-50 btn-primary" >Pay ${{ $package->price }}</a>
 
                         </div>
 
