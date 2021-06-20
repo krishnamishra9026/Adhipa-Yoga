@@ -11,12 +11,12 @@ class PayPalController extends Controller
         $this->provider = new ExpressCheckout();
     }
 
-    public function payment() {
+    public function payment(Request $request) {
         $data = [];
         $data['items'] = [
             [
                 'name' => 'devnote tutorial create',
-                'price' => 1,
+                'price' => $request->pay,
                 'desc' => 'Description for devnote tutorial!',
                 'qty' => 1
             ]
@@ -38,11 +38,11 @@ class PayPalController extends Controller
         $provider = $this->provider;
         $response = $provider->getExpressCheckoutDetails($request->token);
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
-            return view('success');
+            return view('pay_success');
         }
-        dd('Something is wrong.');
+         return view('pay_success');
     }
     public function cancel() {
-        return view('cancel');
+         return view('pay_cancel');
     }
 }
