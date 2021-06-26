@@ -52,7 +52,7 @@
         </div>
         <div class="form-group">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <input class="form-check-input" type="checkbox" id="gridCheck" required="required">
             <label class="form-check-label" for="gridCheck">
               Accept Term and condition
             </label>
