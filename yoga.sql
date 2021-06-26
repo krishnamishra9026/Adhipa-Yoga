@@ -1017,3 +1017,25 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+CREATE TABLE `bookings` (
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `package_id` int(11) NOT NULL,
+  `package_timing_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `mobile_no` varchar(55) NOT NULL,
+  `start_date` date NOT NULL,
+  `start_time` time NOT NULL,
+  `end_time` time NOT NULL,
+  `package_details` text,
+  `transaction_id` varchar(255) DEFAULT NULL,
+  `currency_code` varchar(55) DEFAULT NULL,
+  `payment_status` varchar(55) DEFAULT NULL,
+  `invoice_id` varchar(255) DEFAULT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` int(11) NOT NULL DEFAULT '1',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -204,7 +204,7 @@ class PackageController extends Controller
 
 
 
-        return redirect()->route('admin.packages.index')->with(['success'=>'Package Updated Successfully!']);
+        //return redirect()->route('admin.packages.index')->with(['success'=>'Package Updated Successfully!']);
     }
 
     /**

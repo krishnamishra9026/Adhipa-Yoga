@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\ExpressCheckout;
+use Session;
 
 class PayPalController extends Controller
 {
@@ -12,11 +13,13 @@ class PayPalController extends Controller
     }
 
     public function payment(Request $request) {
+
+        $packageUserData = Session::get('packageUserData');
         $data = [];
         $data['items'] = [
             [
-                'name' => 'devnote tutorial create',
-                'price' => $request->pay,
+                'name' => $packageUserData->name,
+                'price' => $packageUserData->price,
                 'desc' => 'Description for devnote tutorial!',
                 'qty' => 1
             ]
@@ -31,7 +34,7 @@ class PayPalController extends Controller
         $provider = $this->provider;
         $response = $provider->setExpressCheckout($data);
         // $response = $provider->setExpressCheckout($data, true);
-        // echo "<pre>";print_r($response);exit;
+        echo "<pre>";print_r($response);exit;
         return redirect($response['paypal_link']);
     }
     public function success(Request $request) {

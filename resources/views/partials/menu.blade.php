@@ -197,6 +197,15 @@
             </li>
 
             <li class="nav-item">
+                <a href="{{ route("admin.booking.index") }}" class="nav-link {{ request()->is('admin/booking') || request()->is('admin/booking/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-appointment nav-icon">
+
+                    </i>
+                    Booking
+                </a>
+            </li-->
+
+            <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-sign-out-alt">
 

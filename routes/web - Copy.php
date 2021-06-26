@@ -24,11 +24,6 @@ Route::get('/blog', function () {
     return view('blog');
 });
 
-
-
-Route::get('/blog/{id}', 'HomeController@blog');
-
-
 Route::get('/single', function () {
     return view('single');
 });
@@ -47,14 +42,6 @@ Route::get('/terms-conditions', function () {
 
 Route::get('/', 'HomeController@index')->name('home');
 
-
-Route::resource('booking', 'BookingController');
-
-
-
-Route::get('payment', 'PayPalController@payment')->name('payment');
-Route::get('payment/success', 'PayPalController@success')->name('payment.success');
-Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');Route::get('cancel', 'PayPalController@cancel')->name('payment.cancel');
 
 Route::redirect('/yoga/admin', '/login');
 
@@ -94,8 +81,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('newsletters','NewsletterController');
 
-    Route::resource('booking','BookingController');
-
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
 
     Route::resource('users', 'UsersController');
@@ -128,5 +113,3 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     
 });
 Route::post('newsletter/store','NewsletterController@store');
-
-
