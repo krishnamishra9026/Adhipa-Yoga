@@ -24,7 +24,7 @@
 <script>
 	var dataSet8 = [
 	@foreach($packages as $package)
-	[ "{{ $no++ }}" ,"{{ $package->name }}", "SAR "+ {{ $package->price }}, {{ $package->validity }}+" days",@if($package->status == 'on')"Enabled" @else "Disabled" @endif , "<a href='{{route('admin.packages.edit',$package)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a> <a href='javascript:' onclick='submitform({{ $no }});'><i class='far fa-trash-alt ms-text-danger'></i></a><form id='delete-form{{$no}}' action='{{route('admin.packages.destroy',$package)}}' method='POST'><input type='hidden' name='_token' value='{{ csrf_token()}}'><input type='hidden' name='_method' value='DELETE'></form>"],
+	[ "{{ $no++ }}" ,"{{ $package->name }}", "$ "+ {{ $package->price }}, @if($package->status == 'on')"Enabled" @else "Disabled" @endif , "<a href='{{route('admin.packages.edit',$package)}}'><i class='fas fa-pencil-alt ms-text-primary'></i></a> <a href='javascript:' onclick='submitform({{ $no }});'><i class='far fa-trash-alt ms-text-danger'></i></a><form id='delete-form{{$no}}' action='{{route('admin.packages.destroy',$package)}}' method='POST'><input type='hidden' name='_token' value='{{ csrf_token()}}'><input type='hidden' name='_method' value='DELETE'></form>"],
 	@endforeach
 	];
 	var tablepackage = $('#data-table-10').DataTable( {
@@ -33,7 +33,7 @@
 		{ title: "Id" },
 		{ title: "Package Name" },
 		{ title: "Price" },
-		{ title: "Validity" },
+		// { title: "Validity" },
 		{ title: "Status" },
 		{ title: "Action" },
 		],

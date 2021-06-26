@@ -67,6 +67,7 @@ class PackageController extends Controller
         $strinarr = @implode(',', $missing);
 
         $input['workout_days'] = $workout_days;
+        $input['validity'] = 30;
         // $input['off_days'] = $strinarr;
 
         $new_package = Package::create($input);
@@ -150,7 +151,7 @@ class PackageController extends Controller
 
         $package->price = $request->price;
 
-        $package->validity = $request->validity;
+        $package->validity = '40';
         
         $workout_days = @implode(',', $request->workout_days);
 
