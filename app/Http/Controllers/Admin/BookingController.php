@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\MassDestroyBookingRequest;
 use App\Models\Booking;
 use App\Package;
 use App\Models\PackageTiming;
@@ -52,10 +52,11 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Booking $booking)
     {
-        //
+        return view('admin.booking.show', compact('booking'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -86,8 +87,18 @@ class BookingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Booking $booking)
     {
-        //
+
+        $booking->delete();
+
+        return back();
+    }
+
+    public function massDestroy(MassDestroyBookingRequest $request)
+    {
+        Booking::whereIn('id', $request('ids'))->delete();
+
+        return response(null, Response::HTTP_NO_CONTENT);
     }
 }

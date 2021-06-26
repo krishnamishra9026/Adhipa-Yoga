@@ -69,18 +69,11 @@
                         </td>
                         <td>
 
-                            <a class="btn btn-xs btn-primary" href="{{ route('admin.lessons.show', $booking->id) }}">
+                            <a class="btn btn-xs btn-primary" href="{{ route('admin.booking.show', $booking->id) }}">
                                 {{ trans('global.view') }}
                             </a>
 
-
-
-                            <a class="btn btn-xs btn-info" href="{{ route('admin.lessons.edit', $booking->id) }}">
-                                {{ trans('global.edit') }}
-                            </a>
-
-
-                            <form action="{{ route('admin.lessons.destroy', $booking->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                            <form action="{{ route('admin.booking.destroy', $booking->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
@@ -107,7 +100,7 @@
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.lessons.massDestroy') }}",
+    url: "{{ route('admin.booking.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {

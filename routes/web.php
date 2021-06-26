@@ -95,6 +95,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('newsletters','NewsletterController');
 
     Route::resource('booking','BookingController');
+    Route::delete('booking/destroy', 'BookingController@massDestroy')->name('booking.massDestroy');
 
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
 
