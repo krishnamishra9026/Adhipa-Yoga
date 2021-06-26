@@ -68,5 +68,39 @@
 
 
 </section>
-
 @endsection
+
+@push('scripts')
+  <!--end daterangepicker-->
+  <script type="text/javascript">
+    $(function() {
+
+      console.log('{{$packageData->workout_days}}')
+      
+      var workout_days = '{{$packageData->workout_days}}';
+
+      //var workout_days_arr = workout_days.split(',');
+
+      var workout_days_arr = workout_days.split(',').map(function(item) {
+          return parseInt(item, 10);
+      });
+
+      var dateToday = moment().add(1, 'days');    
+
+      $('.datepicker').daterangepicker({
+          singleDatePicker: true,
+          autoApply:true,
+          drops:'up',
+          minDate: dateToday,
+          isInvalidDate: function(date) {
+            console.log(date.day());
+            //if (date.day() == 0 || date.day() == 6)
+            if(workout_days_arr.includes(date.day()))
+              return false;
+            return true;
+          }
+      });
+
+    });
+  </script>
+@endpush

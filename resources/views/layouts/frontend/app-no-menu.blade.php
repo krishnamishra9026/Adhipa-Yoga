@@ -44,23 +44,7 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-	<!--end daterangepicker-->
-	<script type="text/javascript">
-		$(function() {
-		 	
-		 	var dateToday = moment().add(1, 'days');    
 
-			$('.datepicker').daterangepicker({
-		     	singleDatePicker: true,
-		     	autoApply:true,
-		     	drops:'up',
-			   minDate: dateToday 
-			  }, function(start, end, label) {
-			    // var years = moment().diff(start, 'years');
-			    // alert("You are " + years + " years old!");
-			});
-		});
-	</script>
 	 @stack('scripts')
 </body>
 </html>
