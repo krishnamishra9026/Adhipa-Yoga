@@ -10,6 +10,7 @@ use App\Models\ContactUs;
 use App\Models\MainServices;
 use App\Models\Setting;
 use App\Package;
+use App\Models\PackageTiming;
 
 use App\Lesson;
 use App\Services\CalendarService;
@@ -50,9 +51,6 @@ class HomeController extends Controller
 
         // echo "<pre>";
         // print_r($calendarData); exit;
-
-
-
         
         $blogs = Blog::take(6)->get();
         $cms = Cms::latest()->first();
@@ -61,19 +59,13 @@ class HomeController extends Controller
         $setting = Setting::first();
         // echo "<pre>";print_r($setting->toArray());exit;
         $packages = Package::latest()->take(3)->get();
+
+        foreach ($packages as $key => $package) {
+            $packages[$key]->packageTimings = PackageTiming::where('package_id',$package->id)->get();
+        }
         $testimonials = Testimonial::latest()->get();
         // echo "<pre>";print_r($calendarData);"</pre>";exit;
         return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'));
-
-
-        // if ( Cache::has('news_index') ) {
-        //     return Cache::get('news_index');
-        // } else {
-        //     $news = array();
-        //     $cachedData = view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'))->render();
-        //     Cache::put('news_index', $cachedData);                                         
-        //     return $cachedData;           
-        // }   
 
     }
 

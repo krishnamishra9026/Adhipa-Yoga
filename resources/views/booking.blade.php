@@ -43,7 +43,7 @@
             <div class="form-check">
               <input class="form-check-input" type="radio" name="package_timing_id" id="radios{{($key+1)}}" value="{{$packageDataTiming->id}}" required="required">
               <label class="form-check-label" for="radios{{($key+1)}}">
-                {{$packageDataTiming->startTime}} - {{$packageDataTiming->endTime}}
+                {{  date('g:ia', strtotime($packageDataTiming->startTime)) }} -  {{ date('g:ia', strtotime($packageDataTiming->endTime)) }}
               </label>
             </div>
             @endforeach
@@ -93,9 +93,11 @@
           drops:'up',
           minDate: dateToday,
           isInvalidDate: function(date) {
-            console.log(date.day());
+            var wDay = date.day();
+            wDay = parseInt((wDay+1));
+            console.log(wDay);
             //if (date.day() == 0 || date.day() == 6)
-            if(workout_days_arr.includes(date.day()))
+            if(workout_days_arr.includes(wDay))
               return false;
             return true;
           }
