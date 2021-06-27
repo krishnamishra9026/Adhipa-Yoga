@@ -25,16 +25,18 @@ class PayPalController extends Controller
             ]
         ];
 
+        #print_r($data['items']); exit;
+
         $data['invoice_id'] = 1;
         $data['invoice_description'] = "Your order #{$data['invoice_id']} Invoice";
         $data['return_url'] = route('payment.success');
         $data['cancel_url'] = route('payment.cancel');
-        $data['total'] = $request->pay;
+        $data['total'] = $packageUserData->price;
 
         $provider = $this->provider;
         $response = $provider->setExpressCheckout($data);
-        // $response = $provider->setExpressCheckout($data, true);
-        // echo "<pre>";print_r($response);exit;
+        //$response = $provider->setExpressCheckout($data, true);
+        echo "<pre>";print_r($response);exit;
         return redirect($response['paypal_link']);
     }
     public function success(Request $request) {

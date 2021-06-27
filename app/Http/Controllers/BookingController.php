@@ -67,6 +67,7 @@ class BookingController extends Controller
         $data['start_date'] = date("Y-m-d", strtotime($input->start_date));
         $data['start_time'] = $packageTimingData->startTime;
         $data['end_time'] = $packageTimingData->endTime;
+        $data['price'] = $packageData->price;
         $data['package_details'] = json_encode($packageData);
 
         $lastBookingIds = Booking::create($data);
