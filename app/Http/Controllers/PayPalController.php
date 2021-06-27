@@ -34,8 +34,8 @@ class PayPalController extends Controller
         $data['total'] = $packageUserData->price;
 
         $provider = $this->provider;
-        $response = $provider->setExpressCheckout($data);
-        //$response = $provider->setExpressCheckout($data, true);
+        //$response = $provider->setExpressCheckout($data);
+        $response = $provider->setExpressCheckout($data, false, true);
         #echo "<pre>";print_r($response);exit;
         return redirect($response['paypal_link']);
     }
