@@ -1039,3 +1039,4 @@ CREATE TABLE `bookings` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ALTER TABLE `bookings` ADD `price` FLOAT(10,2) NULL DEFAULT NULL AFTER `end_time`;
