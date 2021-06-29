@@ -2,77 +2,9 @@
 
 @section('head')
 
-<title>Welcome to Adhipa Yoga</title>
-
 @endsection
 
 @section('content')
-<style type="text/css">
-    .video-container {
-  position: relative;
-  background-color: black;
-  height: 100vh;
-  /*min-height: 25rem;*/
-  width: 100%;
-  overflow: hidden;
-}
-
-.video-container video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.video-container .container {
-  position: relative;
-  z-index: 2;
-}
-
-.video-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.1;
-  z-index: 1;
-}
-
-@media (max-aspect-ratio: 16/9) {
-    .video-container video{ 
-        width:auto;
-        height: 100%;
-    }
-}
-@media (max-width: 767px) {
-    .video-container video{ 
-        width:auto;
-        height: 100%;
-    }
-
-}
-
-/*@media (pointer: coarse) and (hover: none) {
-  .video-container {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
-  .video-container video {
-    display: blocks;
-  }
-}*/
-
-
-</style>
 
 <section class="gradient-overlay gradient-overlay-dark video-container">
   <div class="overlay"></div>
@@ -115,7 +47,7 @@
 
                             <svg version="1.1" width="100%"
 
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 921.6 655.9"
+                            xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 921.6 655.9"
 
                             enable-background="new 0 0 921.6 655.9" xml:space="preserve">
 
@@ -335,7 +267,7 @@
 
                             <svg version="1.1"
 
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 970.4 617.3"
+                            xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 970.4 617.3"
 
                             enable-background= "new 0 0 970.4 617.3;" xml:space="preserve">
 
@@ -489,20 +421,6 @@
                   </div>
                </div>
                <div class="row align-items-center justify-content-center">
-                  <!--div class="col-lg-2 col-md-4">
-                    <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
-                        <div class="yoga-pose-item ">
-                            <div class="yoga-pose-icon-container text-muted">
-                                <div class="yoga-pose-icon ">
-                                    <div class="yoga-pose-icon-inner">
-                                        <img class="" src="{{asset('frontend/assets/svg/yoga-pose-6.svg')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <h5 class="yoga-pose-title  mb-0">Baddha konasana</h5>
-                        </div>
-                    </a>
-                  </div-->
                   <div class="col-lg-2 col-md-4">
                     <a href="#" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">
                          <div class="yoga-pose-item ">
@@ -560,422 +478,8 @@
                      </a>
                   </div>
                </div>
-               <div style="display: none;" class="row mt-4 pt-4 align-items-center justify-content-center">
-                  <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-11.sv')}}g" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0"> Bhujangasana</h5>
-                     </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-12.sv')}}g" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Tadasana</h5>
-                     </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-13.sv')}}g" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Sukhasna</h5>
-                     </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pose-14.sv')}}g" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title  mb-0">Sanskrit</h5>
-                     </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                     <div class="yoga-pose-item " >
-                        <div class="yoga-pose-icon-container text-muted">
-                           <div class="yoga-pose-icon ">
-                              <div class="yoga-pose-icon-inner">
-                                 <img class="" src="{{asset('frontend/assets/svg/yoga-pos-2-acti')}}ve.svg" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <h5 class="yoga-pose-title mb-0">Uttanasana</h5>
-                     </div>
-                  </div>
-               </div>
             </div>
          </section>
-
-{{-- <section id="trainer">
-
-    <div class="container container spacer-double-lg">
-
-        <div class="row">
-
-            <div class="col">
-
-                <div class="mb-5 pb-5 text-center">
-
-                    <span class="text-uppercase text-secondary font-secondary font-size-12">the trainers</span>       
-
-                    <h1 class="mb-0">Our Instructors</h1>
-
-                    <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row ">
-
-            <div class="col-sm-6">
-
-                <div class="row shrink">
-
-                    <div class="col-lg-6 d-sm-flex align-content-sm-start flex-sm-column text-center text-sm-left mb-5 mb-lg-0">
-
-                        <h3 class="h5 mb-2">Melissa Wagner</h3>
-
-                        <div class="d-inline-block">
-
-                            <span class="badge badge-pill mb-3 bg-primary">Yoga Trainer</span>
-
-                        </div>
-
-                        <p>Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet.</p>
-
-                        <ul class="list-inline mt-auto mb-0">
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-facebook-f btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-google btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mx-0">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-twitter btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-
-                        <img class="img-fluid " src="{{asset('frontend/assets/img/5.jpg')}}" alt="">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-sm-6">
-
-                <div class="row shrink">
-
-                    <div class="col-lg-6 d-sm-flex align-content-sm-start flex-sm-column text-center text-sm-left mb-5 mb-lg-0">
-
-                        <h3 class="h5 mb-2">Jeremy Spivak</h3>
-
-                        <div class="d-inline-block">
-
-                            <span class="badge badge-pill bg-primary mb-3">Yoga Trainer</span>
-
-                        </div>
-
-                        <p>Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet.</p>
-
-                        <ul class="list-inline mt-auto mb-0">
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-facebook-f btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-google btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mx-0">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-twitter btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="col-lg-6 mb-lg-0">
-
-                        <img class="img-fluid" src="{{asset('frontend/assets/img/6.jpg')}}" alt=" ">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row mt-5 pt-5">
-
-            <div class="col-sm-6">
-
-                <div class="row shrink">
-
-                    <div class="col-lg-6 d-sm-flex align-content-sm-start flex-sm-column text-center text-sm-left mb-5 mb-lg-0">
-
-                        <h3 class="h5 mb-2">Renee Mu</h3>
-
-                        <div class="d-inline-block">
-
-                            <span class="badge badge-pill bg-primary mb-3">Yoga Trainer</span>
-
-                        </div>
-
-                        <p>Mountain Pose is the base for all standing poses it gives you a sense of how to ground in to your feet.</p>
-
-                        <ul class="list-inline mt-auto mb-0">
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-facebook-f btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-google btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mx-0">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-twitter btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-
-                        <img class="img-fluid  " src="{{asset('frontend/assets/img/7.jpg')}}" alt="">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-sm-6">
-
-                <div class="row shrink">
-
-                    <div class="col-lg-6 d-sm-flex align-content-sm-start flex-sm-column text-center text-sm-left mb-5 mb-lg-0">
-
-                        <h3 class="h5 mb-2">David Taylor</h3>
-
-                        <div class="d-inline-block">
-
-                            <span class="badge badge-pill bg-primary mb-3">Yoga Trainer</span>
-
-                        </div>
-
-                        <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-
-                        <ul class="list-inline mt-auto mb-0">
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-facebook-f btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mr-1">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-google btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                            <li class="list-inline-item mx-0">
-
-                                <a class="btn btn-social btn-icon btn-social-light" href="#" tabindex="0">
-
-                                    <span class="fab fa-twitter btn-icon-inner"></span>
-
-                                </a>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="col-lg-6 ">
-
-                        <img class="img-fluid " src="{{asset('frontend/assets/img/8.jpg')}}" alt=" ">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section> --}}
-
-<section id="video-cover"  class="gradient-overlay gradient-overlay-dark video-cover">
-
-    <div class="curved-decoration top-n1 flip-xy">
-
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 43.2" enable-background="new 0 0 800 43.2;" xml:space="preserve">
-
-
-
-            <path fill="#f3f5f8" d="M0,43.1v-4.8c0,0,187.9-30,400-3S800,0,800,0v43.1H0z"></path>
-
-
-
-        </svg>
-
-    </div>
-
-    <img class="bg-image" src="{{asset('frontend/assets/img/9.jpg')}}" alt="">
-
-   <!--  <div class="container spacer-xlg z-index-2 position-relative">
-
-        <div class="row justify-content-center text-center">
-
-            <div class="col-md-8 col-lg-6 ">
-
-                <a class="venobox play-but  mt-3" data-vbtype="video" data-overlay="rgba(52,58,64,.6)" href="https://youtu.be/8YDd8Wgjj28">
-
-                    <span class="play-icon play-icon-md">
-
-                        <span class="play-icon-inner">
-
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-
-                            viewBox="0 0 158 178.4" enable-background="new 0 0 158 178.4;" xml:space="preserve">
-
-                            <polygon class="st0" points="147.8,89.2 5,169.8 5,8.6 147.8,89.2 "/>
-
-                            </svg>
-
-                        </span>
-
-                    </span>
-
-                </a>
-
-                <h3 class="h5 text-white mt-3 mb-0">Yoga training for Everybody</h3>
-
-                <span class="font-size-14 text-B42997">Play course</span>
-
-            </div>
-
-        </div>
-
-    </div> -->
-
-    <div class="curved-decoration bottom-n1">
-
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 43.2" enable-background="new 0 0 800 43.2;" xml:space="preserve">
-
-
-
-            <path fill="#f3f5f8" d="M0,43.1v-4.8c0,0,187.9-30,400-3S800,0,800,0v43.1H0z"></path>
-
-
-
-        </svg>
-
-    </div>
-
-</section>
 
 <section id="schedule">
 
@@ -1147,83 +651,7 @@
 
 </section>
 
-<section style="display: none;" id="appointment" class=" bg-white">
 
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-sm-6 col-xs-12">
-
-                <img class="bg-image" src="{{asset('frontend/assets/img/10.jpg')}}" alt="">
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-5 col-xs-12 offset-lg-1 spacer-double-lg">
-
-                <div id="myDivAppointment" class="mb-3 pb-3">
-
-                    <span class="text-uppercase text-503592 font-secondary font-size-12">choose program</span>       
-
-                    <h1 class="mb-0 text-D9008F">Make an Appointment</h1>
-
-                    <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
-
-                    @if(Session::has('success'))
-                    <div class="alert alert-success">
-                      {{ Session::get('success') }}
-                  </div>
-                  @endif
-
-                </div>
-
-                <form method="post" action="{{ route('appointment.store') }}">
-                  {{csrf_field()}}
-
-                  <div class="d-flex flex-column  form-group">
-
-                    <input class="form-control @error('name') is-invalid @enderror  mb-3 h-100" name="name" placeholder="Name" value="{{ old('name') }}" required type="text">
-
-                     @error('name')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-
-                    <input class="form-control @error('email') is-invalid @enderror  mb-3 h-100" name="email" placeholder="Email" value="{{ old('email') }}" required type="email">
-
-                     @error('email')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-
-                    <textarea class="form-control @error('message') is-invalid @enderror mb-3 resize-n" rows="6" name="message" required placeholder="Type your message ...">{{ old('message') }}</textarea>
-
-                     @error('message')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-
-                    <button class="btn w-50 btn-primary" type="submit">
-
-                        <span class="mn-top">Get a free account</span>
-
-                    </button>
-
-                </div>
-
-            </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 <section id="testtimonials">
 
@@ -1287,123 +715,8 @@
                     </div>
 
                 </div>
-                
 
                 @endforeach
-
-                {{-- <div class="px-3  w-100 pt-5">
-
-                    <div class="card border-0  bg-light">
-
-                        <div class="card-body pr-5 pl-5 pb-5 pt-0 shadow radius-2">
-
-                            <div class="testimonial-image">
-
-                                <div class="testimonial-image-border">
-
-                                    <img class="rounded-circle" src="{{asset('frontend/assets/img/6.jpg')}}" alt="/">
-
-                                </div>
-
-                            </div>
-
-                            <p class=" mb-0 mt-2">"Mountain Pose is the base for all standing poses it gives
-
-                                you a sense of how to ground in to your feet and feel the earth
-
-                                below you."
-
-                            </p>
-
-                        </div>
-
-                        <div class="card-footer border-0  pt-0 px-5 pb-3  mt-3">
-
-                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Melissa Wagner</span>
-
-                            <small class="d-block text-503592">Business Manager</small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="px-3  w-100 pt-5 ">
-
-                    <div class="card border-0   bg-light">
-
-                        <div class="card-body pr-5 pl-5 pb-5 pt-0 shadow radius-2">
-
-                            <div class="testimonial-image">
-
-                                <div class="testimonial-image-border">
-
-                                    <img class="rounded-circle" src="{{asset('frontend/assets/img/7.jpg')}}" alt="/">
-
-                                </div>
-
-                            </div>
-
-                            <p class=" mb-0 mt-2">"Mountain Pose is the base for all standing poses it gives
-
-                                you a sense of how to ground in to your feet and feel the earth
-
-                                below you."
-
-                            </p>
-
-                        </div>
-
-                        <div class="card-footer border-0  pt-0 px-5 pb-3 mt-3">
-
-                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Stacy Taylor</span>
-
-                            <small class="d-block text-503592">Business Manager</small>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="px-3 w-100 pt-5 pb-5">
-
-                    <div class="card border-0   bg-light">
-
-                        <div class="card-body pr-5 pl-5 pb-5 pt-0 shadow radius-2">
-
-                            <div class="testimonial-image">
-
-                                <div class="testimonial-image-border">
-
-                                    <img class="rounded-circle" src="{{asset('frontend/assets/img/8.jpg')}}" alt="/">
-
-                                </div>
-
-                            </div>
-
-                            <p class=" mb-0 mt-2">"Mountain Pose is the base for all standing poses it gives
-
-                                you a sense of how to ground in to your feet and feel the earth
-
-                                below you."
-
-                            </p>
-
-                        </div>
-
-                        <div class="card-footer border-0  pt-0 px-5 pb-3  mt-3">
-
-                            <span class="h6 font-base font-weight-600 mb-0 text-D9008F">Renee Mu</span>
-
-                            <small class="d-block text-503592">Business Manager</small>
-
-                        </div>
-
-                    </div>
-
-                </div> --}}
 
             </div>
 
@@ -1644,19 +957,6 @@
 
                             </div>
 
-                            <span style="display: none;" class="badge bg-primary text-white font-base">
-
-                                <svg version="1.1" class="badge-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 45.9" xml:space="preserve">
-
-                                    <path d="M51.9,14.4C51.2,6.1,45.2,0,37.8,0c-4.9,0-9.4,2.7-12,6.9C23.3,2.6,19,0,14.2,0C6.8,0,0.8,6.1,0.1,14.4
-
-                                    c-0.1,0.4-0.3,2.3,0.4,5.5c1.1,4.6,3.6,8.7,7.2,12l18.3,14l18.3-14c3.6-3.3,6.1-7.4,7.2-12C52.2,16.7,52,14.8,51.9,14.4z" fill="#ffffff"></path>
-
-                                </svg>
-
-                                {{ rand(1,99) }}
-
-                            </span>
 
                         </div>
 
@@ -1676,96 +976,6 @@
 
             @php $i++; @endphp
       @endforeach   
-            </div>
-
-            {{-- <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 ">
-
-                <article class="card bg-blog  border-0 h-100">
-
-                    <img class="card-img-top" src="{{asset('frontend/assets/img/Rectangle 374.png')}}" alt="Card image cap">
-
-                    <div class="card-body pt-3">
-
-                        <div class="d-flex justify-content-between mb-3">
-
-                            <div class="small d-flex">
-
-                                <div class="mr-2">
-
-                                    <a href="#">Strenght</a>
-
-                                </div>
-
-                                <span class="text-muted ">10th March</span>
-
-                            </div>
-
-                            <span class="badge bg-primary text-white font-base">
-
-                                <svg version="1.1" class="badge-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 45.9" xml:space="preserve">
-
-                                    <path d="M51.9,14.4C51.2,6.1,45.2,0,37.8,0c-4.9,0-9.4,2.7-12,6.9C23.3,2.6,19,0,14.2,0C6.8,0,0.8,6.1,0.1,14.4
-
-                                    c-0.1,0.4-0.3,2.3,0.4,5.5c1.1,4.6,3.6,8.7,7.2,12l18.3,14l18.3-14c3.6-3.3,6.1-7.4,7.2-12C52.2,16.7,52,14.8,51.9,14.4z" fill="#ffffff"></path>
-
-                                </svg>
-
-                                14
-
-                            </span>
-
-                        </div>
-
-                        <h3 class="h5 ">
-
-                            <a href="#">Protection from injury </a>
-
-                        </h3>
-
-                        <p>Mountain Pose is the base for all standing poses it gives
-
-                        you a sense of how to ground in to your feet. </p>
-
-                    </div>
-
-                    <div class="card-footer border-0 pt-0 pb-5 px-0 mx-5">
-
-                        <div class="media align-items-center">
-
-                            <img class="avatar-xs rounded-circle mr-2" src="{{asset('frontend/assets/img/6.jpg')}}" alt="">
-
-                            <div class="media-body">
-
-                                <span class="font-size-13 text-muted">By</span>
-
-                                <a class="font-size-13 text-dark" href="#">Zak Watson</a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div> --}}
-
-        </div>
-
-        <div class="row">
-
-            <div class="col">
-
-                <div class="mt-5 pt-5 text-center"> 
-
-                   {{--  <a class="mr-2 btn btn-primary btn-radius-bottom-left  mb-lg-0" href="#">
-
-                        View All Blog Posts
-
-                    </a> --}}
-
-                </div>
-
             </div>
 
         </div>
@@ -1945,30 +1155,21 @@
     @if (\Session::has('success'))
         $(window).scrollTop($('#myDivAppointment').offset().top);
     @endif
-
     @if (\Session::has('paypal_success'))
         $(window).scrollTop($('#pricing').offset().top);
     @endif
-
     @if (\Session::has('paypal_failure'))
         $(window).scrollTop($('#pricing').offset().top);
     @endif
-
-
     @error('email') 
         $(window).scrollTop($('#myDivAppointment').offset().top);
     @enderror
-
      @if (\Session::has('success_news'))
       $(window).scrollTop($('#myDiv').offset().top);
     @endif
-
     @if (\Session::has('success'))
       $(window).scrollTop($('#myDivContact').offset().top);
     @endif
-    
-
-
 </script>
 
 <script>
