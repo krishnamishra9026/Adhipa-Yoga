@@ -10,17 +10,17 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+  <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" media="all" />
 
-  <link href="{{asset('frontend/css/main.css')}}" rel="stylesheet" type="text/css" media="all" />
+  <link href="{{asset('frontend/css/main.min.css')}}" rel="stylesheet" type="text/css" media="all" />
 
-   <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" media="all" />
+   <link href="{{asset('frontend/css/custom.min.css')}}" rel="stylesheet" type="text/css" media="all" />
 
-  <link href="{{asset('frontend/css/fonts.css')}}" rel="stylesheet" type="text/css" media="all" />
+  <link href="{{asset('frontend/css/fonts.min.css')}}" rel="stylesheet" type="text/css" media="all" />
 
-  <link href="{{asset('frontend/css/owl-carousel/owl.carousel.css')}}" rel="stylesheet"  media="all"/>
+  <link href="{{asset('frontend/css/owl-carousel/owl.carousel.min.css')}}" rel="stylesheet"  media="all"/>
 
-  <link href="{{asset('frontend/css/owl-carousel/owl.theme.css')}}" rel="stylesheet"  media="all" />
+  <link href="{{asset('frontend/css/owl-carousel/owl.theme.min.css')}}" rel="stylesheet"  media="all" />
 
   <link href="//fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
