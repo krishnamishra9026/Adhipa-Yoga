@@ -19,14 +19,13 @@
 	</div>
 	<script src="{{asset('frontend/js/jquery-1.12.4.min.js')}}"></script>
 	<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('frontend/js/smooth-scroll.js')}}"></script>
-	<script src="{{asset('frontend/js/venobox.js')}}"></script>
-	<script src="{{asset('frontend/js/owl.carousel.js')}}"></script>
+	<script src="{{asset('frontend/js/smooth-scroll.min.js')}}"></script>
+	<script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jarallax.min.js')}}"></script>
 	<script src="{{asset('frontend/js/jarallax-element.min.js')}}"></script>
 	<script src="{{asset('frontend/js/placeholders.min.js')}}"></script>
 	<script src="{{asset('frontend/js/instafeed.min.js')}}"></script>
-	<script src="{{asset('frontend/js/script.js')}}"></script>
+	<script src="{{asset('frontend/js/script.min.js')}}"></script>
 	 @stack('scripts')
 </body>
 </html>
