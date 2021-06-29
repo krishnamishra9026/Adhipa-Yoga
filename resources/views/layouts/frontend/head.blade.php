@@ -16,8 +16,6 @@
 
    <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" media="all" />
 
-  <link href="{{asset('frontend/css/venobox.css')}}" rel="stylesheet" type="text/css" media="all" />
-
   <link href="{{asset('frontend/css/fonts.css')}}" rel="stylesheet" type="text/css" media="all" />
 
   <link href="{{asset('frontend/css/owl-carousel/owl.carousel.css')}}" rel="stylesheet"  media="all"/>
