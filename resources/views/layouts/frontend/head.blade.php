@@ -24,6 +24,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"  type="text/css">
 
-  <link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet"  type="text/css">
+  <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet"  type="text/css">
 
 </head>
