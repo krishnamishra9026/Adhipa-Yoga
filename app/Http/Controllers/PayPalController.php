@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\ExpressCheckout;
 use Session;
 
+use App\Models\Booking;
+
+use Notification;
+
+use App\Notifications\PaymentConfirmationNotification;
+
 class PayPalController extends Controller
 {
     public function __construct(){
@@ -43,6 +49,35 @@ class PayPalController extends Controller
         $provider = $this->provider;
         $response = $provider->getExpressCheckoutDetails($request->token);
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
+
+            $packageUserData = Session::get('packageUserData');
+
+            $details = [
+
+            'greeting' => 'Hello!',
+
+            'body' => 'Payment Confirmation This is my first notification from ItSolutionStuff.com',
+
+            'thanks' => 'Thank you for using yogadhipa.com!',
+
+            'actionText' => 'View Our Site',
+
+            'actionURL' => url('/'),
+
+            'name' => $packageUserData->name,
+
+        ];
+
+
+        Notification::route('mail', $packageUserData->email)->notify(new PaymentConfirmationNotification($details));
+
+        Notification::route('mail', 'yoga.adhipa@gmail.com')->notify(new PaymentConfirmationNotification($details));
+
+        Notification::route('mail', 'laxmanmishrabbk@gmail.com')->notify(new PaymentConfirmationNotification($details));
+
+
+        // Notification::send($user, new PaymentConfirmationNotification($details));
+
             return view('pay_success');
         }
          return view('pay_success');
