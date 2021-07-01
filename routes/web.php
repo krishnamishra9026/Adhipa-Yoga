@@ -1,56 +1,13 @@
 <?php
 
-
-Route::get(
-    'cache-clear',
-    function () {
-        \Artisan::call('config:cache');
-        \Artisan::call('cache:clear');
-        \Artisan::call('config:clear');
-        return 'cleared';
-    }
-);
-
-
-Route::get('/packages', function () {
-    return view('packages');
-});
-
-Route::get('/aboutus', function () {
-    return view('about_us');
-});
-
-Route::get('/blog', function () {
-    return view('blog');
-});
-
-
-
 Route::get('/blog/{id}', 'HomeController@blog');
-
-
-Route::get('/single', function () {
-    return view('single');
-});
-
-// Route::get('/contactus', function () {
-//     return view('contact_us');
-// });
 
 Route::resource('contact-us', 'ContactController');
 Route::resource('appointment', 'AppointmentController');
 
-Route::get('/terms-conditions', function () {
-    return view('terms-conditions');
-});
-
-
 Route::get('/', 'HomeController@index')->name('home');
 
-
 Route::resource('booking', 'BookingController');
-
-
 
 Route::get('payment', 'PayPalController@payment')->name('payment');
 Route::get('payment/success', 'PayPalController@success')->name('payment.success');
