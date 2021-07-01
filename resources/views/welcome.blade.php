@@ -6,12 +6,12 @@
 
 @section('content')
 
-<section class="gradient-overlay gradient-overlay-dark video-container">
+<!--section class="gradient-overlay gradient-overlay-dark video-container">
   <div class="overlay"></div>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="{{asset('frontend/assets/video/main_video.mp4')}}" type="video/mp4">
   </video>
-</section>
+</section-->
 <section id="about">
 
     <div class="container spacer-double-lg border-bottom">
