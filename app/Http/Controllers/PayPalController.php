@@ -48,7 +48,8 @@ class PayPalController extends Controller
     public function success(Request $request) {
         $provider = $this->provider;
         $response = $provider->getExpressCheckoutDetails($request->token);
-        if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
+        
+        if(isset($response['ACK']) && (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING']))){
 
             $packageUserData = Session::get('packageUserData');
 
@@ -56,9 +57,9 @@ class PayPalController extends Controller
 
             'greeting' => 'Hello!',
 
-            'body' => 'Payment Confirmation This is my first notification from ItSolutionStuff.com',
+            'body' => 'Payment Confirmation This is my first notification from adhipakalany.com',
 
-            'thanks' => 'Thank you for using yogadhipa.com!',
+            'thanks' => 'Thank you for using adhipakalany.com!',
 
             'actionText' => 'View Our Site',
 
