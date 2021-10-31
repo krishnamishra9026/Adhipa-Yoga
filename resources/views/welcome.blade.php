@@ -990,11 +990,11 @@
 
     <div class="container spacer-double-lg">
 
-        <div class="row justify-content-lg-between align-items-center">
+        <div class="row">
 
-            <div class="col-lg-6  mb-7 mb-lg-0">
+            <div class="col">
 
-                <div class="mb-3 pb-3">
+                <div class="mb-5 pb-5 text-center">
 
                     <span class="text-uppercase text-secondary font-secondary font-size-12">{{ $contactus->title }}</span>       
 
@@ -1002,7 +1002,7 @@
 
                     <img class=" max-width-4" src="{{asset('frontend/assets/svg/title-line.svg')}}" alt="">
 
-                    <p class=" mb-0 pt-3 lead ">{{ $contactus->desc }}
+                    <p class="mb-0 pt-3 lead w-md-60 mx-auto">{{ $contactus->desc }}
 
                     </p>
 
