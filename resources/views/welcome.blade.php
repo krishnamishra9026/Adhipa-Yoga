@@ -1082,7 +1082,7 @@
 
             </div>
 
-            <div class="col-lg-5 mt-5 mt-lg-0">
+            <!--div class="col-lg-5 mt-5 mt-lg-0">
 
                 <ul class="instafeed-list list-inline" id="instafeed">
 
@@ -1110,7 +1110,7 @@
 
                 </ul>
 
-            </div>
+            </div-->
 
         </div>
 
