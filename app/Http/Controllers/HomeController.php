@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Testimonial;
 use App\Models\Blog;
 use App\Models\Cms;
+use App\Models\CMSBenefit;
 use App\Models\ContactUs;
 use App\Models\MainServices;
 use App\Models\Setting;
@@ -54,6 +55,7 @@ class HomeController extends Controller
         
         $blogs = Blog::take(6)->get();
         $cms = Cms::latest()->first();
+        $cmsbenefit = CMSBenefit::latest()->first();
         $contactus = ContactUs::latest()->first();
         $mainservices = MainServices::all();
         $setting = Setting::first();
@@ -65,7 +67,7 @@ class HomeController extends Controller
         }
         $testimonials = Testimonial::latest()->get();
         // echo "<pre>";print_r($calendarData);"</pre>";exit;
-        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'setting', 'calendarData','weekDays','mainservices','contactus'));
+        return view('welcome',compact('testimonials','blogs','packages', 'cms', 'cmsbenefit', 'setting', 'calendarData','weekDays','mainservices','contactus'));
 
     }
 
