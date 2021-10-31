@@ -34,6 +34,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('cms-delete-image2/{cms}', 'CmsController@deleteimage2')->name('cms-image2-delete');
     Route::post('cms-delete-image3/{cms}', 'CmsController@deleteimage3')->name('cms-image3-delete');
     Route::post('cms-delete-image4/{cms}', 'CmsController@deleteimage4')->name('cms-image4-delete');
+
+    Route::resource('cmsbenefit','CMSBenefitController');
+    Route::post('cmsbenefit-delete-image/{cmsbenefit}', 'CMSBenefitController@deleteimage')->name('cmsbenefit-image-delete');
+    Route::post('cmsbenefit-delete-image2/{cmsbenefit}', 'CMSBenefitController@deleteimage2')->name('cmsbenefit-image2-delete');
+    Route::post('cmsbenefit-delete-image3/{cmsbenefit}', 'CMSBenefitController@deleteimage3')->name('cmsbenefit-image3-delete');
+    Route::post('cmsbenefit-delete-image4/{cmsbenefit}', 'CMSBenefitController@deleteimage4')->name('cmsbenefit-image4-delete');
+
     Route::post('service-img-delete/{cms}', 'MainServicesController@deleteimage')->name('service-img-delete');
     Route::post('testimonial-delete-image/{testimonial}', 'BlogController@deleteimage')->name('testimonial-image-delete');
     Route::resource('terms-and-conditions','TermsController');

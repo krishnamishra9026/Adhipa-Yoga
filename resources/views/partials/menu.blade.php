@@ -133,7 +133,15 @@
                             <i class="fas fa-unlock-alt nav-icon">
 
                             </i>
-                            Cms
+                            CMS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route("admin.cmsbenefit.edit",1) }}" class="nav-link {{ request()->is('admin/cmsbenefit') || request()->is('admin/cmsbenefit/*') ? 'active' : '' }}">
+                            <i class="fas fa-unlock-alt nav-icon">
+
+                            </i>
+                            Benefit CMS
                         </a>
                     </li>
                     <li class="nav-item">

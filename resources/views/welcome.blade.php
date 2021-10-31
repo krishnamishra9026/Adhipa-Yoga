@@ -255,6 +255,10 @@
 
         </div>
 
+         @php
+            $cmsbenefitNames = json_decode($cmsbenefit->name);
+        @endphp
+
         <div class="row justify-content-lg-between align-items-center">
 
             <div class="col-md-7 mb-5 mb-lg-0">
@@ -285,19 +289,19 @@
 
                         <div class="col-6 mb-2" >
 
-                            <img class="img-fluid" src="{{asset('frontend/assets/img/offset/5.jpg')}}" alt="">
+                            <img class="img-fluid" src="{{asset('uploads/cmsbenefit/'.$cmsbenefit->image)}}" alt="">
 
                         </div>
 
                         <div class="col-4 align-self-end mb-2" >
 
-                            <img class="img-fluid" src="{{asset('frontend/assets/img/offset/6.jpg')}}" alt="">
+                            <img class="img-fluid" src="{{asset('uploads/cmsbenefit/'.$cmsbenefit->image2)}}" alt="">
 
                         </div>
 
                         <div class="col-10 offset-2" >
 
-                            <img class="img-fluid" src="{{asset('frontend/assets/img/offset/7.jpg')}}" alt="">
+                            <img class="img-fluid" src="{{asset('uploads/cmsbenefit/'.$cmsbenefit->image3)}}" alt="">
 
                         </div>
 
@@ -321,7 +325,7 @@
 
                         <div class="media-body">
 
-                            <span class="font-secondary font-size-17 text-white">Increased flexibility.</span>
+                            <span class="font-secondary font-size-17 text-white">{{$cmsbenefitNames[0]}}</span>
 
                         </div>
 
@@ -339,7 +343,7 @@
 
                     <div class="media-body">
 
-                        <span class="font-secondary font-size-17 text-white">Increased muscle strength</span>
+                        <span class="font-secondary font-size-17 text-white">{{$cmsbenefitNames[1]}}</span>
 
                     </div>
 
@@ -357,7 +361,7 @@
 
                         <div class="media-body">
 
-                            <span class="font-secondary font-size-17 text-white">Cardio and circulatory health</span>
+                            <span class="font-secondary font-size-17 text-white">{{$cmsbenefitNames[2]}}</span>
 
                         </div>
 
@@ -375,7 +379,7 @@
 
                     <div class="media-body">
 
-                        <span class="font-secondary font-size-17 text-white">Increased muscle strength</span>
+                        <span class="font-secondary font-size-17 text-white">{{$cmsbenefitNames[3]}}</span>
 
                     </div>
 
@@ -393,7 +397,7 @@
 
                         <div class="media-body">
 
-                            <span class="font-secondary font-size-17 text-white">Protection from injury</span>
+                            <span class="font-secondary font-size-17 text-white">{{$cmsbenefitNames[4]}}</span>
 
                         </div>
 
